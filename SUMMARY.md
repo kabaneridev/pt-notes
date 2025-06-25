@@ -2,6 +2,7 @@
 
 * [🏠 /home/kabaneridev/.pt-notes](README.md)
 * [🔍 Information Gathering](information-gathering.md)
+* [📋 OSCP Tools Restrictions](oscp-tools-restrictions.md)
 
 ## Linux
 
@@ -25,6 +26,10 @@
   * [Registry Exploits](windows-privilege-escalation/registry-exploits.md)
   * [Token Impersonation](windows-privilege-escalation/token-impersonation.md)
   * [Software Exploits](windows-privilege-escalation/software-exploits.md)
+  * [Kernel Exploits](windows-privilege-escalation/kernel-exploits.md)
+  * [RunAs Command](windows-privilege-escalation/runas.md)
+  * [Spawning Administrator Shells](windows-privilege-escalation/spawning-shells.md)
+  * [Privilege Escalation Checklist](windows-privilege-escalation/checklist.md)
 
 ## Tools & Utilities
 
@@ -32,5 +37,10 @@
   * [Nmap](tools/nmap.md)
   * [Gobuster](tools/gobuster.md)
   * [John the Ripper](tools/john.md)
+  * [Hydra](tools/hydra.md)
+  * [Winexe](tools/winexe.md)
+  * [PTH-Winexe](tools/pth-winexe.md)
+  * [WinPEAS](tools/winpeas.md)
 * [Linux Commands Cheatsheet](utilities-scripts-and-payloads/linux-commands.md)
-* [Windows Commands Cheatsheet](utilities-scripts-and-payloads/windows-commands.md) 
+* [Windows Commands Cheatsheet](utilities-scripts-and-payloads/windows-commands.md)
+* [File Transfer Techniques](utilities-scripts-and-payloads/file-transfers.md) 

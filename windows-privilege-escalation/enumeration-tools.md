@@ -6,40 +6,30 @@ Automated enumeration tools can significantly speed up the privilege escalation 
 
 WinPEAS (Windows Privilege Escalation Awesome Script) is a comprehensive enumeration script that checks for common privilege escalation vectors.
 
-### Installation and Usage
+> **Note:** A detailed documentation of WinPEAS is available in the [tools/winpeas.md](../tools/winpeas.md) file. This section provides only a brief overview for completeness.
 
-Download from: [https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS](https://github.com/carlospolop/PEASS-ng/tree/master/winPEAS)
+### Key Features Overview
 
-Available as both executable (.exe) and batch script (.bat):
+- Comprehensive system enumeration 
+- Checks for credentials, misconfigurations, and vulnerabilities
+- Available as executable (.exe), batch script (.bat), and PowerShell script (.ps1)
+- Color-coded output highlighting critical findings in red
+- Modular command structure for targeted enumeration
+
+### Quick Reference
 
 ```cmd
-# Running the executable
-C:\> winpeas.exe > winpeas_output.txt
+# Basic usage
+winpeas.exe > winpeas_output.txt
 
-# Running with specific checks
-C:\> winpeas.exe quiet servicesinfo
+# Targeted commands
+winpeas.exe quiet cmd servicesinfo
+winpeas.exe quiet cmd windowscreds
+
+# Efficient OSCP usage
+winpeas.exe quiet fast
+winpeas.exe quiet searchfast
 ```
-
-### Features
-
-WinPEAS checks for:
-- System information and configuration issues
-- Credentials in files, registry, and history
-- Kernel vulnerabilities
-- Service misconfigurations
-- Unquoted service paths
-- Scheduled tasks
-- Startup applications
-- Installed applications
-- Writeable directories
-- Network information
-- And much more
-
-### OSCP Tips
-
-- Use the `quiet` parameter to reduce output verbosity
-- Focus on specific checks when you have a suspicion about a potential vector
-- Always redirect output to a file for easier analysis
 
 ## PrivescCheck
 
@@ -77,6 +67,168 @@ PrivescCheck examines:
 - The `-Extended` flag provides more comprehensive checks
 - The `-Report` parameter generates HTML and CSV reports
 
+## PowerUp
+
+PowerUp is a PowerShell script from the PowerSploit framework specifically designed to identify common Windows privilege escalation vectors.
+
+### Installation and Usage
+
+Download from: [https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1](https://github.com/PowerShellMafia/PowerSploit/blob/master/Privesc/PowerUp.ps1)
+
+```powershell
+# Import the script
+. .\PowerUp.ps1
+
+# Run all checks
+Invoke-AllChecks
+
+# Save results to a file
+Invoke-AllChecks | Out-File -FilePath PowerUp_Results.txt
+```
+
+### Key Features
+
+PowerUp focuses on common Windows misconfigurations:
+- Service issues (unquoted paths, weak permissions)
+- Registry autoruns with weak permissions
+- Modifiable registry entries
+- DLL hijacking opportunities
+- Writeable service directories
+- AlwaysInstallElevated registry settings
+- Credential exposure in common locations
+
+### Specific Checks
+
+```powershell
+# Check for service issues only
+Get-ServiceUnquoted
+Get-ModifiableServiceFile
+Get-ModifiableService
+
+# Check for AlwaysInstallElevated
+Get-RegistryAlwaysInstallElevated
+
+# Check writeable paths
+Get-ModifiablePath
+```
+
+### OSCP Tips
+
+- PowerUp is lightweight and less likely to trigger antivirus compared to compiled executables
+- It excels at finding service-related vulnerabilities
+- The output is structured and easier to read than many other tools
+
+## SharpUp
+
+SharpUp is a C# port of PowerUp that can run on Windows systems as a compiled executable, making it useful when PowerShell is restricted.
+
+### Installation and Usage
+
+Download from: [https://github.com/GhostPack/SharpUp](https://github.com/GhostPack/SharpUp)
+
+```cmd
+# Run all checks
+SharpUp.exe
+
+# Run with specific check
+SharpUp.exe audit
+```
+
+### Key Features
+
+SharpUp checks for:
+- AlwaysInstallElevated registry keys
+- Unquoted service paths
+- Modifiable service binaries
+- Modifiable service directories
+- High integrity processes
+- Token privileges that can be abused
+- Registry autoruns
+
+### OSCP Tips
+
+- Use SharpUp when PowerShell execution is restricted
+- The binary can be compiled with different .NET Framework versions for compatibility
+- Smaller and more focused than WinPEAS, so can be less noisy
+
+## Seatbelt
+
+Seatbelt is a comprehensive C# enumeration tool that performs detailed system reconnaissance.
+
+### Installation and Usage
+
+Download from: [https://github.com/GhostPack/Seatbelt](https://github.com/GhostPack/Seatbelt)
+
+```cmd
+# Run all checks
+Seatbelt.exe -all
+
+# Run specific checks
+Seatbelt.exe -group=system
+Seatbelt.exe -group=user
+Seatbelt.exe WindowsDefender
+
+# Output to file
+Seatbelt.exe -all -output=OutputFile.txt
+```
+
+### Key Features
+
+Seatbelt performs comprehensive system enumeration:
+- Detailed system information
+- User information and environment
+- Security products installed
+- Installed applications
+- COM objects and registry settings
+- File searches and local group policies
+- Network configuration and connections
+- Process details and token privileges
+- Scheduled tasks and services
+
+### OSCP Tips
+
+- Seatbelt produces extremely detailed output - use specific group checks to focus your enumeration
+- The `-group=user` and `-group=system` flags are most useful for privilege escalation
+- Many results require manual analysis to identify exploitable conditions
+
+## Accesschk.exe
+
+Accesschk.exe is a Microsoft Sysinternals tool designed to check access permissions on files, directories, registry keys, and Windows services.
+
+### Installation and Usage
+
+Download from: [https://docs.microsoft.com/en-us/sysinternals/downloads/accesschk](https://docs.microsoft.com/en-us/sysinternals/downloads/accesschk)
+
+```cmd
+# Check service permissions
+accesschk.exe -uwcqv "Authenticated Users" * /accepteula
+
+# Check directory permissions
+accesschk.exe -uwdqs Users c:\ /accepteula
+
+# Check registry permissions
+accesschk.exe -uwkqs Users hklm\Software /accepteula
+
+# Check for weak service permissions
+accesschk.exe -uwcqv * /accepteula
+```
+
+### Key Features
+
+Accesschk.exe is particularly useful for:
+- Identifying services that can be modified by non-administrators
+- Finding directories where regular users have write permissions
+- Discovering registry keys with weak permissions
+- Checking file permissions in system directories
+- Verifying if a user has specific rights on objects
+
+### OSCP Tips
+
+- Always use the `/accepteula` flag to avoid interactive prompts
+- Focus on checking services (`-c`), directories (`-d`), files (`-f`), and registry keys (`-k`)
+- The `-u` flag shows only resources with some level of access
+- The `-w` flag specifically checks for write access, which is most relevant for privilege escalation
+
 ## WES-NG (Windows Exploit Suggester - Next Generation)
 
 WES-NG runs on your attack machine rather than the target, making it useful when you want to avoid triggering antivirus alerts.
@@ -112,38 +264,27 @@ python3 wes.py systeminfo.txt -i 'Metasploit'
 - Look for exploits marked as "Appears Vulnerable"
 - Prioritize exploits that have publicly available PoCs
 
-## PowerUp
+## Comparison of Tools
 
-PowerUp is part of PowerSploit and focuses specifically on Windows privilege escalation vectors.
+| Tool | Language | AV Detection Risk | Speed | Detail Level | Special Features |
+|------|----------|------------------|-------|--------------|------------------|
+| WinPEAS | C#/Batch | Medium-High | Fast | Very High | Most comprehensive, color-coded output |
+| PrivescCheck | PowerShell | Medium | Fast | High | Good balance of detail and readability |
+| PowerUp | PowerShell | Medium | Fast | Medium | Excellent for service issues |
+| SharpUp | C# | Medium | Fast | Medium | Works when PowerShell is restricted |
+| Seatbelt | C# | Medium | Slow | Extremely High | Most detailed system info |
+| Accesschk | Native | Low | Fast | Low | Focused permission checks |
+| WES-NG | Python | N/A (runs on attacker) | Fast | Medium | Missing patch identification |
 
-### Installation and Usage
+## Best Practices for OSCP
 
-Download from: [https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc](https://github.com/PowerShellMafia/PowerSploit/tree/master/Privesc)
+1. **Start with PowerUp or SharpUp** - They're fast and focused on common issues
+2. **Use accesschk.exe for targeted permission checks** - After identifying suspicious services/files
+3. **Run WinPEAS if initial tools don't find anything** - For more comprehensive enumeration
+4. **Use Seatbelt selectively** - When you need very detailed information about specific system components
+5. **Always redirect output to files** - These tools produce extensive information that's easier to analyze offline
 
-```powershell
-# Import and run
-PS C:\> . .\PowerUp.ps1
-PS C:\> Invoke-AllChecks
-
-# Output to file
-PS C:\> Invoke-AllChecks | Out-File -FilePath PowerUp_Output.txt
-```
-
-### Features
-
-PowerUp is especially effective at finding:
-- Service issues (unquoted paths, binary permissions)
-- Registry AutoRuns
-- Modifiable registry entries
-- Writeable service directories
-- Path DLL hijacking
-
-### OSCP Tips
-
-- PowerUp may find different issues than WinPEAS/PrivescCheck, so running multiple tools is recommended
-- Pay special attention to the "Service Issues" section
-
-## Additional Tools
+## Additional Tools and Techniques
 
 ### Metasploit's Local Exploit Suggester
 
@@ -155,36 +296,4 @@ set SESSION [session_id]
 run
 ```
 
-### Windows-Exploit-Suggester (Original)
-
-An older alternative to WES-NG:
-[https://github.com/AonCyberLabs/Windows-Exploit-Suggester](https://github.com/AonCyberLabs/Windows-Exploit-Suggester)
-
-### Seatbelt
-
-A C# project that performs detailed system reconnaissance:
-[https://github.com/GhostPack/Seatbelt](https://github.com/GhostPack/Seatbelt)
-
-## Best Practices for Tool Usage
-
-1. **Don't Rely Solely on Tools**: Automated tools can miss privilege escalation vectors. Use them as a starting point, not the end of your enumeration.
-
-2. **Run Multiple Tools**: Each tool has its strengths and may find different issues.
-
-3. **Parse Output Carefully**: These tools generate large amounts of information. Develop the skill to quickly identify potential vectors.
-
-4. **Understand the Underlying Techniques**: Know what each tool is checking for so you can verify findings manually.
-
-5. **AV Evasion**: Be prepared with PowerShell options if executables are detected by antivirus.
-
-## OSCP Exam Considerations
-
-For the OSCP exam:
-
-1. Have these tools readily available in your arsenal
-2. Practice using them in lab environments
-3. Know how to transfer them to target machines
-4. Understand how to interpret their results
-5. Be ready to manually verify and exploit any findings
-
-Remember that automated tools assist but don't replace manual enumeration skills. Often, the privilege escalation vector that leads to success will be one that requires manual inspection and creative thinking. 
+Remember that manual verification of the issues found by these tools is essential - automated tools can produce false positives or miss context-specific vulnerabilities. 

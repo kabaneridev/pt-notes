@@ -209,4 +209,123 @@ netstat -ano | findstr "LISTENING"
 - Correlate information between different sources to identify privilege escalation vectors.
 - Be methodical and thorough in your enumeration process.
 
-This enumeration process will help identify potential privilege escalation vectors. After completing enumeration, analyze your findings to determine the most promising attack paths. 
+This enumeration process will help identify potential privilege escalation vectors. After completing enumeration, analyze your findings to determine the most promising attack paths.
+
+## Identifying Suspicious Processes
+
+Analyzing running processes is critical for identifying potential security issues or opportunities for privilege escalation. Non-standard processes can indicate compromise or misconfigurations that you can exploit.
+
+### Listing and Analyzing Processes
+
+```cmd
+# Basic process listing
+tasklist
+
+# Verbose process listing
+tasklist /v
+
+# List processes with service information
+tasklist /svc
+
+# More detailed process information with PowerShell
+Get-Process | Select-Object Name, Id, Path, Company
+
+# Find processes running as SYSTEM
+tasklist /v | findstr "SYSTEM"
+
+# Find processes with unusual paths
+wmic process get name,executablepath | findstr /i /v "C:\\Windows\\system32"
+```
+
+### Suspicious Process Characteristics
+
+When analyzing processes, look for:
+
+1. **Unusual locations**: Processes running from temp directories, user directories, or non-standard program paths
+2. **Uncommon names**: Processes with misspelled names (e.g., svch0st.exe instead of svchost.exe)
+3. **High privileges**: Processes running as SYSTEM or Administrator unnecessarily
+4. **Missing descriptions**: Legitimate Windows processes typically have proper descriptions
+5. **Unusual parent-child relationships**: Use Process Explorer to identify abnormal process hierarchies
+
+### Suspicious Process Examples
+
+These processes might indicate potential compromise or misconfiguration:
+
+- **seatbelt.exe**: Part of the GhostPack toolkit, used for security assessments; presence may indicate ongoing penetration testing or compromise
+- **nc.exe/netcat**: Network utility commonly used for creating backdoors or reverse shells
+- **psexec.exe**: Legitimate SysInternals tool, but often abused for lateral movement
+- **mimikatz.exe**: Credential dumping tool
+- **powershell.exe** with unusual parent processes or command line parameters
+- **cmd.exe** running as SYSTEM or with unusual parent processes
+- **wmic.exe** used for remote execution or suspicious queries
+
+### Detailed Analysis with Seatbelt
+
+Ironically, Seatbelt itself is a powerful enumeration tool used by penetration testers. If you find it installed, you might be able to use it for your own enumeration:
+
+```cmd
+# If available, run basic checks
+Seatbelt.exe -group=system
+
+# Run all checks
+Seatbelt.exe all
+
+# Specific checks for processes
+Seatbelt.exe NonstandardProcesses
+```
+
+### Process Analysis with PowerShell
+
+```powershell
+# Get detailed information about suspicious processes
+Get-WmiObject Win32_Process | Where-Object {$_.ExecutablePath -notlike "C:\Windows*"} | Select-Object Name, ExecutablePath, CommandLine
+
+# Check for unusual parent-child relationships
+Get-WmiObject Win32_Process | Select-Object ProcessId, ParentProcessId, Name, ExecutablePath
+
+# Identify processes with open network connections
+Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, RemoteAddress, RemotePort, State, OwningProcess | ForEach-Object { $_ | Add-Member -MemberType NoteProperty -Name ProcessName -Value (Get-Process -Id $_.OwningProcess).Name -PassThru }
+```
+
+### Investigating Process Command Lines
+
+Command line parameters can reveal suspicious behavior:
+
+```cmd
+# Using wmic (works on older Windows versions)
+wmic process get name,commandline
+
+# Using PowerShell (more modern)
+Get-WmiObject Win32_Process | Select-Object Name, CommandLine
+
+# Look for suspicious flags in PowerShell commands
+Get-WmiObject Win32_Process | Where-Object {$_.CommandLine -like "*-enc*" -or $_.CommandLine -like "*-exec*bypass*"} | Select-Object Name, CommandLine
+```
+
+### Exploiting Weak Process Permissions
+
+If you find a process running with high privileges but with weak file permissions:
+
+```cmd
+# Check file permissions of the executable
+icacls "C:\path\to\suspicious\process.exe"
+
+# If writable, you might be able to replace it with a malicious version
+copy C:\path\to\malicious.exe C:\path\to\suspicious\process.exe
+
+# Or if service, check service configuration
+sc qc "SuspiciousService"
+```
+
+## Service Enumeration
+
+```powershell
+# List services
+net start
+wmic service list brief
+Get-Service | Where-Object {$_.Status -eq "Running"} | Format-Table -Property Name,DisplayName,Status
+
+# Query specific service
+sc qc <service_name>
+Get-Service <service_name> | Select-Object *
+``` 

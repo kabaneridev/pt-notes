@@ -69,6 +69,27 @@ dir /r   # Show alternate data streams
 dir /s /b C:\filename.txt
 dir /s /b C:\*.txt
 
+# Searching for password and configuration files
+dir /s *pass* == *.config
+findstr /si password *.xml *.ini *.txt
+
+# Recursively search for files with "pass" in the name or ending in ".config"
+dir /s /b *pass* == *.config
+
+# Search for the word "password" in common configuration files
+findstr /si password *.xml *.ini *.txt *.config *.conf
+findstr /si credential *.xml *.ini *.txt *.config *.conf
+
+# More targeted search for credentials in specific directories
+findstr /spin "password" C:\Users\*.txt C:\Users\*.ini C:\Users\*.xml
+findstr /spin "password" C:\inetpub\*.config C:\Program Files\*.config
+
+# Find configuration files that might contain credentials
+dir /s /b web.config
+dir /s /b php.ini
+dir /s /b wp-config.php
+dir /s /b *credential*
+
 # Create directory
 mkdir NewFolder
 
