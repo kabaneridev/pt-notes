@@ -9,18 +9,15 @@
 * [📘 CPTS Master Guide](CPTS-PREP/README.md)
 * [🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)
 * [🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)
+* [📚 Host-Based Enumeration Index](CPTS-PREP/host-based-enumeration.md)
 
-<details>
-<summary>🗄️ Database Services</summary>
+#### 🗄️ Database Services
 
 * [MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)
 * [MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)
 * [Oracle TNS Enumeration](CPTS-PREP/databases/oracle-enumeration.md)
 
-</details>
-
-<details>
-<summary>📁 Network Services</summary>
+#### 📁 Network Services
 
 * [FTP Enumeration](CPTS-PREP/services/ftp-enumeration.md)
 * [SMB Enumeration](CPTS-PREP/services/smb-enumeration.md)
@@ -30,35 +27,21 @@
 * [SNMP Enumeration](CPTS-PREP/services/snmp-enumeration.md)
 * [IPMI Enumeration](CPTS-PREP/services/ipmi-enumeration.md)
 
-</details>
-
-<details>
-<summary>🖥️ Remote Management</summary>
+#### 🖥️ Remote Management
 
 * [Remote Management Overview](CPTS-PREP/remote-management/remote-management.md)
 * [Linux Remote Protocols](CPTS-PREP/remote-management/linux-remote-protocols.md)
 * [Windows Remote Protocols](CPTS-PREP/remote-management/windows-remote-protocols.md)
-
-</details>
-
-* [📚 Host-Based Enumeration Index](CPTS-PREP/host-based-enumeration.md)
 
 ### ✅ PJPT - Completed
 
 * [📋 PJPT Master Guide](PJPT-prep/README.md)
 * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
 * [✅ Master Checklist](PJPT-prep/PJPT-MASTER-CHECKLIST.md)
-
-<details>
-<summary>📊 Mind Maps & Attack Flows</summary>
-
 * [Attack Flow Diagram](PJPT-prep/PJPT-GitBook-MindMap.md)
 * [Techniques Mind Map](PJPT-prep/PJPT-GitBook-Techniques-Map.md)
 
-</details>
-
-<details>
-<summary>🎯 Active Directory Techniques</summary>
+#### 🎯 Active Directory Techniques
 
 * [LLMNR Poisoning](PJPT-prep/llmnr-poisoning.md)
 * [Kerberoasting](PJPT-prep/kerberoasting.md)
@@ -79,16 +62,11 @@
 * [Post-Compromise Strategy](PJPT-prep/post-compromise-attack-strategy.md)
 * [Post-Domain Strategy](PJPT-prep/post-domain-compromise-strategy.md)
 
-</details>
-
-<details>
-<summary>🌐 Web & Wireless</summary>
+#### 🌐 Web & Wireless
 
 * [SQL Injection Techniques](PJPT-prep/sql-injection-techniques.md)
 * [WPA2 PSK Cracking](PJPT-prep/wpa2-psk-cracking.md)
 * [Initial Internal Strategy](PJPT-prep/initial-internal-attack-strategy.md)
-
-</details>
 
 ---
 
