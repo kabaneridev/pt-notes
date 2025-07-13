@@ -8,11 +8,11 @@
   * [🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)
   * [🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)
   * [📚 Host-Based Enumeration Index](CPTS-PREP/host-based-enumeration.md)
-  * [🗄️ Database Services](CPTS-PREP/databases/mysql-enumeration.md)
+  * 🗄️ Database Services
     * [MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)
     * [MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)
     * [Oracle TNS Enumeration](CPTS-PREP/databases/oracle-enumeration.md)
-  * [📁 Network Services](CPTS-PREP/services/ftp-enumeration.md)
+  * 📁 Network Services
     * [FTP Enumeration](CPTS-PREP/services/ftp-enumeration.md)
     * [SMB Enumeration](CPTS-PREP/services/smb-enumeration.md)
     * [NFS Enumeration](CPTS-PREP/services/nfs-enumeration.md)
@@ -20,7 +20,7 @@
     * [Email Services (IMAP/POP3)](CPTS-PREP/services/email-enumeration.md)
     * [SNMP Enumeration](CPTS-PREP/services/snmp-enumeration.md)
     * [IPMI Enumeration](CPTS-PREP/services/ipmi-enumeration.md)
-  * [🖥️ Remote Management](CPTS-PREP/remote-management/remote-management.md)
+  * 🖥️ Remote Management
     * [Remote Management Overview](CPTS-PREP/remote-management/remote-management.md)
     * [Linux Remote Protocols](CPTS-PREP/remote-management/linux-remote-protocols.md)
     * [Windows Remote Protocols](CPTS-PREP/remote-management/windows-remote-protocols.md)
@@ -28,10 +28,10 @@
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
   * [✅ Master Checklist](PJPT-prep/PJPT-MASTER-CHECKLIST.md)
-  * [📊 Mind Maps & Attack Flows](PJPT-prep/PJPT-GitBook-MindMap.md)
+  * 📊 Mind Maps & Attack Flows
     * [Attack Flow Diagram](PJPT-prep/PJPT-GitBook-MindMap.md)
     * [Techniques Mind Map](PJPT-prep/PJPT-GitBook-Techniques-Map.md)
-  * [🎯 Active Directory Techniques](PJPT-prep/llmnr-poisoning.md)
+  * 🎯 Active Directory Techniques
     * [LLMNR Poisoning](PJPT-prep/llmnr-poisoning.md)
     * [Kerberoasting](PJPT-prep/kerberoasting.md)
     * [GPP/cPassword Attacks](PJPT-prep/gpp-cpassword-attacks.md)
@@ -44,7 +44,7 @@
     * [NTDS.dit Extraction](PJPT-prep/ntds-dit-extraction.md)
     * [Windows Persistence](PJPT-prep/windows-persistence-techniques.md)
     * [Post-Compromise Strategy](PJPT-prep/post-compromise-attack-strategy.md)
-  * [🌐 Web & Wireless](PJPT-prep/sql-injection-techniques.md)
+  * 🌐 Web & Wireless
     * [SQL Injection Techniques](PJPT-prep/sql-injection-techniques.md)
     * [WPA2 PSK Cracking](PJPT-prep/wpa2-psk-cracking.md)
 
