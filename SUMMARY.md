@@ -6,7 +6,6 @@
 
 * [🎯 CPTS - In Progress](CPTS-PREP/README.md)
   * [🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)
-  * [🕷️ Web Application Information Gathering](CPTS-PREP/web-information-gathering.md)
   * [🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)
   * 🗄️ Database Services
     * [MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)
@@ -24,6 +23,10 @@
     * [Remote Management Overview](CPTS-PREP/remote-management/remote-management.md)
     * [Linux Remote Protocols](CPTS-PREP/remote-management/linux-remote-protocols.md)
     * [Windows Remote Protocols](CPTS-PREP/remote-management/windows-remote-protocols.md)
+  * 🕷️ Web Enumeration
+    * [Web Information Gathering](CPTS-PREP/web-enumeration/web-information-gathering.md)
+    * [Subdomain Enumeration](CPTS-PREP/web-enumeration/subdomain-enumeration.md)
+    * [Web Application Enumeration](CPTS-PREP/web-enumeration/web-application-enumeration.md)
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
