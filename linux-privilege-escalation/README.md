@@ -12,10 +12,10 @@ Privilege Escalation refers to the process of exploiting misconfigurations, know
 
 ## Techniques Covered
 
-- [Enumeration](enumeration.md) - System reconnaissance to identify potential attack vectors
-- [Programs, Jobs and Services](programs-jobs-and-services.md) - Exploiting misconfigured services, cron jobs, and SUID binaries
-- [Environment Variables Abuse](environment-variables-abuse.md) - PATH variable, LD_PRELOAD and other issues
-- [Persistence](persistence.md) - Maintaining access after gaining elevated privileges
+- [Enumeration](./enumeration.md) - System reconnaissance to identify potential attack vectors
+- [Programs, Jobs and Services](./programs-jobs-and-services.md) - Exploiting misconfigured services, cron jobs, and SUID binaries
+- [Environment Variables Abuse](./environment-variables-abuse.md) - PATH variable, LD_PRELOAD and other issues
+- [Persistence](./persistence.md) - Maintaining access after gaining elevated privileges
 
 ## Table of Contents
 

@@ -4,16 +4,16 @@ This section covers techniques, tools, and methods to escalate privileges on Win
 
 ## Key Areas Covered
 
-- [Enumeration](enumeration.md) - Collecting system information for privilege escalation vectors
-- [Credential Hunting](credential-hunting.md) - Finding stored passwords and credentials 
-- [Service Exploitation](service-exploitation.md) - Exploiting vulnerable services and misconfigurations
-- [Token Impersonation](token-impersonation.md) - Leveraging Windows token privileges
-- [Registry Exploits](registry-exploits.md) - Exploiting registry-based vulnerabilities
-- [Scheduled Tasks](scheduled-tasks.md) - Exploiting scheduled tasks and jobs
-- [Kernel Exploits](kernel-exploits.md) - Using Windows kernel vulnerabilities
-- [UAC Bypass](uac-bypass.md) - Bypassing User Account Control
-- [Windows Persistence](persistence.md) - Maintaining access to compromised systems
-- [Windows Privilege Escalation Checklist](checklist.md) - Comprehensive checklist of attack vectors
+- [Enumeration](./enumeration.md) - Collecting system information for privilege escalation vectors
+- [Credential Hunting](./credential-hunting.md) - Finding stored passwords and credentials 
+- [Service Exploitation](./service-exploitation.md) - Exploiting vulnerable services and misconfigurations
+- [Token Impersonation](./token-impersonation.md) - Leveraging Windows token privileges
+- [Registry Exploits](./registry-exploits.md) - Exploiting registry-based vulnerabilities
+- [Scheduled Tasks](./scheduled-tasks.md) - Exploiting scheduled tasks and jobs
+- [Kernel Exploits](./kernel-exploits.md) - Using Windows kernel vulnerabilities
+- [UAC Bypass](./uac-bypass.md) - Bypassing User Account Control
+- [Windows Persistence](./persistence.md) - Maintaining access to compromised systems
+- [Windows Privilege Escalation Checklist](./checklist.md) - Comprehensive checklist of attack vectors
 
 ## Automated Tools
 
