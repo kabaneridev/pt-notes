@@ -12,7 +12,7 @@
 ### 🕷️ Web Application Information Gathering
 * [🌐 Subdomain Enumeration & DNS Discovery](web-enumeration/subdomain-enumeration.md)
 * [🔧 Web Application Enumeration](web-enumeration/web-application-enumeration.md)
-* [📋 Web Reconnaissance Overview](web-enumeration/README.md)
+* [📋 Web Information Gathering Overview](web-enumeration/information-gathering.md)
 
 ### 🗄️ Database Services
 * [🔍 MySQL Enumeration](databases/mysql-enumeration.md)
