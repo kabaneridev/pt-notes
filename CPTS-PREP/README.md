@@ -12,8 +12,11 @@ This folder contains comprehensive notes and resources for preparing for the CPT
 CPTS-PREP/
 ├── README.md                           # This overview file
 ├── footprinting.md                     # Infrastructure Based Enumeration (Domain + Cloud + DNS)
-├── web-information-gathering.md        # Web Application Information Gathering
 ├── firewall-evasion.md                 # Firewall and IDS/IPS Evasion techniques
+├── web-enumeration/                    # Web application enumeration guides
+│   ├── web-information-gathering.md    # Web application information gathering overview
+│   ├── subdomain-enumeration.md        # DNS enumeration and subdomain discovery
+│   └── web-application-enumeration.md  # Directory enumeration and virtual hosts
 ├── databases/                          # Database enumeration guides
 │   ├── mysql-enumeration.md            # MySQL service enumeration
 │   ├── mssql-enumeration.md            # Microsoft SQL Server enumeration
@@ -60,6 +63,11 @@ CPTS-PREP/
 - **[Linux Remote Protocols](./remote-management/linux-remote-protocols.md)** - SSH, Rsync, R-Services enumeration
 - **[Windows Remote Protocols](./remote-management/windows-remote-protocols.md)** - RDP, WinRM, WMI testing
 
+**🕷️ Web Enumeration:**
+- **[Web Information Gathering](./web-enumeration/web-information-gathering.md)** - Overview and quick start guide for web reconnaissance
+- **[Subdomain Enumeration](./web-enumeration/subdomain-enumeration.md)** - DNS enumeration and subdomain discovery techniques
+- **[Web Application Enumeration](./web-enumeration/web-application-enumeration.md)** - Directory enumeration, virtual hosts, and web application testing
+
 #### **🌐 [Infrastructure Enumeration](./footprinting.md)**
 *Domain and cloud infrastructure reconnaissance*
 
@@ -69,13 +77,6 @@ CPTS-PREP/
 - Cloud Service Identification
 - Certificate Transparency Analysis
 - Subdomain Discovery
-
-#### **🕷️ Web Application Information Gathering**
-*Web application-specific reconnaissance and enumeration*
-
-- **[Web Information Gathering](./web-enumeration/web-information-gathering.md)** - Overview and quick start guide for web reconnaissance
-- **[Subdomain Enumeration](./web-enumeration/subdomain-enumeration.md)** - DNS enumeration and subdomain discovery techniques
-- **[Web Application Enumeration](./web-enumeration/web-application-enumeration.md)** - Directory enumeration, virtual hosts, and web application testing
 
 #### **🛡️ [Firewall Evasion](./firewall-evasion.md)**
 *Techniques for bypassing security controls*
