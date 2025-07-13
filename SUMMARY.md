@@ -6,6 +6,7 @@
 
 * [🎯 CPTS - In Progress](CPTS-PREP/README.md)
   * [🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)
+  * [🕷️ Web Application Information Gathering](CPTS-PREP/web-information-gathering.md)
   * [🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)
   * 🗄️ Database Services
     * [MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)

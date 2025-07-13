@@ -11,8 +11,9 @@ This folder contains comprehensive notes and resources for preparing for the CPT
 ```
 CPTS-PREP/
 ├── README.md                           # This overview file
-├── firewall-evasion.md                 # Firewall and IDS/IPS Evasion techniques
 ├── footprinting.md                     # Infrastructure Based Enumeration (Domain + Cloud + DNS)
+├── web-information-gathering.md        # Web Application Information Gathering
+├── firewall-evasion.md                 # Firewall and IDS/IPS Evasion techniques
 ├── databases/                          # Database enumeration guides
 │   ├── mysql-enumeration.md            # MySQL service enumeration
 │   ├── mssql-enumeration.md            # Microsoft SQL Server enumeration
@@ -69,6 +70,20 @@ CPTS-PREP/
 - Certificate Transparency Analysis
 - Subdomain Discovery
 
+#### **🕷️ [Web Application Information Gathering](./web-information-gathering.md)**
+*Web application-specific reconnaissance and enumeration*
+
+**Topics Covered:**
+- Technology Stack Identification (whatweb, Wappalyzer)
+- Directory & File Enumeration (gobuster, ffuf, dirb)
+- Parameter Discovery (Arjun, ffuf)
+- Virtual Host Discovery
+- API Enumeration and Documentation
+- JavaScript Analysis and Endpoint Extraction
+- CMS-Specific Enumeration (WordPress, Joomla, Drupal)
+- Security Headers Analysis
+- WAF Detection and Bypass Techniques
+
 #### **🛡️ [Firewall Evasion](./firewall-evasion.md)**
 *Techniques for bypassing security controls*
 
@@ -83,7 +98,8 @@ CPTS-PREP/
 ## **Key Features**
 
 ### **🎯 Comprehensive Coverage**
-- **25+ Service Types** - Complete enumeration guides for all major services
+- **30+ Service Types** - Complete enumeration guides for all major services
+- **Web Application Focus** - Dedicated web reconnaissance and enumeration
 - **CVE References** - Known vulnerabilities with exploitation examples
 - **HTB Academy Style** - Lab questions and practical examples
 - **Real-World Scenarios** - Practical penetration testing methodologies
