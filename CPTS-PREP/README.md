@@ -70,21 +70,12 @@ CPTS-PREP/
 - Certificate Transparency Analysis
 - Subdomain Discovery
 
-#### **🕷️ [Web Application Information Gathering](./web-enumeration/web-information-gathering.md)**
+#### **🕷️ Web Application Information Gathering**
 *Web application-specific reconnaissance and enumeration*
 
-**Topics Covered:**
-- WHOIS Information Gathering and Analysis
-- DNS Enumeration and Zone Transfer Attempts
-- Technology Stack Identification (whatweb, Wappalyzer)
-- Directory & File Enumeration (gobuster, ffuf, dirb)
-- Parameter Discovery (Arjun, ffuf)
-- Virtual Host Discovery
-- API Enumeration and Documentation
-- JavaScript Analysis and Endpoint Extraction
-- CMS-Specific Enumeration (WordPress, Joomla, Drupal)
-- Security Headers Analysis
-- WAF Detection and Bypass Techniques
+- **[Web Information Gathering](./web-enumeration/web-information-gathering.md)** - Overview and quick start guide for web reconnaissance
+- **[Subdomain Enumeration](./web-enumeration/subdomain-enumeration.md)** - DNS enumeration and subdomain discovery techniques
+- **[Web Application Enumeration](./web-enumeration/web-application-enumeration.md)** - Directory enumeration, virtual hosts, and web application testing
 
 #### **🛡️ [Firewall Evasion](./firewall-evasion.md)**
 *Techniques for bypassing security controls*
