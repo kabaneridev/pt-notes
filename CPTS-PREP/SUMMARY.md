@@ -9,6 +9,11 @@
 ### 🌐 Infrastructure Enumeration
 * [🔍 Footprinting](footprinting.md)
 
+### 🕷️ Web Application Information Gathering
+* [📋 Web Reconnaissance Overview](web-enumeration/README.md)
+* [🌐 Subdomain Enumeration & DNS Discovery](web-enumeration/subdomain-enumeration.md)
+* [🔧 Web Application Enumeration](web-enumeration/web-application-enumeration.md)
+
 ### 🗄️ Database Services
 * [🔍 MySQL Enumeration](databases/mysql-enumeration.md)
 * [🏢 MSSQL Enumeration](databases/mssql-enumeration.md)
@@ -36,6 +41,12 @@
 ---
 
 ## 📖 Quick Reference
+
+### 🕷️ Web Application Information Gathering
+* **DNS Tools** - dig, dnsenum, amass, puredns for subdomain discovery
+* **Web Enumeration** - gobuster, ffuf, whatweb for content discovery
+* **CMS Tools** - wpscan, joomscan, droopescan for specific platforms
+* **Parameter Discovery** - arjun, paramspider, ffuf for hidden parameters
 
 ### 🔧 Database Enumeration
 * **MySQL** - Port 3306, default credentials, SQL injection
@@ -65,6 +76,7 @@
 * Firewall and IDS/IPS Evasion
 * Footprinting
 * Host-Based Enumeration
+* Web Application Information Gathering
 
 ### 🔄 In Progress
 * Vulnerability Assessment

@@ -70,7 +70,7 @@ CPTS-PREP/
 - Certificate Transparency Analysis
 - Subdomain Discovery
 
-#### **🕷️ [Web Application Information Gathering](./web-information-gathering.md)**
+#### **🕷️ [Web Application Information Gathering](./web-enumeration/README.md)**
 *Web application-specific reconnaissance and enumeration*
 
 **Topics Covered:**
