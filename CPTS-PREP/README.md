@@ -41,25 +41,25 @@ CPTS-PREP/
 *Complete service enumeration methodology organized by categories*
 
 **🗄️ Database Services:**
-- **[MySQL Enumeration](databases/mysql-enumeration.md)** - MySQL service testing, authentication, and exploitation
-- **[MSSQL Enumeration](databases/mssql-enumeration.md)** - Microsoft SQL Server enumeration and attacks
-- **[Oracle TNS Enumeration](databases/oracle-enumeration.md)** - Oracle database service testing
+- **[MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)** - MySQL service testing, authentication, and exploitation
+- **[MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)** - Microsoft SQL Server enumeration and attacks
+- **[Oracle TNS Enumeration](CPTS-PREP/databases/oracle-enumeration.md)** - Oracle database service testing
 
 **📁 Network Services:**
-- **[FTP Enumeration](services/ftp-enumeration.md)** - File Transfer Protocol testing and exploitation
-- **[SMB Enumeration](services/smb-enumeration.md)** - SMB share enumeration, authentication testing, and CVE exploitation
-- **[NFS Enumeration](services/nfs-enumeration.md)** - Network File System testing and security assessment
-- **[SMTP Enumeration](services/smtp-enumeration.md)** - Mail server testing and user enumeration
-- **[Email Services](services/email-enumeration.md)** - IMAP/POP3 enumeration and certificate analysis
-- **[SNMP Enumeration](services/snmp-enumeration.md)** - Network management protocol testing and information gathering
-- **[IPMI Enumeration](services/ipmi-enumeration.md)** - Hardware management interface testing and hash extraction
+- **[FTP Enumeration](CPTS-PREP/services/ftp-enumeration.md)** - File Transfer Protocol testing and exploitation
+- **[SMB Enumeration](CPTS-PREP/services/smb-enumeration.md)** - SMB share enumeration, authentication testing, and CVE exploitation
+- **[NFS Enumeration](CPTS-PREP/services/nfs-enumeration.md)** - Network File System testing and security assessment
+- **[SMTP Enumeration](CPTS-PREP/services/smtp-enumeration.md)** - Mail server testing and user enumeration
+- **[Email Services](CPTS-PREP/services/email-enumeration.md)** - IMAP/POP3 enumeration and certificate analysis
+- **[SNMP Enumeration](CPTS-PREP/services/snmp-enumeration.md)** - Network management protocol testing and information gathering
+- **[IPMI Enumeration](CPTS-PREP/services/ipmi-enumeration.md)** - Hardware management interface testing and hash extraction
 
 **🖥️ Remote Management:**
-- **[Remote Management Overview](remote-management/remote-management.md)** - Overview of remote access protocols
-- **[Linux Remote Protocols](remote-management/linux-remote-protocols.md)** - SSH, Rsync, R-Services enumeration
-- **[Windows Remote Protocols](remote-management/windows-remote-protocols.md)** - RDP, WinRM, WMI testing
+- **[Remote Management Overview](CPTS-PREP/remote-management/remote-management.md)** - Overview of remote access protocols
+- **[Linux Remote Protocols](CPTS-PREP/remote-management/linux-remote-protocols.md)** - SSH, Rsync, R-Services enumeration
+- **[Windows Remote Protocols](CPTS-PREP/remote-management/windows-remote-protocols.md)** - RDP, WinRM, WMI testing
 
-#### **🌐 [Infrastructure Enumeration](footprinting.md)**
+#### **🌐 [Infrastructure Enumeration](CPTS-PREP/footprinting.md)**
 *Domain and cloud infrastructure reconnaissance*
 
 **Topics Covered:**
@@ -69,7 +69,7 @@ CPTS-PREP/
 - Certificate Transparency Analysis
 - Subdomain Discovery
 
-#### **🛡️ [Firewall Evasion](firewall-evasion.md)**
+#### **🛡️ [Firewall Evasion](CPTS-PREP/firewall-evasion.md)**
 *Techniques for bypassing security controls*
 
 **Techniques Covered:**
@@ -98,46 +98,61 @@ CPTS-PREP/
 
 ## **Study Resources**
 
-### **📚 Official HTB Academy**
-- [HTB Academy CPTS Path](https://academy.hackthebox.com/path/preview/penetration-tester)
-- [HTB Academy Modules](https://academy.hackthebox.com/modules)
+### **📖 Essential Reading**
+- **HTB Academy CPTS Path** - Official certification curriculum
+- **PTES Standard** - Penetration Testing Execution Standard
+- **NIST Guidelines** - Cybersecurity framework references
+- **OWASP Top 10** - Web application security fundamentals
 
-### **📖 Additional References**
-- [PTES (Penetration Testing Execution Standard)](http://www.pentest-standard.org/)
-- [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
-- [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+### **🛠️ Required Tools**
+- **Nmap** - Network discovery and security auditing
+- **Burp Suite** - Web application security testing
+- **Metasploit** - Penetration testing framework
+- **Bloodhound** - Active Directory environment analysis
+- **Custom Scripts** - Automation and efficiency tools
 
-### **🔧 Tools and Utilities**
-- [Nmap Reference](../tools/nmap.md)
-- [Linux Commands](../utilities-scripts-and-payloads/linux-commands.md)
-- [File Transfer Techniques](../utilities-scripts-and-payloads/file-transfers.md)
-
----
-
-## **Exam Preparation Strategy**
-
-### **📝 Skills Assessment Checklist**
-- [ ] Complete all HTB Academy module exercises
-- [ ] Practice on relevant HTB machines
-- [ ] Document personal methodologies
-- [ ] Create attack flow diagrams
-- [ ] Practice time management
-
-### **🎯 Focus Areas**
-1. **Systematic Enumeration** - Methodical approach to service discovery
-2. **Exploitation Techniques** - Common attack vectors and payloads
-3. **Post-Exploitation** - Persistence and lateral movement
-4. **Documentation** - Clear reporting and evidence collection
+### **🏆 Certification Path**
+1. **Study Phase** - Review all enumeration guides systematically
+2. **Lab Practice** - Complete HTB Academy lab exercises
+3. **Exam Preparation** - Review methodologies and checklists
+4. **Certification Exam** - Apply knowledge in simulated environment
 
 ---
 
-## **Notes Structure**
+## **📚 Navigation Guide**
 
-Each enumeration guide follows this format:
-- **📖 Overview:** Service fundamentals and key characteristics
-- **🔧 Enumeration Techniques:** Step-by-step procedures and commands
-- **⚙️ Tools:** Nmap, specialized tools, and custom scripts
-- **💡 Practical Examples:** HTB Academy style lab questions and scenarios
-- **🔬 Security Assessment:** Vulnerability identification and exploitation
-- **🛡️ Defensive Measures:** Hardening and protection recommendations
-- **📚 CVE References:** Known vulnerabilities with detection and exploitation
+### **For Beginners**
+- Start with **[Infrastructure Enumeration](CPTS-PREP/footprinting.md)** to understand reconnaissance
+- Progress to **[FTP Enumeration](CPTS-PREP/services/ftp-enumeration.md)** for basic service analysis
+- Continue with **[SMB Enumeration](CPTS-PREP/services/smb-enumeration.md)** for Windows environments
+
+### **For Intermediate Users**
+- Focus on **[Database Services](CPTS-PREP/databases/mysql-enumeration.md)** for web application testing
+- Master **[Remote Management](CPTS-PREP/remote-management/remote-management.md)** protocols
+- Practice **[Firewall Evasion](CPTS-PREP/firewall-evasion.md)** techniques
+
+### **For Advanced Users**
+- Combine multiple enumeration techniques
+- Develop custom automation scripts
+- Create comprehensive assessment methodologies
+- Contribute to the documentation
+
+---
+
+## **🔄 Update Log**
+
+### **Latest Changes**
+- **2024-07-13**: Reorganized massive host-based enumeration into focused service guides
+- **2024-07-13**: Added CVE references and enhanced security assessment sections
+- **2024-07-13**: Improved GitBook navigation and cross-references
+- **2024-07-13**: Enhanced practical examples and HTB Academy lab integration
+
+### **Next Steps**
+- [ ] Add more CVE references and exploitation examples
+- [ ] Include additional service enumeration guides
+- [ ] Develop interactive checklists and automation tools
+- [ ] Create video tutorials for complex techniques
+
+---
+
+*This CPTS preparation guide is designed to provide comprehensive coverage of penetration testing methodologies while maintaining practical applicability for real-world security assessments.*
