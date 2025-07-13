@@ -41,25 +41,25 @@ CPTS-PREP/
 *Complete service enumeration methodology organized by categories*
 
 **🗄️ Database Services:**
-- **[MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)** - MySQL service testing, authentication, and exploitation
-- **[MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)** - Microsoft SQL Server enumeration and attacks
-- **[Oracle TNS Enumeration](CPTS-PREP/databases/oracle-enumeration.md)** - Oracle database service testing
+- **[MySQL Enumeration](./databases/mysql-enumeration.md)** - MySQL service testing, authentication, and exploitation
+- **[MSSQL Enumeration](./databases/mssql-enumeration.md)** - Microsoft SQL Server enumeration and attacks
+- **[Oracle TNS Enumeration](./databases/oracle-enumeration.md)** - Oracle database service testing
 
 **📁 Network Services:**
-- **[FTP Enumeration](CPTS-PREP/services/ftp-enumeration.md)** - File Transfer Protocol testing and exploitation
-- **[SMB Enumeration](CPTS-PREP/services/smb-enumeration.md)** - SMB share enumeration, authentication testing, and CVE exploitation
-- **[NFS Enumeration](CPTS-PREP/services/nfs-enumeration.md)** - Network File System testing and security assessment
-- **[SMTP Enumeration](CPTS-PREP/services/smtp-enumeration.md)** - Mail server testing and user enumeration
-- **[Email Services](CPTS-PREP/services/email-enumeration.md)** - IMAP/POP3 enumeration and certificate analysis
-- **[SNMP Enumeration](CPTS-PREP/services/snmp-enumeration.md)** - Network management protocol testing and information gathering
-- **[IPMI Enumeration](CPTS-PREP/services/ipmi-enumeration.md)** - Hardware management interface testing and hash extraction
+- **[FTP Enumeration](./services/ftp-enumeration.md)** - File Transfer Protocol testing and exploitation
+- **[SMB Enumeration](./services/smb-enumeration.md)** - SMB share enumeration, authentication testing, and CVE exploitation
+- **[NFS Enumeration](./services/nfs-enumeration.md)** - Network File System testing and security assessment
+- **[SMTP Enumeration](./services/smtp-enumeration.md)** - Mail server testing and user enumeration
+- **[Email Services](./services/email-enumeration.md)** - IMAP/POP3 enumeration and certificate analysis
+- **[SNMP Enumeration](./services/snmp-enumeration.md)** - Network management protocol testing and information gathering
+- **[IPMI Enumeration](./services/ipmi-enumeration.md)** - Hardware management interface testing and hash extraction
 
 **🖥️ Remote Management:**
-- **[Remote Management Overview](CPTS-PREP/remote-management/remote-management.md)** - Overview of remote access protocols
-- **[Linux Remote Protocols](CPTS-PREP/remote-management/linux-remote-protocols.md)** - SSH, Rsync, R-Services enumeration
-- **[Windows Remote Protocols](CPTS-PREP/remote-management/windows-remote-protocols.md)** - RDP, WinRM, WMI testing
+- **[Remote Management Overview](./remote-management/remote-management.md)** - Overview of remote access protocols
+- **[Linux Remote Protocols](./remote-management/linux-remote-protocols.md)** - SSH, Rsync, R-Services enumeration
+- **[Windows Remote Protocols](./remote-management/windows-remote-protocols.md)** - RDP, WinRM, WMI testing
 
-#### **🌐 [Infrastructure Enumeration](CPTS-PREP/footprinting.md)**
+#### **🌐 [Infrastructure Enumeration](./footprinting.md)**
 *Domain and cloud infrastructure reconnaissance*
 
 **Topics Covered:**
@@ -69,7 +69,7 @@ CPTS-PREP/
 - Certificate Transparency Analysis
 - Subdomain Discovery
 
-#### **🛡️ [Firewall Evasion](CPTS-PREP/firewall-evasion.md)**
+#### **🛡️ [Firewall Evasion](./firewall-evasion.md)**
 *Techniques for bypassing security controls*
 
 **Techniques Covered:**
@@ -117,41 +117,6 @@ CPTS-PREP/
 3. **Exam Preparation** - Review methodologies and checklists
 4. **Certification Exam** - Apply knowledge in simulated environment
 
----
-
-## **📚 Navigation Guide**
-
-### **For Beginners**
-- Start with **[Infrastructure Enumeration](CPTS-PREP/footprinting.md)** to understand reconnaissance
-- Progress to **[FTP Enumeration](CPTS-PREP/services/ftp-enumeration.md)** for basic service analysis
-- Continue with **[SMB Enumeration](CPTS-PREP/services/smb-enumeration.md)** for Windows environments
-
-### **For Intermediate Users**
-- Focus on **[Database Services](CPTS-PREP/databases/mysql-enumeration.md)** for web application testing
-- Master **[Remote Management](CPTS-PREP/remote-management/remote-management.md)** protocols
-- Practice **[Firewall Evasion](CPTS-PREP/firewall-evasion.md)** techniques
-
-### **For Advanced Users**
-- Combine multiple enumeration techniques
-- Develop custom automation scripts
-- Create comprehensive assessment methodologies
-- Contribute to the documentation
-
----
-
-## **🔄 Update Log**
-
-### **Latest Changes**
-- **2024-07-13**: Reorganized massive host-based enumeration into focused service guides
-- **2024-07-13**: Added CVE references and enhanced security assessment sections
-- **2024-07-13**: Improved GitBook navigation and cross-references
-- **2024-07-13**: Enhanced practical examples and HTB Academy lab integration
-
-### **Next Steps**
-- [ ] Add more CVE references and exploitation examples
-- [ ] Include additional service enumeration guides
-- [ ] Develop interactive checklists and automation tools
-- [ ] Create video tutorials for complex techniques
 
 ---
 
