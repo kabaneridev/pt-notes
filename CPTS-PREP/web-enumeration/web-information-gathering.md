@@ -192,7 +192,7 @@ After completing web information gathering:
 4. **Reporting** - Document discoveries and recommendations
 
 **Related CPTS Guides:**
-- [Infrastructure Enumeration](./footprinting.md)
-- [Service-Specific Enumeration](./services/)
-- [Database Enumeration](./databases/)
-- [Remote Management](./remote-management/) 
+- [Infrastructure Enumeration](../footprinting.md)
+- [Service-Specific Enumeration](../services/)
+- [Database Enumeration](../databases/)
+- [Remote Management](../remote-management/) 
