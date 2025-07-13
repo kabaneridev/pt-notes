@@ -4,6 +4,36 @@
 * [🔍 Information Gathering](information-gathering.md)
 * [📋 OSCP Tools Restrictions](oscp-tools-restrictions.md)
 
+## 🎯 CPTS Preparation
+
+* [🎯 CPTS Master Guide](CPTS-PREP/README.md)
+
+### 🌐 Infrastructure Enumeration
+* [🔍 Footprinting](CPTS-PREP/footprinting.md)
+* [🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)
+
+### 🗄️ Database Services
+* [🔍 MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)
+* [🏢 MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)
+* [⚡ Oracle TNS Enumeration](CPTS-PREP/databases/oracle-enumeration.md)
+
+### 📁 Network Services
+* [📂 FTP Enumeration](CPTS-PREP/services/ftp-enumeration.md)
+* [🔗 SMB Enumeration](CPTS-PREP/services/smb-enumeration.md)
+* [📁 NFS Enumeration](CPTS-PREP/services/nfs-enumeration.md)
+* [📧 SMTP Enumeration](CPTS-PREP/services/smtp-enumeration.md)
+* [📮 Email Services (IMAP/POP3)](CPTS-PREP/services/email-enumeration.md)
+* [📊 SNMP Enumeration](CPTS-PREP/services/snmp-enumeration.md)
+* [⚙️ IPMI Enumeration](CPTS-PREP/services/ipmi-enumeration.md)
+
+### 🖥️ Remote Management Protocols
+* [📋 Remote Management Overview](CPTS-PREP/remote-management/remote-management.md)
+* [🐧 Linux Remote Protocols](CPTS-PREP/remote-management/linux-remote-protocols.md)
+* [🪟 Windows Remote Protocols](CPTS-PREP/remote-management/windows-remote-protocols.md)
+
+### 🔍 Legacy Reference
+* [📚 Host-Based Enumeration Index](CPTS-PREP/host-based-enumeration.md)
+
 ## Linux
 
 * [Linux Privilege Escalation](linux-privilege-escalation/README.md)
@@ -45,7 +75,7 @@
 * [Windows Commands Cheatsheet](utilities-scripts-and-payloads/windows-commands.md)
 * [File Transfer Techniques](utilities-scripts-and-payloads/file-transfers.md)
 
-## 🎯 PJPT Preparation
+## ✅ PJPT Preparation (Completed)
 
 * [PJPT Master Checklist](PJPT-prep/README.md)
 * [📊 Mind Maps & Attack Flows](PJPT-prep/README.md)
