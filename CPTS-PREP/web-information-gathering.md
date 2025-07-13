@@ -97,6 +97,42 @@ whois example.com | grep -i "expiry\|expires"
 
 ## **DNS Enumeration & Analysis**
 
+### **DNS Tools Overview**
+
+| Tool | Key Features | Use Cases |
+|------|-------------|-----------|
+| **dig** | Versatile DNS lookup tool supporting various query types (A, MX, NS, TXT, etc.) with detailed output | Manual DNS queries, zone transfers, troubleshooting DNS issues, in-depth analysis |
+| **nslookup** | Simpler DNS lookup tool, primarily for A, AAAA, and MX records | Basic DNS queries, quick domain resolution checks |
+| **host** | Streamlined DNS lookup tool with concise output | Quick checks of A, AAAA, and MX records |
+| **dnsenum** | Automated DNS enumeration with dictionary attacks, brute-forcing, zone transfers | Discovering subdomains and gathering DNS information efficiently |
+| **fierce** | DNS reconnaissance and subdomain enumeration with recursive search and wildcard detection | User-friendly DNS reconnaissance, identifying subdomains and targets |
+| **dnsrecon** | Combines multiple DNS reconnaissance techniques with various output formats | Comprehensive DNS enumeration, subdomain discovery, record gathering |
+| **theHarvester** | OSINT tool gathering information from various sources, including DNS records | Collecting email addresses, employee information, domain-associated data |
+| **Online DNS Services** | User-friendly web interfaces for DNS lookups | Quick DNS lookups when command-line tools unavailable |
+
+### **The Domain Information Groper (dig)**
+
+The `dig` command is the most versatile and powerful utility for querying DNS servers. Its flexibility and detailed output make it the go-to choice for DNS reconnaissance.
+
+#### **Common dig Commands**
+
+| Command | Description |
+|---------|-------------|
+| `dig domain.com` | Performs default A record lookup for the domain |
+| `dig domain.com A` | Retrieves IPv4 address (A record) associated with domain |
+| `dig domain.com AAAA` | Retrieves IPv6 address (AAAA record) associated with domain |
+| `dig domain.com MX` | Finds mail servers (MX records) responsible for domain |
+| `dig domain.com NS` | Identifies authoritative name servers for domain |
+| `dig domain.com TXT` | Retrieves TXT records associated with domain |
+| `dig domain.com CNAME` | Retrieves canonical name (CNAME) record for domain |
+| `dig domain.com SOA` | Retrieves start of authority (SOA) record for domain |
+| `dig @1.1.1.1 domain.com` | Specifies specific name server to query (1.1.1.1) |
+| `dig +trace domain.com` | Shows full path of DNS resolution |
+| `dig -x 192.168.1.1` | Performs reverse lookup on IP to find hostname |
+| `dig +short domain.com` | Provides short, concise answer to query |
+| `dig +noall +answer domain.com` | Displays only answer section of query output |
+| `dig domain.com ANY` | Retrieves all available DNS records (many servers ignore this) |
+
 ### **Basic DNS Queries**
 ```bash
 # A records
@@ -118,6 +154,114 @@ dig example.com TXT
 dig example.com SOA
 ```
 
+### **Understanding dig Output**
+```bash
+# Example dig output for google.com
+kabaneridev@htb[/htb]$ dig google.com
+
+; <<>> DiG 9.18.24-0ubuntu0.22.04.1-Ubuntu <<>> google.com
+;; global options: +cmd
+;; Got answer:
+;; ->>HEADER<<- opcode: QUERY, status: NOERROR, id: 16449
+;; flags: qr rd ad; QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0
+;; WARNING: recursion requested but not available
+
+;; QUESTION SECTION:
+;google.com.                    IN      A
+
+;; ANSWER SECTION:
+google.com.             0       IN      A       142.251.47.142
+
+;; Query time: 0 msec
+;; SERVER: 172.23.176.1#53(172.23.176.1) (UDP)
+;; WHEN: Thu Jun 13 10:45:58 SAST 2024
+;; MSG SIZE  rcvd: 54
+```
+
+#### **Output Breakdown:**
+
+**Header Section:**
+- `opcode: QUERY, status: NOERROR, id: 16449` - Query type, success status, unique identifier
+- `flags: qr rd ad` - Query Response, Recursion Desired, Authentic Data flags
+- `QUERY: 1, ANSWER: 1, AUTHORITY: 0, ADDITIONAL: 0` - Number of entries in each section
+
+**Question Section:**
+- `google.com. IN A` - Query: "What is the IPv4 address (A record) for google.com?"
+
+**Answer Section:**
+- `google.com. 0 IN A 142.251.47.142` - IP address is 142.251.47.142, TTL is 0
+
+**Footer:**
+- `Query time: 0 msec` - Processing time
+- `SERVER: 172.23.176.1#53` - DNS server that provided the answer
+- `WHEN:` - Timestamp of query
+- `MSG SIZE rcvd: 54` - Size of DNS message received
+
+### **Quick DNS Queries**
+```bash
+# Short output only
+dig +short hackthebox.com
+# Output: 104.18.20.126
+#         104.18.21.126
+
+# Answer section only
+dig +noall +answer google.com
+
+# Specific query types
+dig +short google.com MX
+dig +short google.com NS
+dig +short google.com TXT
+```
+
+### **Advanced dig Techniques**
+```bash
+# Trace full DNS resolution path
+dig +trace google.com
+
+# Query specific DNS server
+dig @8.8.8.8 google.com A
+dig @1.1.1.1 google.com MX
+
+# Multiple query types in one command
+dig google.com A MX NS TXT
+
+# Check DNSSEC validation
+dig +dnssec google.com
+
+# TCP instead of UDP (for large responses)
+dig +tcp google.com TXT
+
+# No recursion (direct authoritative query)
+dig +norecurse @ns1.google.com google.com
+```
+
+### **Practical DNS Enumeration Examples**
+```bash
+# Complete domain reconnaissance
+domain="example.com"
+
+echo "=== Basic Records ==="
+dig +short $domain A
+dig +short $domain AAAA
+dig +short $domain MX
+dig +short $domain NS
+
+echo "=== TXT Records Analysis ==="
+dig +short $domain TXT | grep -E "(spf|dkim|dmarc)"
+
+echo "=== Mail Server Analysis ==="
+for mx in $(dig +short $domain MX | awk '{print $2}'); do
+  echo "Mail server: $mx"
+  dig +short $mx A
+done
+
+echo "=== Name Server Analysis ==="
+for ns in $(dig +short $domain NS); do
+  echo "Name server: $ns"
+  dig +short $ns A
+done
+```
+
 ### **DNS Zone Transfer Attempts**
 ```bash
 # Find name servers
@@ -133,6 +277,25 @@ for ns in $(dig +short example.com NS); do
   dig @$ns example.com AXFR
 done
 ```
+
+### **DNS Security Considerations**
+```bash
+# Check DNSSEC implementation
+dig +dnssec example.com
+
+# Verify DNSSEC chain
+dig +trace +dnssec example.com
+
+# Check for DNS over HTTPS (DoH)
+curl -H "Accept: application/dns-json" "https://1.1.1.1/dns-query?name=example.com&type=A"
+```
+
+⚠️ **Important Security Note:**
+- Some DNS servers can detect and block excessive queries
+- Always respect rate limits and use reasonable delays
+- Obtain proper authorization before extensive DNS reconnaissance
+- Consider using multiple DNS servers to distribute queries
+- Be aware that extensive querying may trigger security alerts
 
 ### **Reverse DNS Lookups**
 ```bash
@@ -155,6 +318,74 @@ for dns in 8.8.8.8 1.1.1.1 208.67.222.222; do
   echo "Testing $dns"
   dig @$dns example.com +short
 done
+```
+
+### **Automated DNS Enumeration Tools**
+
+#### **dnsenum - Comprehensive DNS Enumeration**
+```bash
+# Basic enumeration
+dnsenum example.com
+
+# With specific wordlist
+dnsenum --dnsserver 8.8.8.8 --enum example.com
+
+# Brute force subdomains
+dnsenum --subfile /usr/share/wordlists/dnsmap.txt example.com
+
+# Zone transfer attempts
+dnsenum --noreverse example.com
+
+# Output to file
+dnsenum -o dns_results.txt example.com
+```
+
+#### **dnsrecon - Advanced DNS Reconnaissance**
+```bash
+# Standard enumeration
+dnsrecon -d example.com
+
+# Brute force with custom wordlist
+dnsrecon -d example.com -D /usr/share/wordlists/dnsmap.txt -t brt
+
+# Zone transfer
+dnsrecon -d example.com -t axfr
+
+# Reverse lookup on IP range
+dnsrecon -r 192.168.1.0/24
+
+# Google enumeration
+dnsrecon -d example.com -t goo
+```
+
+#### **fierce - Subdomain Scanner**
+```bash
+# Basic subdomain enumeration
+fierce --domain example.com
+
+# Custom wordlist
+fierce --domain example.com --wordlist custom_subdomains.txt
+
+# Specific DNS server
+fierce --domain example.com --dns-servers 8.8.8.8
+
+# Output to file
+fierce --domain example.com > fierce_results.txt
+```
+
+#### **theHarvester - OSINT DNS Gathering**
+```bash
+# Search multiple sources
+theHarvester -d example.com -l 500 -b all
+
+# Specific sources
+theHarvester -d example.com -l 200 -b google,bing,yahoo
+
+# DNS brute force
+theHarvester -d example.com -c
+
+# Output formats
+theHarvester -d example.com -l 100 -b google -f results.xml
 ```
 
 ---
@@ -642,19 +873,36 @@ curl -X POST https://example.com/search -d "query=<script>alert(1)</script>"
 # Domain intelligence gathering
 whois inlanefreight.htb
 
-# DNS enumeration
+# Basic DNS enumeration with dig
 dig inlanefreight.htb A
 dig inlanefreight.htb MX
+dig inlanefreight.htb NS
 dig inlanefreight.htb TXT
 
-# Zone transfer attempt
-dig @ns1.inlanefreight.htb inlanefreight.htb AXFR
+# Detailed dig analysis
+dig +trace inlanefreight.htb
+dig +short inlanefreight.htb MX
+
+# Zone transfer attempts
+for ns in $(dig +short inlanefreight.htb NS); do
+  echo "Attempting zone transfer with $ns"
+  dig @$ns inlanefreight.htb AXFR
+done
+
+# Automated enumeration
+dnsenum inlanefreight.htb
+dnsrecon -d inlanefreight.htb
+
+# OSINT gathering
+theHarvester -d inlanefreight.htb -l 100 -b google
 
 # Expected analysis:
 # - Registration details and contact information
-# - Name server configuration
-# - Mail server identification
-# - TXT records for SPF/DKIM policies
+# - Name server configuration and vulnerabilities
+# - Mail server identification and security
+# - TXT records for SPF/DKIM/DMARC policies
+# - Subdomain discovery and enumeration
+# - Email addresses and employee information
 ```
 
 ### **Lab 2: Technology Stack Identification**
@@ -737,6 +985,10 @@ curl -H "Host: admin.inlanefreight.htb" http://94.237.49.166:58026
 |------|---------|--------------|
 | **whois** | Domain registration info | Initial domain intelligence |
 | **dig** | DNS enumeration | Zone transfers, record analysis |
+| **dnsenum** | Automated DNS enumeration | Comprehensive subdomain discovery |
+| **dnsrecon** | Advanced DNS reconnaissance | Multi-technique DNS enumeration |
+| **fierce** | Subdomain scanner | User-friendly subdomain discovery |
+| **theHarvester** | OSINT gathering | Email addresses, employee info |
 | **whatweb** | Technology detection | Initial reconnaissance |
 | **gobuster** | Directory/file discovery | Finding hidden content |
 | **ffuf** | Web fuzzing | Parameter/vhost discovery |
@@ -751,15 +1003,18 @@ curl -H "Host: admin.inlanefreight.htb" http://94.237.49.166:58026
 ## **Key Takeaways**
 
 1. **WHOIS data provides** fundamental domain intelligence and contact information
-2. **DNS enumeration** reveals infrastructure and potential zone transfer vulnerabilities
-3. **Web reconnaissance is different** from infrastructure enumeration
-4. **Technology identification** guides subsequent testing approaches
-5. **Directory enumeration** reveals hidden functionality and files
-6. **Parameter discovery** uncovers additional attack surface
-7. **JavaScript analysis** exposes client-side vulnerabilities
-8. **Virtual hosts** may contain additional applications
-9. **Security headers** indicate the security posture
-10. **CMS enumeration** requires specialized tools and techniques
+2. **DNS enumeration** reveals infrastructure and potential zone transfer vulnerabilities  
+3. **dig command** is the most versatile tool for manual DNS analysis and troubleshooting
+4. **Automated DNS tools** (dnsenum, dnsrecon, fierce) accelerate subdomain discovery
+5. **Rate limiting awareness** is crucial to avoid detection and blocking
+6. **Web reconnaissance is different** from infrastructure enumeration
+7. **Technology identification** guides subsequent testing approaches
+8. **Directory enumeration** reveals hidden functionality and files
+9. **Parameter discovery** uncovers additional attack surface
+10. **JavaScript analysis** exposes client-side vulnerabilities
+11. **Virtual hosts** may contain additional applications
+12. **Security headers** indicate the security posture
+13. **CMS enumeration** requires specialized tools and techniques
 
 ---
 
