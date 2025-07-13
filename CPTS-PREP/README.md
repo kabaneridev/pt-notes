@@ -74,6 +74,8 @@ CPTS-PREP/
 *Web application-specific reconnaissance and enumeration*
 
 **Topics Covered:**
+- WHOIS Information Gathering and Analysis
+- DNS Enumeration and Zone Transfer Attempts
 - Technology Stack Identification (whatweb, Wappalyzer)
 - Directory & File Enumeration (gobuster, ffuf, dirb)
 - Parameter Discovery (Arjun, ffuf)

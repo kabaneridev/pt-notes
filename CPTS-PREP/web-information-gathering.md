@@ -6,6 +6,159 @@ Web Application Information Gathering is a specialized phase of reconnaissance t
 
 ---
 
+## **WHOIS Information Gathering**
+
+### **Basic WHOIS Lookup**
+```bash
+# Basic WHOIS query
+whois example.com
+
+# WHOIS with specific server
+whois -h whois.internic.net example.com
+
+# Multiple domain lookup
+for domain in example.com google.com; do echo "=== $domain ==="; whois $domain; done
+```
+
+### **Key Information to Extract**
+```bash
+# Domain registration details
+whois example.com | grep -E "(Registrar|Creation Date|Registry Expiry|Updated Date)"
+
+# Name servers
+whois example.com | grep -i "name server"
+
+# Contact information
+whois example.com | grep -E "(Registrant|Admin|Tech)" -A 5
+
+# DNSSEC status
+whois example.com | grep -i dnssec
+```
+
+### **WHOIS Data Analysis**
+```bash
+# Extract email addresses
+whois example.com | grep -oE '[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}'
+
+# Extract phone numbers
+whois example.com | grep -oE '\+?[0-9]{1,4}?[-.\s]?\(?\d{1,3}\)?[-.\s]?\d{1,4}[-.\s]?\d{1,9}'
+
+# Extract organization names
+whois example.com | grep -i "organization\|registrant"
+
+# Check domain age
+whois example.com | grep -i "creation date"
+```
+
+### **Privacy Protection Detection**
+```bash
+# Common privacy services
+whois example.com | grep -iE "(whoisguard|privacy|proxy|domains by proxy|perfect privacy)"
+
+# Registrar privacy indication
+whois example.com | grep -i "redacted\|privacy\|proxy"
+```
+
+### **Historical WHOIS Data**
+```bash
+# Using online tools (manual process)
+# Visit: https://whois.domaintools.com/
+# Visit: https://who.is/whois-history/
+
+# Check for domain transfers
+whois example.com | grep -i "registrar\|updated date"
+```
+
+### **Subdomain WHOIS Analysis**
+```bash
+# Check WHOIS for discovered subdomains
+for sub in mail admin ftp api; do
+  echo "=== $sub.example.com ==="
+  whois $sub.example.com 2>/dev/null || echo "No WHOIS data"
+done
+
+# IP-based WHOIS for subdomains
+dig +short api.example.com | head -1 | xargs whois
+```
+
+### **Practical WHOIS Intelligence**
+```bash
+# Find related domains by registrant email
+whois example.com | grep -i "registrant.*email" | cut -d: -f2 | tr -d ' '
+
+# Check registrar patterns
+whois example.com | grep -i registrar
+
+# Domain expiration monitoring
+whois example.com | grep -i "expiry\|expires"
+```
+
+---
+
+## **DNS Enumeration & Analysis**
+
+### **Basic DNS Queries**
+```bash
+# A records
+dig example.com A
+
+# All records
+dig example.com ANY
+
+# MX records (mail servers)
+dig example.com MX
+
+# NS records (name servers)
+dig example.com NS
+
+# TXT records (SPF, DKIM, DMARC)
+dig example.com TXT
+
+# SOA record
+dig example.com SOA
+```
+
+### **DNS Zone Transfer Attempts**
+```bash
+# Find name servers
+dig example.com NS
+
+# Attempt zone transfer
+dig @ns1.example.com example.com AXFR
+dig @ns2.example.com example.com AXFR
+
+# Try all discovered name servers
+for ns in $(dig +short example.com NS); do
+  echo "Trying zone transfer with $ns"
+  dig @$ns example.com AXFR
+done
+```
+
+### **Reverse DNS Lookups**
+```bash
+# Reverse lookup for IP
+dig -x 1.2.3.4
+
+# Reverse lookup for IP range
+for i in {1..254}; do
+  dig -x 192.168.1.$i +short
+done | grep -v "^$"
+```
+
+### **DNS Cache Snooping**
+```bash
+# Check if domain is cached
+dig @8.8.8.8 example.com +norecurse
+
+# Try different DNS servers
+for dns in 8.8.8.8 1.1.1.1 208.67.222.222; do
+  echo "Testing $dns"
+  dig @$dns example.com +short
+done
+```
+
+---
+
 ## **Technology Stack Identification**
 
 ### **Wappalyzer (Browser Extension)**
@@ -484,7 +637,27 @@ curl -X POST https://example.com/search -d "query=<script>alert(1)</script>"
 
 ## **Practical HTB Academy Lab Examples**
 
-### **Lab 1: Technology Stack Identification**
+### **Lab 1: WHOIS and DNS Analysis**
+```bash
+# Domain intelligence gathering
+whois inlanefreight.htb
+
+# DNS enumeration
+dig inlanefreight.htb A
+dig inlanefreight.htb MX
+dig inlanefreight.htb TXT
+
+# Zone transfer attempt
+dig @ns1.inlanefreight.htb inlanefreight.htb AXFR
+
+# Expected analysis:
+# - Registration details and contact information
+# - Name server configuration
+# - Mail server identification
+# - TXT records for SPF/DKIM policies
+```
+
+### **Lab 2: Technology Stack Identification**
 ```bash
 # Identify the web server and version
 whatweb http://94.237.49.166:58026
@@ -498,7 +671,7 @@ whatweb http://94.237.49.166:58026
 # Follow-up enumeration based on identified technology
 ```
 
-### **Lab 2: Directory Discovery**
+### **Lab 3: Directory Discovery**
 ```bash
 # Discover hidden directories and files
 gobuster dir -u http://94.237.49.166:58026 -w /usr/share/wordlists/dirb/common.txt -x php,txt,html
@@ -510,7 +683,7 @@ gobuster dir -u http://94.237.49.166:58026 -w admin-panels.txt
 gobuster dir -u http://94.237.49.166:58026 -w backup-files.txt -x bak,backup,old,orig
 ```
 
-### **Lab 3: Virtual Host Discovery**
+### **Lab 4: Virtual Host Discovery**
 ```bash
 # Discover virtual hosts
 ffuf -u http://94.237.49.166:58026 -H "Host: FUZZ.inlanefreight.htb" -w subdomains.txt -fs 10918
@@ -562,6 +735,8 @@ curl -H "Host: admin.inlanefreight.htb" http://94.237.49.166:58026
 
 | Tool | Purpose | Best Use Case |
 |------|---------|--------------|
+| **whois** | Domain registration info | Initial domain intelligence |
+| **dig** | DNS enumeration | Zone transfers, record analysis |
 | **whatweb** | Technology detection | Initial reconnaissance |
 | **gobuster** | Directory/file discovery | Finding hidden content |
 | **ffuf** | Web fuzzing | Parameter/vhost discovery |
@@ -575,14 +750,16 @@ curl -H "Host: admin.inlanefreight.htb" http://94.237.49.166:58026
 
 ## **Key Takeaways**
 
-1. **Web reconnaissance is different** from infrastructure enumeration
-2. **Technology identification** guides subsequent testing approaches
-3. **Directory enumeration** reveals hidden functionality and files
-4. **Parameter discovery** uncovers additional attack surface
-5. **JavaScript analysis** exposes client-side vulnerabilities
-6. **Virtual hosts** may contain additional applications
-7. **Security headers** indicate the security posture
-8. **CMS enumeration** requires specialized tools and techniques
+1. **WHOIS data provides** fundamental domain intelligence and contact information
+2. **DNS enumeration** reveals infrastructure and potential zone transfer vulnerabilities
+3. **Web reconnaissance is different** from infrastructure enumeration
+4. **Technology identification** guides subsequent testing approaches
+5. **Directory enumeration** reveals hidden functionality and files
+6. **Parameter discovery** uncovers additional attack surface
+7. **JavaScript analysis** exposes client-side vulnerabilities
+8. **Virtual hosts** may contain additional applications
+9. **Security headers** indicate the security posture
+10. **CMS enumeration** requires specialized tools and techniques
 
 ---
 
