@@ -64,7 +64,7 @@
     * [Security Bypass](linux-privilege-escalation/security-bypass.md)
     * [Privilege Escalation Checklist](linux-privilege-escalation/checklist.md)
 
-* [🪟 Windows Systems](windows-privilege-escalation/README.md)
+* [🪟 Windows Systems]
   * [Windows Privilege Escalation](windows-privilege-escalation/README.md)
     * [Enumeration](windows-privilege-escalation/enumeration.md)
     * [Credential Hunting](windows-privilege-escalation/credential-hunting.md)
