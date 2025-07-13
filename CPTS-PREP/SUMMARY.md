@@ -10,9 +10,9 @@
 * [🔍 Footprinting](footprinting.md)
 
 ### 🕷️ Web Application Information Gathering
-* [📋 Web Reconnaissance Overview](web-enumeration/README.md)
 * [🌐 Subdomain Enumeration & DNS Discovery](web-enumeration/subdomain-enumeration.md)
 * [🔧 Web Application Enumeration](web-enumeration/web-application-enumeration.md)
+* [📋 Web Reconnaissance Overview](web-enumeration/README.md)
 
 ### 🗄️ Database Services
 * [🔍 MySQL Enumeration](databases/mysql-enumeration.md)
