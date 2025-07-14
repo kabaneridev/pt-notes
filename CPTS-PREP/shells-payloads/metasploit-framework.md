@@ -269,6 +269,40 @@ Payload options (windows/x64/meterpreter/reverse_tcp):
    LPORT     4444             yes       The listen port
 ```
 
+## Database Integration (Enterprise Feature)
+
+### Overview
+Metasploit supports PostgreSQL integration for:
+- **Multi-host engagements** tracking
+- **Scan result** organization  
+- **Credential** management
+- **Team collaboration**
+
+### Basic Setup
+```bash
+sudo msfdb init       # Initialize database
+msfconsole             # Connect automatically
+db_status              # Check connection
+```
+
+### Key Commands
+```bash
+workspace -a ProjectX  # Create workspace
+db_nmap -sV target     # Integrated Nmap scanning
+hosts                  # List discovered hosts
+services               # List services found
+creds                  # View gathered credentials
+db_export -f xml backup.xml  # Export results
+```
+
+### When to Use
+- **Large networks** (10+ hosts)
+- **Team assessments** with shared data
+- **Long-term campaigns** requiring tracking
+- **Client reporting** with organized results
+
+**Note**: Not typically needed for CPTS lab scenarios or single-target assessments.
+
 ## Essential Commands
 
 ### Module Management
@@ -319,3 +353,25 @@ set target <id>      # Set target (0=Automatic)
 9. **Post-exploit**: Use meterpreter or shell for further access
 
 This framework provides systematic approach to exploitation while maintaining the flexibility needed for diverse penetration testing scenarios. 
+
+## Encoders (Legacy AV Evasion)
+
+### Overview
+Encoders modify payloads to:
+- Make compatible with different architectures (x86, x64)
+- Remove bad characters from shellcode
+- Historically: evade antivirus detection
+
+### Current Status
+- **Shikata Ga Nai** was once highly effective
+- **Modern AV** systems detect most encoded payloads
+- **Limited effectiveness** for evasion (51/68 detection rate)
+
+### Basic Commands
+```bash
+show encoders                    # List compatible encoders
+set encoder x86/shikata_ga_nai  # Set encoder
+```
+
+### Modern Approach
+See `payloads.md` for current AV evasion techniques 
