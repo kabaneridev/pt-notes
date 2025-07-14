@@ -11,6 +11,11 @@
   * [📂] File Transfer Methods
     * [📂 Windows File Transfer Methods](CPTS-PREP/file-transfers/windows-file-transfers.md)
     * [🐧 Linux File Transfer Methods](CPTS-PREP/file-transfers/linux-file-transfers.md)
+    * [⚡ Code File Transfer Methods](CPTS-PREP/file-transfers/code-file-transfers.md)
+    * [🔀 Miscellaneous File Transfer Methods](CPTS-PREP/file-transfers/miscellaneous-file-transfers.md)
+    * [🔒 Protected File Transfer Methods](CPTS-PREP/file-transfers/protected-file-transfers.md)
+    * [🎭 Living off The Land File Transfers](CPTS-PREP/file-transfers/living-off-the-land-file-transfers.md)
+    * [👁️ File Transfer Detection](CPTS-PREP/file-transfers/file-transfer-detection.md)
   * 🗄️ Database Services
     * [MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)
     * [MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)
