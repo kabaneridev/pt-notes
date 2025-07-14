@@ -38,6 +38,10 @@ Web Application Information Gathering is a specialized phase of reconnaissance t
 - **Virtual Host Discovery** - Finding additional applications on same server
 - **Parameter Discovery** - ffuf, arjun, paramspider for hidden parameters
 - **API Enumeration** - REST, GraphQL, OpenAPI documentation discovery
+- **Web Crawling & Spidering** - ReconSpider, hakrawler, Burp Suite, OWASP ZAP
+- **Search Engine Discovery** - Google dorking, OSINT techniques, automated tools
+- **Web Archives** - Wayback Machine, historical analysis, waybackurls, gau
+- **Automated Frameworks** - FinalRecon, Recon-ng, theHarvester, SpiderFoot
 - **JavaScript Analysis** - LinkFinder, endpoint extraction, sensitive data
 - **CMS-Specific Enumeration** - WordPress, Joomla, Drupal specialized tools
 - **Security Analysis** - Headers, SSL/TLS, WAF detection and bypass
@@ -80,6 +84,34 @@ gobuster dir -u https://example.com -w /usr/share/wordlists/dirb/common.txt
 ffuf -u https://example.com/page?FUZZ=value -w parameters.txt
 ```
 
+### **Phase 4: Search Engine Discovery**
+```bash
+# Google dorking reconnaissance
+site:example.com
+site:example.com inurl:login
+site:example.com filetype:pdf
+site:example.com "confidential" OR "internal"
+```
+
+### **Phase 5: Web Archives Analysis**
+```bash
+# Historical website analysis
+echo "example.com" | waybackurls
+gau example.com
+
+# Manual Wayback Machine investigation
+https://web.archive.org/web/*/example.com
+```
+
+### **Phase 6: Automated Reconnaissance**
+```bash
+# FinalRecon comprehensive scan
+./finalrecon.py --full --url http://example.com
+
+# theHarvester OSINT gathering
+theHarvester -d example.com -l 500 -b all
+```
+
 ---
 
 ## **🛠️ Essential Tools Summary**
@@ -91,8 +123,19 @@ ffuf -u https://example.com/page?FUZZ=value -w parameters.txt
 | **DNS** | `amass` | Advanced subdomain discovery | Maximum coverage with 30+ sources |
 | **DNS** | `puredns` | High-performance brute-forcing | Massive wordlist handling |
 | **Web** | `whatweb` | Technology detection | Initial reconnaissance |
+| **Web** | `nikto` | Web server scanning | Comprehensive security assessment |
+| **Web** | `builtwith` | Technology profiling | Detailed technology stack analysis |
+| **Web** | `netcraft` | Web security services | Security posture assessment |
 | **Web** | `gobuster` | Directory discovery | Finding hidden content |
 | **Web** | `ffuf` | Web fuzzing | Parameter/vhost discovery |
+| **Web** | `reconspider` | Custom web crawling | HTB Academy reconnaissance |
+| **Web** | `hakrawler` | Web crawling | Content discovery |
+| **Web** | `google dorking` | OSINT reconnaissance | Search engine discovery |
+| **Web** | `wayback machine` | Web archives | Historical website analysis |
+| **Web** | `waybackurls` | Archive URL extraction | Historical endpoint discovery |
+| **Web** | `finalrecon` | Automated framework | All-in-one Python reconnaissance |
+| **Web** | `recon-ng` | Modular framework | Database-driven reconnaissance |
+| **Web** | `theharvester` | OSINT gathering | Email, subdomain, employee discovery |
 | **Web** | `wpscan` | WordPress security | CMS-specific testing |
 
 ---

@@ -13,6 +13,7 @@ CPTS-PREP/
 ├── README.md                           # This overview file
 ├── footprinting.md                     # Infrastructure Based Enumeration (Domain + Cloud + DNS)
 ├── firewall-evasion.md                 # Firewall and IDS/IPS Evasion techniques
+├── vulnerability-assessment.md         # Nessus vulnerability scanning and credentialed assessment
 ├── web-enumeration/                    # Web application enumeration guides
 │   ├── web-information-gathering.md    # Web application information gathering overview
 │   ├── subdomain-enumeration.md        # DNS enumeration and subdomain discovery
@@ -87,6 +88,18 @@ CPTS-PREP/
 - Port Scanning Evasion
 - Protocol Manipulation
 
+#### **🎯 [Vulnerability Assessment](./vulnerability-assessment.md)**
+*Comprehensive vulnerability scanning with Nessus Professional*
+
+**Topics Covered:**
+- Nessus Professional Setup and Configuration
+- Custom Scan Policies and Advanced Settings
+- Credentialed Scanning (SSH, Windows, Database, Web)
+- Plugin Management and False Positive Handling
+- HTB Academy Lab Integration
+- Risk-Based Vulnerability Prioritization
+- Professional Reporting and Documentation
+
 ---
 
 ## **Key Features**
@@ -94,6 +107,7 @@ CPTS-PREP/
 ### **🎯 Comprehensive Coverage**
 - **30+ Service Types** - Complete enumeration guides for all major services
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration
+- **Vulnerability Assessment** - Professional Nessus scanning with credentialed access
 - **CVE References** - Known vulnerabilities with exploitation examples
 - **HTB Academy Style** - Lab questions and practical examples
 - **Real-World Scenarios** - Practical penetration testing methodologies

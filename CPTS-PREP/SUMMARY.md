@@ -39,6 +39,9 @@
 ### 🔥 Firewall & IDS/IPS Evasion
 * [🛡️ Firewall Evasion](firewall-evasion.md)
 
+### 🎯 Vulnerability Assessment
+* [🎯 Vulnerability Assessment](vulnerability-assessment.md)
+
 ---
 
 ## 📖 Quick Reference
