@@ -8,7 +8,7 @@
   * [🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)
   * [🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)
   * [🔍 Vulnerability Assessment](CPTS-PREP/vulnerability-assessment.md)
-  * [📂] File Transfer Methods
+  * 📂 File Transfer Methods
     * [📂 Windows File Transfer Methods](CPTS-PREP/file-transfers/windows-file-transfers.md)
     * [🐧 Linux File Transfer Methods](CPTS-PREP/file-transfers/linux-file-transfers.md)
     * [⚡ Code File Transfer Methods](CPTS-PREP/file-transfers/code-file-transfers.md)
@@ -16,6 +16,12 @@
     * [🔒 Protected File Transfer Methods](CPTS-PREP/file-transfers/protected-file-transfers.md)
     * [🎭 Living off The Land File Transfers](CPTS-PREP/file-transfers/living-off-the-land-file-transfers.md)
     * [👁️ File Transfer Detection](CPTS-PREP/file-transfers/file-transfer-detection.md)
+  * 🐚 Shells & Payloads
+    * [🔧 Shell Basics](CPTS-PREP/shells-payloads/shell-basics.md)
+    * [💥 Payloads](CPTS-PREP/shells-payloads/payloads.md)
+    * [🪟 Windows Shells](CPTS-PREP/shells-payloads/windows-shells.md)
+    * [🐧 NIX Shells](CPTS-PREP/shells-payloads/nix-shells.md)
+    * [🌐 Web Shells](CPTS-PREP/shells-payloads/web-shells.md)
   * 🗄️ Database Services
     * [MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)
     * [MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)

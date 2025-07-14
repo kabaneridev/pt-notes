@@ -42,6 +42,29 @@
 ### 🎯 Vulnerability Assessment
 * [🎯 Vulnerability Assessment](vulnerability-assessment.md)
 
+## 🔧 Shells & Payloads
+
+### 🐚 Shell Fundamentals
+* [📋 Shell Basics](shells-payloads/shell-basics.md)
+* [🎯 Payloads](shells-payloads/payloads.md)
+
+### 🐧 Platform-Specific Shells
+* [🪟 Windows Shells](shells-payloads/windows-shells.md)
+* [🐧 Linux/Unix Shells](shells-payloads/nix-shells.md)
+
+### 🌐 Web Shells
+* [🕷️ PHP Web Shells](shells-payloads/php-web-shells.md)
+* [🔧 Web Shell Techniques](shells-payloads/web-shells.md)
+
+### 📁 File Transfer Methods
+* [🪟 Windows File Transfers](file-transfers/windows-file-transfers.md)
+* [🐧 Linux File Transfers](file-transfers/linux-file-transfers.md)
+* [💻 Code-Based File Transfers](file-transfers/code-file-transfers.md)
+* [🔀 Miscellaneous File Transfers](file-transfers/miscellaneous-file-transfers.md)
+* [🛡️ Protected File Transfers](file-transfers/protected-file-transfers.md)
+* [🎯 Living off the Land Transfers](file-transfers/living-off-the-land-file-transfers.md)
+* [🔍 File Transfer Detection](file-transfers/file-transfer-detection.md)
+
 ---
 
 ## 📖 Quick Reference
