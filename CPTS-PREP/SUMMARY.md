@@ -47,6 +47,7 @@
 ### 🐚 Shell Fundamentals
 * [📋 Shell Basics](shells-payloads/shell-basics.md)
 * [🎯 Payloads](shells-payloads/payloads.md)
+* [🔧 Metasploit Framework](shells-payloads/metasploit-framework.md)
 
 ### 🐧 Platform-Specific Shells
 * [🪟 Windows Shells](shells-payloads/windows-shells.md)
