@@ -8,6 +8,9 @@
   * [🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)
   * [🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)
   * [🔍 Vulnerability Assessment](CPTS-PREP/vulnerability-assessment.md)
+  * [📂] File Transfer Methods
+    * [📂 Windows File Transfer Methods](CPTS-PREP/file-transfers/windows-file-transfers.md)
+    * [🐧 Linux File Transfer Methods](CPTS-PREP/file-transfers/linux-file-transfers.md)
   * 🗄️ Database Services
     * [MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)
     * [MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)
