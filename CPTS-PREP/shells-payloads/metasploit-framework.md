@@ -196,6 +196,79 @@ target => 6
 - **Languages**: Language packs can change memory addresses
 - **Verification**: Always verify target compatibility before exploitation
 
+## Payloads
+
+### What are Payloads?
+Payloads are modules that work with exploits to typically return a shell to the attacker. They are sent together with the exploit to establish a foothold on the target system.
+
+### Payload Types
+
+#### Singles
+- **Self-contained** payloads with exploit + complete shellcode
+- **Stable** but can be large in size
+- **Example**: `windows/shell_bind_tcp` (no stage, indicated by single `/`)
+
+#### Stagers & Stages
+- **Stagers**: Small, reliable, establish network connection
+- **Stages**: Downloaded by stagers, provide advanced features
+- **Example**: `windows/shell/bind_tcp` (staged, indicated by double `/`)
+
+#### Meterpreter
+- **Advanced payload** using DLL injection
+- **Memory-resident** - leaves no traces on disk
+- **Feature-rich**: keystroke capture, screenshots, pivoting
+- **Example**: `windows/x64/meterpreter/reverse_tcp`
+
+### Payload Management
+
+#### List Available Payloads
+```bash
+# Show all payloads
+msf6 > show payloads
+
+# Search for specific payloads
+msf6 exploit(windows/smb/ms17_010_psexec) > grep meterpreter show payloads
+msf6 exploit(windows/smb/ms17_010_psexec) > grep meterpreter grep reverse_tcp show payloads
+```
+
+#### Select Payload
+```bash
+# Set payload by number
+msf6 exploit(windows/smb/ms17_010_psexec) > set payload 15
+
+# Set payload by name
+msf6 exploit(windows/smb/ms17_010_psexec) > set payload windows/x64/meterpreter/reverse_tcp
+```
+
+### Common Payload Examples
+
+#### Windows Payloads
+| Payload | Description |
+|---------|-------------|
+| `windows/x64/shell_reverse_tcp` | Simple reverse shell |
+| `windows/x64/meterpreter/reverse_tcp` | Meterpreter reverse shell |
+| `windows/x64/meterpreter/reverse_https` | Meterpreter over HTTPS |
+| `windows/x64/exec` | Execute arbitrary command |
+
+#### Connection Types
+| Type | Description | Use Case |
+|------|-------------|----------|
+| **reverse_tcp** | Target connects back to attacker | Bypasses firewalls |
+| **bind_tcp** | Attacker connects to target | Direct connection |
+| **reverse_https** | HTTPS tunnel for stealth | Evades detection |
+
+### Payload Configuration
+```bash
+# Required payload options
+msf6 exploit(windows/smb/ms17_010_psexec) > show options
+
+Payload options (windows/x64/meterpreter/reverse_tcp):
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------
+   LHOST                      yes       The listen address
+   LPORT     4444             yes       The listen port
+```
+
 ## Essential Commands
 
 ### Module Management
@@ -240,8 +313,9 @@ set target <id>      # Set target (0=Automatic)
 3. **Select**: Choose appropriate exploit module
 4. **Configure**: Set required options (RHOSTS, LHOST, etc.)
 5. **Target**: Set specific target or use automatic detection
-6. **Verify**: Check options and module info
-7. **Execute**: Run the exploit
-8. **Post-exploit**: Use meterpreter or shell for further access
+6. **Payload**: Select appropriate payload (shell, meterpreter, etc.)
+7. **Verify**: Check options and module info
+8. **Execute**: Run the exploit
+9. **Post-exploit**: Use meterpreter or shell for further access
 
 This framework provides systematic approach to exploitation while maintaining the flexibility needed for diverse penetration testing scenarios. 
