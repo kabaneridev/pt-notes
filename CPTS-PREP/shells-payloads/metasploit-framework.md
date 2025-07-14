@@ -374,4 +374,77 @@ set encoder x86/shikata_ga_nai  # Set encoder
 ```
 
 ### Modern Approach
-See `payloads.md` for current AV evasion techniques 
+See `payloads.md` for current AV evasion techniques
+
+## Module Management (Custom Modules)
+
+### Importing Modules from ExploitDB
+
+#### Find MSF Modules
+```bash
+# Search ExploitDB for MSF modules
+searchsploit -t <service> --exclude=".py"
+searchsploit nagios3 --exclude=".py"
+
+# Look for .rb files (Ruby/Metasploit modules)
+searchsploit -t <service> | grep "\.rb"
+```
+
+#### Install Custom Module
+```bash
+# Copy to appropriate directory
+cp ~/Downloads/exploit.rb /usr/share/metasploit-framework/modules/exploits/unix/webapp/custom_exploit.rb
+
+# Launch with module path
+msfconsole -m /usr/share/metasploit-framework/modules/
+
+# OR reload in running session
+msf6 > reload_all
+msf6 > use exploit/unix/webapp/custom_exploit
+```
+
+### Directory Structure
+```
+/usr/share/metasploit-framework/modules/
+├── exploits/
+│   ├── windows/
+│   ├── linux/
+│   └── unix/webapp/
+├── auxiliary/
+├── post/
+└── payloads/
+```
+
+### Naming Convention
+- **snake_case**: Use underscores, not dashes
+- **Alphanumeric**: No special characters
+- **Descriptive**: Clear purpose indication
+
+**Examples:**
+- ✅ `nagios3_command_injection.rb`
+- ✅ `bludit_auth_bypass.rb`
+- ❌ `nagios-exploit.rb` (dashes)
+- ❌ `exploit@test.rb` (special chars)
+
+### Module Installation Process
+```bash
+# 1. Download module
+wget https://www.exploit-db.com/raw/9861 -O nagios3_exploit.rb
+
+# 2. Place in correct directory
+sudo cp nagios3_exploit.rb /usr/share/metasploit-framework/modules/exploits/unix/webapp/nagios3_command_injection.rb
+
+# 3. Load in msfconsole
+msf6 > reload_all
+msf6 > search nagios3
+msf6 > use exploit/unix/webapp/nagios3_command_injection
+```
+
+### Troubleshooting
+- **Module not found**: Check file path and naming
+- **Load errors**: Verify Ruby syntax and dependencies
+- **Permission issues**: Use sudo for system directories
+
+**Note**: For advanced module development, see [Metasploit Documentation](https://docs.metasploit.com/)
+
+This framework provides systematic approach to exploitation while maintaining the flexibility needed for diverse penetration testing scenarios. 
