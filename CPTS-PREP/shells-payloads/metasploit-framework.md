@@ -148,6 +148,54 @@ C:\Windows\system32> whoami
 nt authority\system
 ```
 
+## Targets
+
+### What are Targets?
+Targets are unique operating system identifiers taken from specific OS versions. They adapt the selected exploit module to run on a particular version of the operating system.
+
+### Target Management
+```bash
+# Show available targets (must be inside a module)
+msf6 exploit(windows/browser/ie_execcommand_uaf) > show targets
+
+# Show targets from root menu (will show error)
+msf6 > show targets
+[-] No exploit module selected.
+```
+
+### Example: IE Exploit Targets
+```bash
+msf6 exploit(windows/browser/ie_execcommand_uaf) > show targets
+
+Exploit targets:
+   Id  Name
+   --  ----
+   0   Automatic
+   1   IE 7 on Windows XP SP3
+   2   IE 8 on Windows XP SP3
+   3   IE 7 on Windows Vista
+   4   IE 8 on Windows Vista
+   5   IE 8 on Windows 7
+   6   IE 9 on Windows 7
+```
+
+### Target Selection
+```bash
+# Use automatic target detection (default)
+msf6 exploit(windows/browser/ie_execcommand_uaf) > set target 0
+
+# Set specific target if you know the version
+msf6 exploit(windows/browser/ie_execcommand_uaf) > set target 6
+target => 6
+```
+
+### Target Considerations
+- **Automatic**: Metasploit performs service detection before attack
+- **Specific**: Use when you know exact OS/software versions
+- **Addresses**: Targets differ by return addresses, service packs, OS versions
+- **Languages**: Language packs can change memory addresses
+- **Verification**: Always verify target compatibility before exploitation
+
 ## Essential Commands
 
 ### Module Management
@@ -168,12 +216,12 @@ sessions -k <id>     # Kill session
 background           # Background current session
 ```
 
-### Payload Management
+### Payload & Target Management
 ```bash
 show payloads        # List available payloads
 set payload <name>   # Set specific payload
 show targets         # Show available targets
-set target <id>      # Set target
+set target <id>      # Set target (0=Automatic)
 ```
 
 ## Best Practices
@@ -191,8 +239,9 @@ set target <id>      # Set target
 2. **Search**: Find relevant modules using keywords
 3. **Select**: Choose appropriate exploit module
 4. **Configure**: Set required options (RHOSTS, LHOST, etc.)
-5. **Verify**: Check options and module info
-6. **Execute**: Run the exploit
-7. **Post-exploit**: Use meterpreter or shell for further access
+5. **Target**: Set specific target or use automatic detection
+6. **Verify**: Check options and module info
+7. **Execute**: Run the exploit
+8. **Post-exploit**: Use meterpreter or shell for further access
 
 This framework provides systematic approach to exploitation while maintaining the flexibility needed for diverse penetration testing scenarios. 
