@@ -67,6 +67,40 @@
 * [🎯 Living off the Land Transfers](file-transfers/living-off-the-land-file-transfers.md)
 * [🔍 File Transfer Detection](file-transfers/file-transfer-detection.md)
 
+## 🔐 Password Attacks
+
+### 🎯 Active Directory Attacks
+* [🎫 NTDS.dit Extraction & Analysis](passwords-attacks/active-directory-ntds-attacks.md)
+* [🔍 Username Enumeration & OSINT](passwords-attacks/username-enumeration.md)
+* [🗡️ Dictionary & Brute Force Attacks](passwords-attacks/dictionary-attacks.md)
+* [⚔️ Pass-the-Hash Techniques](passwords-attacks/pass-the-hash.md)
+
+### 🪟 Windows Password Attacks
+* [🔧 Registry Hive Attacks (SAM, SYSTEM, SECURITY)](passwords-attacks/windows-passwords.md)
+* [🧠 LSASS Memory Dumping](passwords-attacks/lsass-attacks.md)
+* [💾 Credential Manager Attacks](passwords-attacks/credential-manager.md)
+* [🕵️ Credential Hunting in Windows](passwords-attacks/credential-hunting-windows.md)
+
+### 🐧 Linux Password Attacks
+* [🔍 Credential Hunting in Linux](passwords-attacks/credential-hunting-linux.md)
+
+### 🔨 Hash Cracking
+* [⚡ Hashcat Techniques](passwords-attacks/hashcat.md)
+* [🔓 John the Ripper](passwords-attacks/john-the-ripper.md)
+* [📝 Custom Wordlists & Rules](passwords-attacks/custom-wordlists-rules.md)
+
+### 🌐 Network Service Attacks
+* [🔌 Network Services Brute Force](passwords-attacks/network-services.md)
+* [📁 Protected File Cracking](passwords-attacks/cracking-protected-files.md)
+* [🌐 Network Traffic Credential Hunting](passwords-attacks/credential-hunting-network.md)
+* [📂 Network Shares Credential Hunting](passwords-attacks/credential-hunting-shares.md)
+
+### ⚔️ Windows Lateral Movement
+* [🔑 Pass the Hash (PtH) Attacks](passwords-attacks/pass-the-hash.md)
+* [🎫 Pass the Ticket (PtT) Attacks](passwords-attacks/pass-the-ticket.md)
+* [📜 Pass the Certificate (ESC8 & ADCS Attacks)](passwords-attacks/pass-the-certificate.md)
+* [🐧 Pass the Ticket from Linux](passwords-attacks/pass-the-ticket-linux.md)
+
 ---
 
 ## 📖 Quick Reference
@@ -110,10 +144,10 @@
 ### 🔄 In Progress
 * Vulnerability Assessment
 * Web Application Attacks
+* Password Attacks
 
 ### 📅 Planned
 * Network Enumeration
-* Password Attacks
 * Active Directory Enumeration & Attacks
 * Privilege Escalation
 * Lateral Movement

@@ -13,7 +13,6 @@ CPTS-PREP/
 ├── README.md                           # This overview file
 ├── footprinting.md                     # Infrastructure Based Enumeration (Domain + Cloud + DNS)
 ├── firewall-evasion.md                 # Firewall and IDS/IPS Evasion techniques
-├── vulnerability-assessment.md         # Nessus vulnerability scanning and credentialed assessment
 ├── web-enumeration/                    # Web application enumeration guides
 │   ├── web-information-gathering.md    # Web application information gathering overview
 │   ├── subdomain-enumeration.md        # DNS enumeration and subdomain discovery
@@ -30,6 +29,12 @@ CPTS-PREP/
 │   ├── email-enumeration.md            # IMAP/POP3 enumeration
 │   ├── snmp-enumeration.md             # SNMP network management testing
 │   └── ipmi-enumeration.md             # Hardware management interface testing
+├── passwords-attacks/                  # Password attacks and lateral movement
+│   ├── pass-the-hash.md               # Pass the Hash (PtH) attacks
+│   ├── pass-the-ticket.md             # Pass the Ticket (PtT) attacks
+│   ├── pass-the-certificate.md        # Pass the Certificate (ESC8 & ADCS attacks)
+│   ├── active-directory-ntds-attacks.md # NTDS.dit extraction and analysis
+│   └── [other password attack techniques]
 └── remote-management/                  # Remote access protocols
     ├── remote-management.md            # Overview of remote management protocols
     ├── linux-remote-protocols.md      # SSH, Rsync, R-Services
@@ -69,6 +74,12 @@ CPTS-PREP/
 - **[Subdomain Enumeration](./web-enumeration/subdomain-enumeration.md)** - DNS enumeration and subdomain discovery techniques
 - **[Web Application Enumeration](./web-enumeration/web-application-enumeration.md)** - Directory enumeration, virtual hosts, and web application testing
 
+**🔐 Password Attacks & Lateral Movement:**
+- **[Pass the Hash Attacks](./passwords-attacks/pass-the-hash.md)** - NTLM hash relay and authentication bypass
+- **[Pass the Ticket Attacks](./passwords-attacks/pass-the-ticket.md)** - Kerberos ticket manipulation and Golden Ticket attacks
+- **[Pass the Certificate Attacks](./passwords-attacks/pass-the-certificate.md)** - ESC8 ADCS attacks and PKINIT exploitation
+- **[NTDS.dit Attacks](./passwords-attacks/active-directory-ntds-attacks.md)** - Domain controller credential extraction
+
 #### **🌐 [Infrastructure Enumeration](./footprinting.md)**
 *Domain and cloud infrastructure reconnaissance*
 
@@ -88,18 +99,6 @@ CPTS-PREP/
 - Port Scanning Evasion
 - Protocol Manipulation
 
-#### **🎯 [Vulnerability Assessment](./vulnerability-assessment.md)**
-*Comprehensive vulnerability scanning with Nessus Professional*
-
-**Topics Covered:**
-- Nessus Professional Setup and Configuration
-- Custom Scan Policies and Advanced Settings
-- Credentialed Scanning (SSH, Windows, Database, Web)
-- Plugin Management and False Positive Handling
-- HTB Academy Lab Integration
-- Risk-Based Vulnerability Prioritization
-- Professional Reporting and Documentation
-
 ---
 
 ## **Key Features**
@@ -107,7 +106,6 @@ CPTS-PREP/
 ### **🎯 Comprehensive Coverage**
 - **30+ Service Types** - Complete enumeration guides for all major services
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration
-- **Vulnerability Assessment** - Professional Nessus scanning with credentialed access
 - **CVE References** - Known vulnerabilities with exploitation examples
 - **HTB Academy Style** - Lab questions and practical examples
 - **Real-World Scenarios** - Practical penetration testing methodologies
