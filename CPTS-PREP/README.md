@@ -13,6 +13,7 @@ CPTS-PREP/
 ├── README.md                           # This overview file
 ├── footprinting.md                     # Infrastructure Based Enumeration (Domain + Cloud + DNS)
 ├── firewall-evasion.md                 # Firewall and IDS/IPS Evasion techniques
+├── vulnerability-assessment.md         # Nessus vulnerability scanning and credentialed assessment
 ├── web-enumeration/                    # Web application enumeration guides
 │   ├── web-information-gathering.md    # Web application information gathering overview
 │   ├── subdomain-enumeration.md        # DNS enumeration and subdomain discovery

@@ -42,6 +42,29 @@
     * [Web Information Gathering](CPTS-PREP/web-enumeration/web-information-gathering.md)
     * [Subdomain Enumeration](CPTS-PREP/web-enumeration/subdomain-enumeration.md)
     * [Web Application Enumeration](CPTS-PREP/web-enumeration/web-application-enumeration.md)
+  * 🔐 Password Attacks & Lateral Movement
+    * 🎯 Active Directory Attacks
+      * [NTDS.dit Extraction & Analysis](CPTS-PREP/passwords-attacks/active-directory-ntds-attacks.md)
+      * [Active Directory Attacks](CPTS-PREP/passwords-attacks/active-directory-attacks.md)
+    * ⚔️ Lateral Movement Techniques
+      * [Pass the Hash (PtH) Attacks](CPTS-PREP/passwords-attacks/pass-the-hash.md)
+      * [Pass the Ticket (PtT) Attacks](CPTS-PREP/passwords-attacks/pass-the-ticket.md)
+      * [📜 Pass the Certificate (ESC8 & ADCS)](CPTS-PREP/passwords-attacks/pass-the-certificate.md)
+      * [Pass the Ticket from Linux](CPTS-PREP/passwords-attacks/pass-the-ticket-linux.md)
+    * 🪟 Windows Password Attacks
+      * [Windows Password Techniques](CPTS-PREP/passwords-attacks/windows-passwords.md)
+      * [Credential Hunting in Windows](CPTS-PREP/passwords-attacks/credential-hunting-windows.md)
+    * 🐧 Linux Password Attacks
+      * [Credential Hunting in Linux](CPTS-PREP/passwords-attacks/credential-hunting-linux.md)
+    * 🌐 Network & Service Attacks
+      * [Network Services Brute Force](CPTS-PREP/passwords-attacks/network-services.md)
+      * [Network Traffic Credential Hunting](CPTS-PREP/passwords-attacks/credential-hunting-network.md)
+      * [Network Shares Credential Hunting](CPTS-PREP/passwords-attacks/credential-hunting-shares.md)
+    * 🔨 Hash Cracking & Tools
+      * [Hashcat Techniques](CPTS-PREP/passwords-attacks/hashcat.md)
+      * [John the Ripper](CPTS-PREP/passwords-attacks/john-the-ripper.md)
+      * [Custom Wordlists & Rules](CPTS-PREP/passwords-attacks/custom-wordlists-rules.md)
+      * [Cracking Protected Files](CPTS-PREP/passwords-attacks/cracking-protected-files.md)
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
