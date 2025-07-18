@@ -29,6 +29,15 @@
 * [📊 SNMP Enumeration](services/snmp-enumeration.md)
 * [⚙️ IPMI Enumeration](services/ipmi-enumeration.md)
 
+## ⚔️ Attacking Common Services
+* [📁 FTP Attacks](attacking-common-services/ftp-attacks.md)
+* [🔗 SMB Attacks](attacking-common-services/smb-attacks.md)
+* [🗄️ SQL Database Attacks](attacking-common-services/sql-attacks.md)
+* [🌐 DNS Attacks](attacking-common-services/dns-attacks.md)
+* [🖥️ RDP Attacks](attacking-common-services/rdp-attacks.md)
+* [📧 Email Services Attacks (SMTP/IMAP/POP3)](attacking-common-services/smtp-attacks.md)
+* [🎯 Skills Assessment - Complete Attack Chain Scenarios](attacking-common-services/skills-assessment.md)
+
 ### 🖥️ Remote Management Protocols
 * [📋 Remote Management Overview](remote-management/remote-management.md)
 * [🐧 Linux Remote Protocols](remote-management/linux-remote-protocols.md)
@@ -68,6 +77,9 @@
 * [🔍 File Transfer Detection](file-transfers/file-transfer-detection.md)
 
 ## 🔐 Password Attacks
+
+### 📋 Complete Assessment Workflows
+* [🎯 Skills Assessment - Complete Password Attacks Workflow](passwords-attacks/skills-assessment-workflow.md)
 
 ### 🎯 Active Directory Attacks
 * [🎫 NTDS.dit Extraction & Analysis](passwords-attacks/active-directory-ntds-attacks.md)
@@ -140,6 +152,7 @@
 * Footprinting
 * Host-Based Enumeration
 * Web Application Information Gathering
+* **Attacking Common Services** (Complete - 7 documents, 4,262 lines)
 
 ### 🔄 In Progress
 * Vulnerability Assessment

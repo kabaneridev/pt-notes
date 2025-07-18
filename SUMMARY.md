@@ -34,6 +34,14 @@
     * [Email Services (IMAP/POP3)](CPTS-PREP/services/email-enumeration.md)
     * [SNMP Enumeration](CPTS-PREP/services/snmp-enumeration.md)
     * [IPMI Enumeration](CPTS-PREP/services/ipmi-enumeration.md)
+  * ⚔️ Attacking Common Services
+    * [📁 FTP Attacks](CPTS-PREP/attacking-common-services/ftp-attacks.md)
+    * [🔗 SMB Attacks](CPTS-PREP/attacking-common-services/smb-attacks.md)
+    * [🗄️ SQL Database Attacks](CPTS-PREP/attacking-common-services/sql-attacks.md)
+    * [🌐 DNS Attacks](CPTS-PREP/attacking-common-services/dns-attacks.md)
+    * [🖥️ RDP Attacks](CPTS-PREP/attacking-common-services/rdp-attacks.md)
+    * [📧 Email Services Attacks](CPTS-PREP/attacking-common-services/smtp-attacks.md)
+    * [🎯 Skills Assessment Scenarios](CPTS-PREP/attacking-common-services/skills-assessment.md)
   * 🖥️ Remote Management
     * [Remote Management Overview](CPTS-PREP/remote-management/remote-management.md)
     * [Linux Remote Protocols](CPTS-PREP/remote-management/linux-remote-protocols.md)
@@ -43,6 +51,8 @@
     * [Subdomain Enumeration](CPTS-PREP/web-enumeration/subdomain-enumeration.md)
     * [Web Application Enumeration](CPTS-PREP/web-enumeration/web-application-enumeration.md)
   * 🔐 Password Attacks & Lateral Movement
+    * 📋 Complete Assessment Workflows
+      * [🎯 Skills Assessment - Complete Password Attacks Workflow](CPTS-PREP/passwords-attacks/skills-assessment-workflow.md)
     * 🎯 Active Directory Attacks
       * [NTDS.dit Extraction & Analysis](CPTS-PREP/passwords-attacks/active-directory-ntds-attacks.md)
       * [Active Directory Attacks](CPTS-PREP/passwords-attacks/active-directory-attacks.md)

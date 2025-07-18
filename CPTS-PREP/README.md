@@ -36,6 +36,11 @@ CPTS-PREP/
 │   ├── pass-the-certificate.md        # Pass the Certificate (ESC8 & ADCS attacks)
 │   ├── active-directory-ntds-attacks.md # NTDS.dit extraction and analysis
 │   └── [other password attack techniques]
+├── attacking-common-services/          # Protocol exploitation techniques
+│   ├── ftp-attacks.md                 # FTP exploitation and abuse
+│   ├── smb-attacks.md                 # SMB protocol attacks and RCE
+│   ├── sql-attacks.md                 # MySQL/MSSQL database exploitation
+│   └── [other service exploitation]
 └── remote-management/                  # Remote access protocols
     ├── remote-management.md            # Overview of remote management protocols
     ├── linux-remote-protocols.md      # SSH, Rsync, R-Services
@@ -65,6 +70,15 @@ CPTS-PREP/
 - **[SNMP Enumeration](./services/snmp-enumeration.md)** - Network management protocol testing and information gathering
 - **[IPMI Enumeration](./services/ipmi-enumeration.md)** - Hardware management interface testing and hash extraction
 
+**⚔️ Attacking Common Services:**
+- **[FTP Attacks](./attacking-common-services/ftp-attacks.md)** - FTP exploitation techniques, brute forcing, bounce attacks, and file transfer abuse
+- **[SMB Attacks](./attacking-common-services/smb-attacks.md)** - SMB protocol exploitation, Pass-the-Hash, RCE, forced authentication, and NTLM relay
+- **[SQL Database Attacks](./attacking-common-services/sql-attacks.md)** - MySQL/MSSQL exploitation, command execution, hash stealing, privilege escalation, and lateral movement
+- **[DNS Attacks](./attacking-common-services/dns-attacks.md)** - DNS zone transfers, subdomain enumeration, domain takeover, and DNS-based attacks
+- **[RDP Attacks](./attacking-common-services/rdp-attacks.md)** - RDP exploitation, password spraying, session hijacking, and Pass-the-Hash attacks
+- **[Email Services Attacks](./attacking-common-services/smtp-attacks.md)** - SMTP/IMAP/POP3 exploitation, user enumeration, mail relay abuse, and credential harvesting
+- **[Skills Assessment](./attacking-common-services/skills-assessment.md)** - Complete attack chain scenarios (Easy/Medium/Hard) with HTB Academy solutions
+
 **🖥️ Remote Management:**
 - **[Remote Management Overview](./remote-management/remote-management.md)** - Overview of remote access protocols
 - **[Linux Remote Protocols](./remote-management/linux-remote-protocols.md)** - SSH, Rsync, R-Services enumeration
@@ -76,6 +90,7 @@ CPTS-PREP/
 - **[Web Application Enumeration](./web-enumeration/web-application-enumeration.md)** - Directory enumeration, virtual hosts, and web application testing
 
 **🔐 Password Attacks & Lateral Movement:**
+- **[Skills Assessment Workflow](./passwords-attacks/skills-assessment-workflow.md)** - Complete password attacks methodology from foothold to domain compromise
 - **[Pass the Hash Attacks](./passwords-attacks/pass-the-hash.md)** - NTLM hash relay and authentication bypass
 - **[Pass the Ticket Attacks](./passwords-attacks/pass-the-ticket.md)** - Kerberos ticket manipulation and Golden Ticket attacks
 - **[Pass the Certificate Attacks](./passwords-attacks/pass-the-certificate.md)** - ESC8 ADCS attacks and PKINIT exploitation
@@ -106,6 +121,8 @@ CPTS-PREP/
 
 ### **🎯 Comprehensive Coverage**
 - **30+ Service Types** - Complete enumeration guides for all major services
+- **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines)
+- **Skills Assessment Trilogy** - Easy/Medium/Hard difficulty scenarios with solutions
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration
 - **CVE References** - Known vulnerabilities with exploitation examples
 - **HTB Academy Style** - Lab questions and practical examples
