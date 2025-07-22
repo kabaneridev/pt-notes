@@ -38,6 +38,27 @@
 * [📧 Email Services Attacks (SMTP/IMAP/POP3)](attacking-common-services/smtp-attacks.md)
 * [🎯 Skills Assessment - Complete Attack Chain Scenarios](attacking-common-services/skills-assessment.md)
 
+## 🔀 Pivoting, Tunneling & Port Forwarding
+* [📋 Module Overview](pivoting-tunneling-port-forwarding/pivoting-overview.md)
+* [🔧 SSH Tunneling Complete Guide](pivoting-tunneling-port-forwarding/ssh-tunneling.md)
+* [🌐 Dynamic Port Forwarding](pivoting-tunneling-port-forwarding/dynamic-port-forwarding.md)
+* [🔄 Remote Port Forwarding](pivoting-tunneling-port-forwarding/remote-port-forwarding.md)
+* [⚡ Chisel SOCKS5 Tunneling](pivoting-tunneling-port-forwarding/chisel-socks5-tunneling.md)
+* [🛡️ SSHuttle Pivoting](pivoting-tunneling-port-forwarding/sshuttle-pivoting.md)
+* [🎯 Meterpreter Tunneling](pivoting-tunneling-port-forwarding/meterpreter-tunneling.md)
+* [🔗 Socat Redirection](pivoting-tunneling-port-forwarding/socat-redirection.md)
+* [🪟 Plink Windows Pivoting](pivoting-tunneling-port-forwarding/plink-windows-pivoting.md)
+* [⚙️ Netsh Port Forwarding](pivoting-tunneling-port-forwarding/netsh-windows-portforward.md)
+* [🔌 SocksOverRDP](pivoting-tunneling-port-forwarding/socksoverrdp-windows-pivoting.md)
+* [🕸️ Rpivot Web Pivoting](pivoting-tunneling-port-forwarding/rpivot-web-pivoting.md)
+* [�� DNS Tunneling with dnscat2](pivoting-tunneling-port-forwarding/dnscat2-dns-tunneling.md)
+* [📡 ICMP Tunneling with ptunnel-ng](pivoting-tunneling-port-forwarding/ptunnel-ng-icmp-tunneling.md)
+* [�� Complete Skills Assessment](pivoting-tunneling-port-forwarding/skills-assessment-complete-walkthrough.md)
+
+## 🏰 Active Directory Enumeration & Attacks
+* [🔍 Initial Domain Enumeration](active-directory-enumeration-attacks/initial-enumeration-domain.md)
+* [☣️ LLMNR/NBT-NS Poisoning from Linux](active-directory-enumeration-attacks/llmnr-nbt-ns-poisoning-linux.md)
+
 ### 🖥️ Remote Management Protocols
 * [📋 Remote Management Overview](remote-management/remote-management.md)
 * [🐧 Linux Remote Protocols](remote-management/linux-remote-protocols.md)
