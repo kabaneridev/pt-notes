@@ -36,6 +36,17 @@ CPTS-PREP/
 │   ├── pass-the-certificate.md        # Pass the Certificate (ESC8 & ADCS attacks)
 │   ├── active-directory-ntds-attacks.md # NTDS.dit extraction and analysis
 │   └── [other password attack techniques]
+├── pivoting-tunneling-port-forwarding/ # Network pivoting and tunneling techniques
+│   ├── pivoting-overview.md           # Module overview and network segmentation concepts
+│   ├── dynamic-port-forwarding.md     # SSH SOCKS tunneling (HTB Academy Page 3)
+│   ├── ssh-tunneling.md               # Complete SSH forwarding guide (Local, Remote, Dynamic)
+│   ├── proxychains-socks.md           # Proxychains configuration and tool integration
+│   ├── chisel-tunneling.md            # Modern HTTP tunneling with Chisel
+│   ├── ligolo-ng.md                   # Next-generation tunneling agent
+│   ├── metasploit-pivoting.md         # Metasploit autoroute and pivoting modules
+│   ├── windows-pivoting-tools.md      # Windows native tools (netsh, plink)
+│   ├── dns-icmp-tunneling.md          # Alternative tunneling protocols
+│   └── skills-assessment.md           # Practical scenarios and lab exercises
 ├── attacking-common-services/          # Protocol exploitation techniques
 │   ├── ftp-attacks.md                 # FTP exploitation and abuse
 │   ├── smb-attacks.md                 # SMB protocol attacks and RCE
@@ -114,6 +125,28 @@ CPTS-PREP/
 - IDS/IPS Evasion Methods
 - Port Scanning Evasion
 - Protocol Manipulation
+
+### **📋 Phase 3: Lateral Movement & Pivoting**
+
+#### **🔀 [Pivoting, Tunneling & Port Forwarding](./pivoting-tunneling-port-forwarding/)**
+*Network traversal and tunnel creation techniques*
+
+**Core Modules:**
+- **[Module Overview](./pivoting-tunneling-port-forwarding/pivoting-overview.md)** - Concepts, network segmentation, and learning path
+- **[Dynamic Port Forwarding](./pivoting-tunneling-port-forwarding/dynamic-port-forwarding.md)** - HTB Academy Page 3: SSH SOCKS tunneling and proxychains
+- **[Remote Port Forwarding](./pivoting-tunneling-port-forwarding/remote-port-forwarding.md)** - HTB Academy Page 4: Reverse shells and Meterpreter pivoting
+- **[SSH Tunneling Complete Guide](./pivoting-tunneling-port-forwarding/ssh-tunneling.md)** - Local, Remote, and Dynamic port forwarding mastery
+- **[Proxychains & SOCKS](./pivoting-tunneling-port-forwarding/proxychains-socks.md)** - Tool integration and configuration
+
+**Advanced Techniques:**
+- **[Chisel Tunneling](./pivoting-tunneling-port-forwarding/chisel-tunneling.md)** - Modern HTTP-based tunneling
+- **[Ligolo-ng](./pivoting-tunneling-port-forwarding/ligolo-ng.md)** - Next-generation tunneling agent
+- **[Metasploit Pivoting](./pivoting-tunneling-port-forwarding/metasploit-pivoting.md)** - MSF autoroute and framework integration
+- **[Windows Tools](./pivoting-tunneling-port-forwarding/windows-pivoting-tools.md)** - Native Windows pivoting (netsh, plink)
+- **[Alternative Protocols](./pivoting-tunneling-port-forwarding/dns-icmp-tunneling.md)** - DNS and ICMP tunneling techniques
+
+**Practical Application:**
+- **[Skills Assessment](./pivoting-tunneling-port-forwarding/skills-assessment.md)** - Hands-on lab scenarios and HTB Academy exercises
 
 ---
 
