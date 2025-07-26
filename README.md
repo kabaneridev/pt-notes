@@ -25,6 +25,11 @@ Certifications
 
 ### 🎯 **CPTS Preparation**
 * **[🎯 CPTS-PREP](CPTS-PREP/README.md)** - Comprehensive CPTS certification preparation
+  * **[🏰 Active Directory Enumeration & Attacks](CPTS-PREP/active-directory-enumeration-attacks/)** - **🔥 COMPLETE AD MODULE** 
+    * **26 Advanced Techniques** - LLMNR poisoning, Kerberoasting, ACL abuse, Trust attacks, Bleeding edge vulnerabilities
+    * **2 Skills Assessments** - Part I (8 questions) & Part II (12 questions) with professional methodologies
+    * **Superior Pivoting** - SSH dynamic port forwarding + proxychains methodology vs Meterpreter
+    * **Professional Toolkit** - CrackMapExec, Impacket, BloodHound integration
   * **[🗄️ Database Services](CPTS-PREP/databases/)** - MySQL, MSSQL, Oracle enumeration guides
   * **[📁 Network Services](CPTS-PREP/services/)** - FTP, SMB, NFS, SMTP, SNMP, IPMI enumeration
   * **[🖥️ Remote Management](CPTS-PREP/remote-management/)** - SSH, RDP, WinRM, WMI protocols
@@ -48,12 +53,17 @@ Certifications
 ## **Key Features**
 
 ### 🎯 **Comprehensive Coverage**
+- **🏰 Complete Active Directory Module** - 26 advanced AD techniques + 2 comprehensive Skills Assessments (20 questions total)
+- **🚀 Revolutionary Pivoting Methodology** - SSH dynamic port forwarding + proxychains (superior to Meterpreter)
 - **25+ Service Enumeration Guides** - Complete methodology for all major services
 - **CVE References** - Known vulnerabilities with exploitation examples
 - **HTB Academy Style** - Lab questions and practical scenarios
 - **Real-World Techniques** - Proven penetration testing methodologies
 
 ### 📚 **Practical Focus**
+- **🎯 Complete AD Attack Chains** - End-to-end domain compromise scenarios with working commands
+- **🔧 Professional Methodology** - SSH tunneling + proxychains for reliable pivoting
+- **🛠️ Industry-Standard Tools** - CrackMapExec, Impacket, BloodHound, Responder integration
 - **Step-by-step Commands** - Copy-paste ready enumeration procedures
 - **Multiple Tool Coverage** - Various tools for each enumeration task
 - **Security Assessment** - Vulnerability identification and exploitation
