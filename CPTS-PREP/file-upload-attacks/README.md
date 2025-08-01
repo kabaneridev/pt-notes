@@ -6,7 +6,9 @@
 
 ### Core Techniques
 - **[Upload Exploitation](./upload-exploitation.md)** - Web shells, reverse shells, and payload execution
-- **[Basic Bypass Techniques](./basic-bypass-techniques.md)** - Extension, content-type, and file signature bypasses
+- **[Client-Side Validation](./client-side-validation.md)** - Bypassing JavaScript-based frontend filtering
+- **[Blacklist Filters](./blacklist-filters.md)** - Extension fuzzing and blacklist bypass techniques
+- **[Basic Bypass Techniques](./basic-bypass-techniques.md)** - Whitelist bypasses, double extensions, character injection
 - **[Advanced Bypass Methods](./advanced-bypass-methods.md)** - Complex filtering evasion techniques
 - **[Other Upload Attacks](./other-upload-attacks.md)** - Alternative attack vectors and techniques
 
@@ -74,11 +76,12 @@ GIF89a<?php system($_GET['cmd']); ?>    # GIF header + PHP
 ```
 
 ### 🎯 **HTB Academy Coverage**
-- ✅ **Web Shell Exploitation** - PHP, ASP.NET, JSP web shells
-- ✅ **Reverse Shell Techniques** - Multiple language payloads
-- ✅ **Custom Shell Creation** - Manual payload crafting
-- ✅ **msfvenom Integration** - Automated payload generation
-- ✅ **Complete Lab Solutions** - Step-by-step HTB Academy walkthroughs
+- ✅ **Upload Exploitation (Page 3)** - Web shells, reverse shells, msfvenom integration
+- ✅ **Client-Side Validation (Page 4)** - Burp Suite interception, DevTools manipulation
+- ✅ **Blacklist Filters (Page 5)** - Extension fuzzing, .phtml bypass, case sensitivity
+- ✅ **Whitelist Filters (Page 6)** - Double extensions, character injection, null bytes
+- ✅ **Complete Lab Solutions** - All HTB Academy flags and step-by-step walkthroughs
+- ✅ **Advanced Techniques** - Server misconfigurations, automated wordlist generation
 
 ---
 
