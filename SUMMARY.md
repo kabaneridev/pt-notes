@@ -26,6 +26,8 @@
     * [MySQL Enumeration](CPTS-PREP/databases/mysql-enumeration.md)
     * [MSSQL Enumeration](CPTS-PREP/databases/mssql-enumeration.md)
     * [Oracle TNS Enumeration](CPTS-PREP/databases/oracle-enumeration.md)
+    * [SQL Basics](CPTS-PREP/databases/sql-basics.md)
+    * [SQL Injection Cheatsheet](CPTS-PREP/databases/sql-injection-cheatsheet.md)
   * 📁 Network Services
     * [FTP Enumeration](CPTS-PREP/services/ftp-enumeration.md)
     * [SMB Enumeration](CPTS-PREP/services/smb-enumeration.md)
@@ -94,6 +96,18 @@
     * [Web Information Gathering](CPTS-PREP/web-enumeration/web-information-gathering.md)
     * [Subdomain Enumeration](CPTS-PREP/web-enumeration/subdomain-enumeration.md)
     * [Web Application Enumeration](CPTS-PREP/web-enumeration/web-application-enumeration.md)
+  * 🌐 Web Application Attacks
+    * [🔥 Cross-Site Scripting (XSS)](CPTS-PREP/xss-cross-site-scripting.md)
+    * [📁 File Inclusion](CPTS-PREP/file-inclusion/README.md)
+      * [Basic LFI Techniques](CPTS-PREP/file-inclusion/basic-lfi-techniques.md)
+      * [Advanced Bypasses & PHP Filters](CPTS-PREP/file-inclusion/advanced-bypasses-filters.md)
+      * [PHP Wrappers for RCE](CPTS-PREP/file-inclusion/php-wrappers-rce.md)
+      * [Remote File Inclusion (RFI)](CPTS-PREP/file-inclusion/remote-file-inclusion.md)
+      * [File Upload + LFI](CPTS-PREP/file-inclusion/file-upload-lfi.md)
+      * [Log Poisoning Techniques](CPTS-PREP/file-inclusion/log-poisoning-techniques.md)
+      * [Automated Scanning & Tools](CPTS-PREP/file-inclusion/automated-scanning-tools.md)
+      * [Prevention & Hardening](CPTS-PREP/file-inclusion/prevention-hardening.md)
+      * [Skills Assessment Walkthrough](CPTS-PREP/file-inclusion/skills-assessment-walkthrough.md)
   * 🔐 Password Attacks & Lateral Movement
     * 📋 Complete Assessment Workflows
       * [🎯 Skills Assessment - Complete Password Attacks Workflow](CPTS-PREP/passwords-attacks/skills-assessment-workflow.md)
