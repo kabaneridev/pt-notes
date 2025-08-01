@@ -156,6 +156,10 @@ CPTS-PREP/
 - **[Subdomain Enumeration](./web-enumeration/subdomain-enumeration.md)** - DNS enumeration and subdomain discovery techniques
 - **[Web Application Enumeration](./web-enumeration/web-application-enumeration.md)** - Directory enumeration, virtual hosts, and web application testing
 
+**🌐 Web Application Attacks:**
+- **[Cross-Site Scripting (XSS)](./xss-cross-site-scripting.md)** - Complete XSS guide covering Stored, Reflected, and DOM-based XSS with HTB Academy techniques
+- **[File Inclusion](./file-inclusion/)** - Comprehensive LFI/RFI module with 9 specialized guides covering Basic Techniques, Advanced Bypasses, PHP Wrappers RCE, Remote File Inclusion, File Upload + LFI, Log Poisoning, Automated Scanning, Prevention & Hardening, and complete HTB Academy Skills Assessment
+
 
 **🔐 Password Attacks & Lateral Movement:**
 - **[Skills Assessment Workflow](./passwords-attacks/skills-assessment-workflow.md)** - Complete password attacks methodology from foothold to domain compromise
@@ -195,6 +199,7 @@ CPTS-PREP/
 ### **🎯 Comprehensive Coverage**
 - **30+ Service Types** - Complete enumeration guides for all major services
 - **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines)
+- **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides: LFI/RFI, PHP Wrappers, Log Poisoning, Automated Scanning, Prevention), and complete Skills Assessment with HTB Academy content
 - **Skills Assessment Trilogy** - Easy/Medium/Hard difficulty scenarios with solutions
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration
 - **CVE References** - Known vulnerabilities with exploitation examples
