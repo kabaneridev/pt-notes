@@ -33,9 +33,10 @@ Certifications
   * **[🗄️ Database Services](CPTS-PREP/databases/)** - MySQL, MSSQL, Oracle enumeration & SQL injection guides
   * **[📁 Network Services](CPTS-PREP/services/)** - FTP, SMB, NFS, SMTP, SNMP, IPMI enumeration
   * **[🖥️ Remote Management](CPTS-PREP/remote-management/)** - SSH, RDP, WinRM, WMI protocols
-  * **[🌐 Web Application Attacks](CPTS-PREP/)** - Complete web attack module with XSS and File Inclusion
+  * **[🌐 Web Application Attacks](CPTS-PREP/)** - Complete web attack module with XSS, File Inclusion, and File Upload Attacks
     * **[🔥 Cross-Site Scripting (XSS)](CPTS-PREP/xss-cross-site-scripting.md)** - Stored, Reflected, DOM-based XSS
     * **[📁 File Inclusion Module](CPTS-PREP/file-inclusion/)** - 9 specialized guides (LFI, RFI, PHP Wrappers, Log Poisoning)
+    * **[📤 File Upload Attacks](CPTS-PREP/file-upload-attacks/)** - Web shells, reverse shells, bypass techniques
   * **[🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)** - Domain and cloud reconnaissance
   * **[🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)** - IDS/IPS bypass techniques
 
@@ -57,7 +58,7 @@ Certifications
 
 ### 🎯 **Comprehensive Coverage**
 - **🏰 Complete Active Directory Module** - 26 advanced AD techniques + 2 comprehensive Skills Assessments (20 questions total)
-- **🌐 Complete Web Application Attacks** - XSS (Cross-Site Scripting) + File Inclusion module (9 specialized guides)
+- **🌐 Complete Web Application Attacks** - XSS (Cross-Site Scripting) + File Inclusion (9 guides) + File Upload Attacks modules
 - **🚀 Revolutionary Pivoting Methodology** - SSH dynamic port forwarding + proxychains (superior to Meterpreter)
 - **25+ Service Enumeration Guides** - Complete methodology for all major services
 - **CVE References** - Known vulnerabilities with exploitation examples

@@ -159,6 +159,7 @@ CPTS-PREP/
 **🌐 Web Application Attacks:**
 - **[Cross-Site Scripting (XSS)](./xss-cross-site-scripting.md)** - Complete XSS guide covering Stored, Reflected, and DOM-based XSS with HTB Academy techniques
 - **[File Inclusion](./file-inclusion/)** - Comprehensive LFI/RFI module with 9 specialized guides covering Basic Techniques, Advanced Bypasses, PHP Wrappers RCE, Remote File Inclusion, File Upload + LFI, Log Poisoning, Automated Scanning, Prevention & Hardening, and complete HTB Academy Skills Assessment
+- **[File Upload Attacks](./file-upload-attacks/)** - Complete file upload exploitation guide covering web shells, reverse shells, bypass techniques, and HTB Academy lab solutions
 
 
 **🔐 Password Attacks & Lateral Movement:**

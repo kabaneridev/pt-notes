@@ -99,6 +99,7 @@
   * 🌐 Web Application Attacks
     * [🔥 Cross-Site Scripting (XSS)](CPTS-PREP/xss-cross-site-scripting.md)
     * [📁 File Inclusion](CPTS-PREP/file-inclusion/README.md)
+    * [📤 File Upload Attacks](CPTS-PREP/file-upload-attacks/README.md)
       * [Basic LFI Techniques](CPTS-PREP/file-inclusion/basic-lfi-techniques.md)
       * [Advanced Bypasses & PHP Filters](CPTS-PREP/file-inclusion/advanced-bypasses-filters.md)
       * [PHP Wrappers for RCE](CPTS-PREP/file-inclusion/php-wrappers-rce.md)
