@@ -161,6 +161,18 @@ ffuf -u https://example.com/FUZZ -w /usr/share/wordlists/dirb/common.txt
 # File extension fuzzing
 ffuf -u https://example.com/indexFUZZ -w extensions.txt
 
+# Page fuzzing (find specific files after discovering extension)
+ffuf -u https://example.com/blog/FUZZ.php -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt
+
+# DNS subdomain fuzzing (public DNS resolution)
+ffuf -u https://FUZZ.example.com/ -w /opt/useful/seclists/Discovery/DNS/subdomains-top1million-5000.txt
+
+# Recursive fuzzing (automated subdirectory discovery)
+ffuf -u https://example.com/FUZZ -w /opt/useful/seclists/Discovery/Web-Content/directory-list-2.3-small.txt -recursion -recursion-depth 1 -e .php -v
+
+# Recursive fuzzing with multiple extensions and threading
+ffuf -u https://example.com/FUZZ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-small.txt -recursion -recursion-depth 1 -e .php,.phps,.php7 -v -fs 287 -t 200
+
 # Filter by response size
 ffuf -u https://example.com/FUZZ -w wordlist.txt -fs 1234
 
@@ -553,11 +565,21 @@ ffuf -u https://example.com/page?FUZZ=value -w /usr/share/wordlists/SecLists/Dis
 # POST parameter discovery
 ffuf -u https://example.com/login -d "FUZZ=value" -w parameters.txt -X POST
 
+# POST parameter fuzzing with proper headers
+ffuf -u https://example.com/admin/admin.php -d "FUZZ=key" -w /opt/useful/seclists/Discovery/Web-Content/burp-parameter-names.txt -X POST -H "Content-Type: application/x-www-form-urlencoded" -fs xxx
+
 # Hidden parameter discovery
 ffuf -u https://example.com/api/user?FUZZ=1 -w parameters.txt -fs 1234
 
 # JSON parameter fuzzing
 ffuf -u https://example.com/api/user -d '{"FUZZ":"value"}' -w parameters.txt -X POST -H "Content-Type: application/json"
+
+# Value fuzzing (after finding parameter, fuzz its values)
+# Create custom wordlist: for i in $(seq 1 1000); do echo $i >> ids.txt; done
+ffuf -u https://example.com/admin/admin.php -d "id=FUZZ" -w ids.txt -X POST -H "Content-Type: application/x-www-form-urlencoded" -fs xxx
+
+# Username value fuzzing
+ffuf -u https://example.com/login.php -d "username=FUZZ" -w /usr/share/seclists/Usernames/xato-net-10-million-usernames.txt -X POST -H "Content-Type: application/x-www-form-urlencoded" -fs 781
 ```
 
 ### **Arjun - Parameter Discovery Tool**

