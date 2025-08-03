@@ -18,6 +18,7 @@
 * [🔥 Cross-Site Scripting (XSS)](xss-cross-site-scripting.md)
 * [📁 File Inclusion](file-inclusion/README.md)
 * [📤 File Upload Attacks](file-upload-attacks/README.md)
+* [⚡ Command Injection](command-injection/README.md)
   * [Basic LFI Techniques](file-inclusion/basic-lfi-techniques.md)
   * [Advanced Bypasses & PHP Filters](file-inclusion/advanced-bypasses-filters.md)
   * [PHP Wrappers for RCE](file-inclusion/php-wrappers-rce.md)
@@ -245,13 +246,9 @@
 ### 🔄 In Progress
 * Vulnerability Assessment
 * Password Attacks
-* Command Injection
 
 ### 📅 Planned
 * SQL Injection (Advanced)
-* File Inclusion & Directory Traversal
-* Command Injection
-* File Upload Attacks
 * Network Enumeration
 * Privilege Escalation
 * Lateral Movement

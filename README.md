@@ -33,10 +33,18 @@ Certifications
   * **[🗄️ Database Services](CPTS-PREP/databases/)** - MySQL, MSSQL, Oracle enumeration & SQL injection guides
   * **[📁 Network Services](CPTS-PREP/services/)** - FTP, SMB, NFS, SMTP, SNMP, IPMI enumeration
   * **[🖥️ Remote Management](CPTS-PREP/remote-management/)** - SSH, RDP, WinRM, WMI protocols
-  * **[🌐 Web Application Attacks](CPTS-PREP/)** - Complete web attack module with XSS, File Inclusion, and File Upload Attacks
+  * **[🌐 Web Application Attacks](CPTS-PREP/)** - Complete web attack module with XSS, File Inclusion, File Upload, and Command Injection
     * **[🔥 Cross-Site Scripting (XSS)](CPTS-PREP/xss-cross-site-scripting.md)** - Stored, Reflected, DOM-based XSS
     * **[📁 File Inclusion Module](CPTS-PREP/file-inclusion/)** - 9 specialized guides (LFI, RFI, PHP Wrappers, Log Poisoning)
-    * **[📤 File Upload Attacks](CPTS-PREP/file-upload-attacks/)** - Web shells, reverse shells, bypass techniques
+    * **[📤 File Upload Attacks](CPTS-PREP/file-upload-attacks/)** - **🔥 COMPLETE UPLOAD MODULE**
+      * **8 Advanced Techniques** - Extension bypass, Content validation, XXE, XSS, DoS attacks
+      * **Skills Assessment Walkthrough** - Real-world 6-phase attack chain with source code analysis
+      * **Offensive + Defensive** - Attack techniques + comprehensive security measures
+      * **Professional Methodology** - Burp Suite integration, payload crafting, exploitation chains
+    * **[⚡ Command Injection Attacks](CPTS-PREP/command-injection/)** - **🔥 NEW MODULE** (In Progress)
+      * **OS Command Execution** - Direct and blind injection techniques
+      * **Filter Bypass Methods** - Advanced evasion and exploitation
+      * **Complete Methodology** - Detection, exploitation, and prevention
   * **[🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)** - Domain and cloud reconnaissance
   * **[🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)** - IDS/IPS bypass techniques
 
@@ -58,7 +66,7 @@ Certifications
 
 ### 🎯 **Comprehensive Coverage**
 - **🏰 Complete Active Directory Module** - 26 advanced AD techniques + 2 comprehensive Skills Assessments (20 questions total)
-- **🌐 Complete Web Application Attacks** - XSS (Cross-Site Scripting) + File Inclusion (9 guides) + File Upload Attacks modules
+- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (8 techniques + Skills Assessment) + Command Injection (New!)
 - **🚀 Revolutionary Pivoting Methodology** - SSH dynamic port forwarding + proxychains (superior to Meterpreter)
 - **25+ Service Enumeration Guides** - Complete methodology for all major services
 - **CVE References** - Known vulnerabilities with exploitation examples
@@ -67,8 +75,9 @@ Certifications
 
 ### 📚 **Practical Focus**
 - **🎯 Complete AD Attack Chains** - End-to-end domain compromise scenarios with working commands
+- **📤 Real-World Upload Exploitation** - 6-phase attack methodology with source code analysis and defense-in-depth bypasses
 - **🔧 Professional Methodology** - SSH tunneling + proxychains for reliable pivoting
-- **🛠️ Industry-Standard Tools** - CrackMapExec, Impacket, BloodHound, Responder integration
+- **🛠️ Industry-Standard Tools** - CrackMapExec, Impacket, BloodHound, Responder, Burp Suite integration
 - **Step-by-step Commands** - Copy-paste ready enumeration procedures
 - **Multiple Tool Coverage** - Various tools for each enumeration task
 - **Security Assessment** - Vulnerability identification and exploitation
