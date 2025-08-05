@@ -17,6 +17,15 @@
 ### 🌐 Web Application Attacks
 * [🔥 Cross-Site Scripting (XSS)](xss-cross-site-scripting.md)
 * [📁 File Inclusion](file-inclusion/README.md)
+  * [Basic LFI Techniques](file-inclusion/basic-lfi-techniques.md)
+  * [Advanced Bypasses & PHP Filters](file-inclusion/advanced-bypasses-filters.md)
+  * [PHP Wrappers for RCE](file-inclusion/php-wrappers-rce.md)
+  * [Remote File Inclusion (RFI)](file-inclusion/remote-file-inclusion.md)
+  * [File Upload + LFI](file-inclusion/file-upload-lfi.md)
+  * [Log Poisoning Techniques](file-inclusion/log-poisoning-techniques.md)
+  * [Automated Scanning & Tools](file-inclusion/automated-scanning-tools.md)
+  * [Prevention & Hardening](file-inclusion/prevention-hardening.md)
+  * [Skills Assessment Walkthrough](file-inclusion/skills-assessment-walkthrough.md)
 * [📤 File Upload Attacks](file-upload-attacks/README.md)
 * [⚡ Command Injection](command-injection/README.md)
   * [🔍 Detection Methods](command-injection/detection-methods.md)
@@ -29,15 +38,6 @@
   * [🎭 Advanced Command Obfuscation](command-injection/advanced-command-obfuscation.md)
   * [🤖 Evasion Tools](command-injection/evasion-tools.md)
   * [🎯 Skills Assessment - Command Injection](command-injection/skills-assessment-walkthrough.md)
-  * [Basic LFI Techniques](file-inclusion/basic-lfi-techniques.md)
-  * [Advanced Bypasses & PHP Filters](file-inclusion/advanced-bypasses-filters.md)
-  * [PHP Wrappers for RCE](file-inclusion/php-wrappers-rce.md)
-  * [Remote File Inclusion (RFI)](file-inclusion/remote-file-inclusion.md)
-  * [File Upload + LFI](file-inclusion/file-upload-lfi.md)
-  * [Log Poisoning Techniques](file-inclusion/log-poisoning-techniques.md)
-  * [Automated Scanning & Tools](file-inclusion/automated-scanning-tools.md)
-  * [Prevention & Hardening](file-inclusion/prevention-hardening.md)
-  * [Skills Assessment Walkthrough](file-inclusion/skills-assessment-walkthrough.md)
 
 
 ### 🗄️ Database Services
