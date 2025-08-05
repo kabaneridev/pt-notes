@@ -148,7 +148,7 @@ Each technique includes:
    - Automated payload generation
    - Tool comparison and integration
 
-10. **[Skills Assessment - Command Injection](skills-assessment-walkthrough.md)**
+10. **[🎯 Skills Assessment](skills-assessment-walkthrough.md)**
     - Real-world web file manager scenario
     - Complete exploitation walkthrough
     - Multiple payload construction methods
