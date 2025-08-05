@@ -160,6 +160,7 @@ CPTS-PREP/
 - **[Cross-Site Scripting (XSS)](./xss-cross-site-scripting.md)** - Complete XSS guide covering Stored, Reflected, and DOM-based XSS with HTB Academy techniques
 - **[File Inclusion](./file-inclusion/)** - Comprehensive LFI/RFI module with 9 specialized guides covering Basic Techniques, Advanced Bypasses, PHP Wrappers RCE, Remote File Inclusion, File Upload + LFI, Log Poisoning, Automated Scanning, Prevention & Hardening, and complete HTB Academy Skills Assessment
 - **[File Upload Attacks](./file-upload-attacks/)** - Complete file upload exploitation guide covering web shells, reverse shells, bypass techniques, and HTB Academy lab solutions
+- **[Command Injection Attacks](./command-injection/)** - **🏆 COMPLETE MODULE** (10 comprehensive sections: Detection + Exploitation + Filter Bypasses + Advanced Obfuscation + Skills Assessment) - OS Command Execution with direct and blind injection techniques, filter bypass methods, advanced evasion and automated tools, complete methodology with HTB Academy lab solutions
 
 
 **🔐 Password Attacks & Lateral Movement:**
@@ -200,7 +201,7 @@ CPTS-PREP/
 ### **🎯 Comprehensive Coverage**
 - **30+ Service Types** - Complete enumeration guides for all major services
 - **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines)
-- **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides: LFI/RFI, PHP Wrappers, Log Poisoning, Automated Scanning, Prevention), and complete Skills Assessment with HTB Academy content
+- **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides: LFI/RFI, PHP Wrappers, Log Poisoning, Automated Scanning, Prevention), File Upload Attacks (8 techniques + Skills Assessment), and Command Injection (10 comprehensive sections with complete Skills Assessment)
 - **Skills Assessment Trilogy** - Easy/Medium/Hard difficulty scenarios with solutions
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration
 - **CVE References** - Known vulnerabilities with exploitation examples
