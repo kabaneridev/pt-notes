@@ -201,7 +201,7 @@ CPTS-PREP/
 ### **🎯 Comprehensive Coverage**
 - **30+ Service Types** - Complete enumeration guides for all major services
 - **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines)
-- **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides: LFI/RFI, PHP Wrappers, Log Poisoning, Automated Scanning, Prevention), File Upload Attacks (8 techniques + Skills Assessment), and Command Injection (10 comprehensive sections with complete Skills Assessment)
+- **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides: LFI/RFI, PHP Wrappers, Log Poisoning, Automated Scanning, Prevention), File Upload Attacks (10 comprehensive sections + Skills Assessment), and Command Injection (10 comprehensive sections + Skills Assessment)
 - **Skills Assessment Trilogy** - Easy/Medium/Hard difficulty scenarios with solutions
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration
 - **CVE References** - Known vulnerabilities with exploitation examples

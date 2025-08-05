@@ -36,10 +36,9 @@ Certifications
   * **[🌐 Web Application Attacks](CPTS-PREP/)** - Complete web attack module with XSS, File Inclusion, File Upload, and Command Injection
     * **[🔥 Cross-Site Scripting (XSS)](CPTS-PREP/xss-cross-site-scripting.md)** - Stored, Reflected, DOM-based XSS
     * **[📁 File Inclusion Module](CPTS-PREP/file-inclusion/)** - 9 specialized guides (LFI, RFI, PHP Wrappers, Log Poisoning)
-    * **[📤 File Upload Attacks](CPTS-PREP/file-upload-attacks/)** - **🔥 COMPLETE UPLOAD MODULE**
-      * **8 Advanced Techniques** - Extension bypass, Content validation, XXE, XSS, DoS attacks
-      * **Skills Assessment Walkthrough** - Real-world 6-phase attack chain with source code analysis
-      * **Offensive + Defensive** - Attack techniques + comprehensive security measures
+    * **[📤 File Upload Attacks](CPTS-PREP/file-upload-attacks/)** - **🏆 COMPLETE MODULE** (10 sections: Upload Exploitation + Client-Side Bypass + Filter Evasion + Advanced Techniques + Skills Assessment)
+      * **Web Shell Deployment** - PHP, ASP.NET, JSP reverse shells and command execution
+      * **Comprehensive Bypasses** - Extension, Content-Type, MIME-Type, and advanced filter evasion  
       * **Professional Methodology** - Burp Suite integration, payload crafting, exploitation chains
     * **[⚡ Command Injection Attacks](CPTS-PREP/command-injection/)** - **🏆 COMPLETE MODULE** (10 sections: Detection + Exploitation + Filter Bypasses + Advanced Obfuscation + Skills Assessment)
       * **OS Command Execution** - Direct and blind injection techniques
@@ -66,7 +65,7 @@ Certifications
 
 ### 🎯 **Comprehensive Coverage**
 - **🏰 Complete Active Directory Module** - 26 advanced AD techniques + 2 comprehensive Skills Assessments (20 questions total)
-- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (8 techniques + Skills Assessment) + Command Injection (10 comprehensive sections with complete Skills Assessment)
+- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (10 comprehensive sections + Skills Assessment) + Command Injection (10 comprehensive sections + Skills Assessment)
 - **🚀 Revolutionary Pivoting Methodology** - SSH dynamic port forwarding + proxychains (superior to Meterpreter)
 - **25+ Service Enumeration Guides** - Complete methodology for all major services
 - **CVE References** - Known vulnerabilities with exploitation examples
