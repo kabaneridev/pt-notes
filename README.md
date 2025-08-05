@@ -41,7 +41,7 @@ Certifications
       * **Skills Assessment Walkthrough** - Real-world 6-phase attack chain with source code analysis
       * **Offensive + Defensive** - Attack techniques + comprehensive security measures
       * **Professional Methodology** - Burp Suite integration, payload crafting, exploitation chains
-    * **[⚡ Command Injection Attacks](CPTS-PREP/command-injection/)** - **🔥 NEW MODULE** (In Progress)
+    * **[⚡ Command Injection Attacks](CPTS-PREP/command-injection/)** - **🏆 COMPLETE MODULE** (10 sections: Detection + Exploitation + Filter Bypasses + Advanced Obfuscation + Skills Assessment)
       * **OS Command Execution** - Direct and blind injection techniques
       * **Filter Bypass Methods** - Advanced evasion and exploitation
       * **Complete Methodology** - Detection, exploitation, and prevention
@@ -66,7 +66,7 @@ Certifications
 
 ### 🎯 **Comprehensive Coverage**
 - **🏰 Complete Active Directory Module** - 26 advanced AD techniques + 2 comprehensive Skills Assessments (20 questions total)
-- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (8 techniques + Skills Assessment) + Command Injection (New!)
+- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (8 techniques + Skills Assessment) + Command Injection (10 comprehensive sections with complete Skills Assessment)
 - **🚀 Revolutionary Pivoting Methodology** - SSH dynamic port forwarding + proxychains (superior to Meterpreter)
 - **25+ Service Enumeration Guides** - Complete methodology for all major services
 - **CVE References** - Known vulnerabilities with exploitation examples

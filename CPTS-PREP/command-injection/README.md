@@ -90,4 +90,68 @@ Each technique includes:
 - ✅ **Real-world scenarios**
 - ✅ **Defense recommendations**
 
-Get ready to master command injection attacks! 🚀 
+---
+
+## Section Breakdown
+
+1. **[Detection Methods](detection-methods.md)**
+   - OS command injection operators
+   - URL encoding techniques
+   - Cross-platform compatibility
+   - Detection methodology
+
+2. **[Basic Exploitation](basic-exploitation.md)**
+   - Front-end validation bypass
+   - Web proxy usage (Burp Suite)
+   - HTTP request modification
+   - Initial command execution
+
+3. **[Advanced Operators](advanced-operators.md)**
+   - AND/OR logic operators
+   - Pipe and background execution
+   - Newline and separator methods
+   - Cross-injection operator reference
+
+4. **[Filter Identification](filter-identification.md)**
+   - Application vs WAF detection
+   - Blacklisted character discovery
+   - Systematic filter testing
+   - HTB Academy lab solutions
+
+5. **[Bypassing Space Filters](bypassing-space-filters.md)**
+   - Tab character replacement
+   - `$IFS` environment variable
+   - Bash brace expansion
+   - Alternative whitespace methods
+
+6. **[Bypassing Character Filters](bypassing-character-filters.md)**
+   - Environment variable extraction (`${PATH:0:1}`)
+   - Windows character techniques
+   - ASCII character shifting methods
+   - Variable syntax alternatives
+
+7. **[Bypassing Blacklisted Commands](bypassing-blacklisted-commands.md)**
+   - Command obfuscation techniques
+   - Quote injection methods (`w'h'o'am'i`)
+   - Platform-specific bypasses
+   - Advanced payload construction
+
+8. **[Advanced Command Obfuscation](advanced-command-obfuscation.md)**
+   - Case manipulation techniques
+   - Reversed command execution
+   - Base64/hex encoding methods
+   - WAF evasion strategies
+
+9. **[Evasion Tools](evasion-tools.md)**
+   - Bashfuscator (Linux automation)
+   - DOSfuscation (Windows automation)
+   - Automated payload generation
+   - Tool comparison and integration
+
+10. **[Skills Assessment - Command Injection](skills-assessment-walkthrough.md)**
+    - Real-world web file manager scenario
+    - Complete exploitation walkthrough
+    - Multiple payload construction methods
+    - Professional penetration testing methodology
+
+🎯 **Congratulations! You've mastered command injection attacks!** 🚀 
