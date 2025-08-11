@@ -130,6 +130,11 @@
       * [Advanced Command Obfuscation](CPTS-PREP/command-injection/advanced-command-obfuscation.md)
       * [Evasion Tools](CPTS-PREP/command-injection/evasion-tools.md)
       * [🎯 Skills Assessment](CPTS-PREP/command-injection/skills-assessment-walkthrough.md)
+    * [🌐 Web Attacks](CPTS-PREP/web-attacks/README.md)
+      * [HTTP Verb Tampering](CPTS-PREP/web-attacks/http-verb-tampering.md)
+      * [Insecure Direct Object References (IDOR)](CPTS-PREP/web-attacks/idor-attacks.md)
+      * [XML External Entity (XXE) Injection](CPTS-PREP/web-attacks/xxe-injection.md)
+      * [🎯 Skills Assessment](CPTS-PREP/web-attacks/skills-assessment.md)
   * 🔐 Password Attacks & Lateral Movement
     * 📋 Complete Assessment Workflows
       * [🎯 Skills Assessment - Complete Password Attacks Workflow](CPTS-PREP/passwords-attacks/skills-assessment-workflow.md)

@@ -44,6 +44,11 @@ Certifications
       * **OS Command Execution** - Direct and blind injection techniques
       * **Filter Bypass Methods** - Advanced evasion and exploitation
       * **Complete Methodology** - Detection, exploitation, and prevention
+    * **[🌐 Web Attacks](CPTS-PREP/web-attacks/)** - **🏆 COMPLETE MODULE** (4 sections: HTTP Verb Tampering + IDOR + XXE + Skills Assessment)
+      * **HTTP Verb Tampering** - Authorization bypass via method manipulation
+      * **IDOR Attacks** - User enumeration and privilege escalation
+      * **XXE Injection** - External entity exploitation and file disclosure
+      * **Attack Chaining** - Professional methodology combining multiple vulnerabilities
   * **[🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)** - Domain and cloud reconnaissance
   * **[🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)** - IDS/IPS bypass techniques
 
@@ -65,7 +70,7 @@ Certifications
 
 ### 🎯 **Comprehensive Coverage**
 - **🏰 Complete Active Directory Module** - 26 advanced AD techniques + 2 comprehensive Skills Assessments (20 questions total)
-- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (10 comprehensive sections + Skills Assessment) + Command Injection (10 comprehensive sections + Skills Assessment)
+- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (10 comprehensive sections + Skills Assessment) + Command Injection (10 comprehensive sections + Skills Assessment) + Web Attacks (4 comprehensive sections: HTTP Verb Tampering, IDOR, XXE + Skills Assessment)
 - **🚀 Revolutionary Pivoting Methodology** - SSH dynamic port forwarding + proxychains (superior to Meterpreter)
 - **25+ Service Enumeration Guides** - Complete methodology for all major services
 - **CVE References** - Known vulnerabilities with exploitation examples

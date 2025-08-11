@@ -48,6 +48,11 @@
   * [Advanced Command Obfuscation](command-injection/advanced-command-obfuscation.md)
   * [Evasion Tools](command-injection/evasion-tools.md)
   * [🎯 Skills Assessment](command-injection/skills-assessment-walkthrough.md)
+* [🌐 Web Attacks](web-attacks/README.md)
+  * [HTTP Verb Tampering](web-attacks/http-verb-tampering.md)
+  * [Insecure Direct Object References (IDOR)](web-attacks/idor-attacks.md)
+  * [XML External Entity (XXE) Injection](web-attacks/xxe-injection.md)
+  * [🎯 Skills Assessment](web-attacks/skills-assessment.md)
 
 
 ### 🗄️ Database Services
