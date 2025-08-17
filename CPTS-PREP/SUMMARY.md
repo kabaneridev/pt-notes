@@ -78,6 +78,42 @@
 * [📧 Email Services Attacks (SMTP/IMAP/POP3)](attacking-common-services/smtp-attacks.md)
 * [🎯 Skills Assessment - Complete Attack Chain Scenarios](attacking-common-services/skills-assessment.md)
 
+## 🌐 Attacking Common Applications
+* [📋 Module Overview](attacking-common-applications/README.md)
+
+### 🌐 Content Management Systems (CMS)
+* [WordPress Discovery & Enumeration](attacking-common-applications/wordpress-discovery-enumeration.md)
+* [WordPress Attacks & Exploitation](attacking-common-applications/wordpress-attacks.md)
+* [Joomla Discovery & Enumeration](attacking-common-applications/joomla-discovery-enumeration.md)
+* [Joomla Attacks & Exploitation](attacking-common-applications/joomla-attacks.md)
+* [Drupal Discovery & Enumeration](attacking-common-applications/drupal-discovery-enumeration.md)
+* [Drupal Attacks & Exploitation](attacking-common-applications/drupal-attacks.md)
+
+### ⚙️ Development & Build Tools
+* [Tomcat Discovery & Enumeration](attacking-common-applications/tomcat-discovery-enumeration.md)
+* [Tomcat Attacks & Exploitation](attacking-common-applications/tomcat-attacks.md)
+* [Jenkins Discovery & Enumeration](attacking-common-applications/jenkins-discovery-enumeration.md)
+* [Jenkins Attacks & Exploitation](attacking-common-applications/jenkins-attacks.md)
+
+### 📊 Infrastructure & Monitoring
+* [Splunk Discovery & Enumeration](attacking-common-applications/splunk-discovery-enumeration.md)
+* [Splunk Attacks & Exploitation](attacking-common-applications/splunk-attacks.md)
+* [GitLab Discovery & Enumeration](attacking-common-applications/gitlab-discovery-enumeration.md)
+* [PRTG Network Monitor Attacks](attacking-common-applications/prtg-attacks.md)
+
+### 🎫 Customer Service & Management
+* [osTicket System Exploitation](attacking-common-applications/osticket-attacks.md)
+
+### 🔌 Web Interfaces & Gateways
+* [Common Gateway Interface (CGI) - Shellshock](attacking-common-applications/cgi-shellshock-attacks.md)
+* [IIS Tilde Enumeration](attacking-common-applications/iis-tilde-enumeration.md)
+* [ColdFusion Discovery & Enumeration](attacking-common-applications/coldfusion-discovery-enumeration.md)
+
+### 🔍 Specialized Applications
+* [LDAP Injection Attacks](attacking-common-applications/ldap-injection-attacks.md)
+* [Binary Reverse Engineering](attacking-common-applications/binary-reverse-engineering.md)
+* [Other Notable Applications](attacking-common-applications/other-notable-applications.md)
+
 ## 🔀 Pivoting, Tunneling & Port Forwarding
 * [📋 Module Overview](pivoting-tunneling-port-forwarding/pivoting-overview.md)
 * [🔧 SSH Tunneling Complete Guide](pivoting-tunneling-port-forwarding/ssh-tunneling.md)
@@ -265,8 +301,14 @@
 * Host-Based Enumeration
 * Web Application Information Gathering
 * **Attacking Common Services** (Complete - 7 documents, 4,262 lines)
+* **Attacking Common Applications** (Complete - 22 documents covering CMS, Development Tools, Infrastructure Monitoring, and Specialized Applications)
 * **Cross-Site Scripting (XSS)** (Complete - HTB Academy guide with all XSS types and techniques)
 * **File Inclusion** (Complete - HTB Academy module with 9 specialized guides: Basic LFI, Advanced Bypasses, PHP Wrappers RCE, RFI, File Upload + LFI, Log Poisoning, Automated Scanning, Prevention & Hardening, Skills Assessment)
+* **File Upload Attacks** (Complete - 9 specialized guides covering all upload attack vectors and bypass techniques)
+* **Command Injection** (Complete - 10 comprehensive sections with detection, exploitation, and advanced evasion techniques)
+* **Web Attacks** (Complete - HTTP Verb Tampering, IDOR, XXE Injection with Skills Assessment)
+* **Pivoting, Tunneling & Port Forwarding** (Complete - 14 specialized guides covering all tunneling protocols and techniques)
+* **Active Directory Enumeration & Attacks** (Complete - 25 comprehensive guides covering all AD attack vectors and lateral movement)
 
 ### 🔄 In Progress
 * Vulnerability Assessment

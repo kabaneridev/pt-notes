@@ -49,6 +49,22 @@ Certifications
       * **IDOR Attacks** - User enumeration and privilege escalation
       * **XXE Injection** - External entity exploitation and file disclosure
       * **Attack Chaining** - Professional methodology combining multiple vulnerabilities
+    * **[⚔️ Attacking Common Applications](CPTS-PREP/attacking-common-applications/)** - **🚀 NEW MODULE** (WordPress + Joomla + CMS + Development Tools + Infrastructure)
+      * **WordPress Discovery & Enumeration** - WPScan, manual enumeration, and vulnerability assessment  
+      * **WordPress Attacks & Exploitation** - Theme manipulation, plugin vulnerabilities, Metasploit integration
+      * **Joomla Discovery & Enumeration** - DroopeScan, version detection, component analysis
+      * **Joomla Attacks & Exploitation** - Template RCE, CVE-2019-10945 directory traversal, core vulnerabilities
+      * **Drupal Discovery & Enumeration** - Node enumeration, CHANGELOG analysis, module discovery
+      * **Drupal Attacks & Exploitation** - PHP Filter abuse, Drupalgeddon series, backdoored modules
+      * **Tomcat Discovery & Enumeration** - Servlet container fingerprinting, manager interface discovery
+      * **Tomcat Attacks & Exploitation** - Manager brute force, WAR uploads, JSP shells, CVE-2020-1938
+      * **Jenkins Discovery & Enumeration** - CI/CD automation server reconnaissance, plugin analysis
+      * **Jenkins Attacks & Exploitation** - Script Console abuse, Groovy RCE, pipeline manipulation
+      * **Splunk Discovery & Enumeration** - SIEM log analytics reconnaissance, license analysis
+      * **Splunk Attacks & Exploitation** - Custom app RCE, scripted inputs, Universal Forwarder compromise
+      * **CMS Attack Vectors** - WordPress, Drupal, Joomla exploitation techniques
+      * **Development Tools** - Tomcat, Jenkins, GitLab security testing
+      * **Infrastructure Applications** - Splunk, PRTG, monitoring tool attacks
   * **[🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)** - Domain and cloud reconnaissance
   * **[🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)** - IDS/IPS bypass techniques
 
@@ -70,7 +86,7 @@ Certifications
 
 ### 🎯 **Comprehensive Coverage**
 - **🏰 Complete Active Directory Module** - 26 advanced AD techniques + 2 comprehensive Skills Assessments (20 questions total)
-- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (10 comprehensive sections + Skills Assessment) + Command Injection (10 comprehensive sections + Skills Assessment) + Web Attacks (4 comprehensive sections: HTTP Verb Tampering, IDOR, XXE + Skills Assessment)
+- **🌐 Complete Web Application Attacks** - XSS + File Inclusion (9 guides) + File Upload Attacks (10 comprehensive sections + Skills Assessment) + Command Injection (10 comprehensive sections + Skills Assessment) + Web Attacks (4 comprehensive sections: HTTP Verb Tampering, IDOR, XXE + Skills Assessment) + Attacking Common Applications (WordPress + Joomla + CMS + Development Tools + Infrastructure)
 - **🚀 Revolutionary Pivoting Methodology** - SSH dynamic port forwarding + proxychains (superior to Meterpreter)
 - **25+ Service Enumeration Guides** - Complete methodology for all major services
 - **CVE References** - Known vulnerabilities with exploitation examples

@@ -54,13 +54,28 @@ CPTS-PREP/
 │   └── skills-assessment-complete-walkthrough.md # Complete HTB Academy skills assessment (All 7 questions)
 ├── attacking-common-services/          # Protocol exploitation techniques
 │   ├── ftp-attacks.md                 # FTP exploitation and abuse
+│   ├── smb-attacks.md                 # SMB protocol attacks and RCE
+│   ├── sql-attacks.md                 # MySQL/MSSQL database exploitation
+│   └── [other service exploitation]
+├── attacking-common-applications/      # Application-specific exploitation
+│   ├── README.md                      # Module overview and methodology
+│   ├── wordpress-discovery-enumeration.md # WordPress scanning and enumeration
+│   ├── wordpress-attacks.md           # WordPress exploitation techniques
+│   ├── joomla-discovery-enumeration.md # Joomla scanning and enumeration
+│   ├── joomla-attacks.md              # Joomla exploitation techniques
+│   ├── drupal-discovery-enumeration.md # Drupal scanning and enumeration
+│   ├── drupal-attacks.md              # Drupal exploitation techniques
+│   ├── tomcat-discovery-enumeration.md # Tomcat enumeration and analysis
+│   ├── tomcat-attacks.md              # Tomcat exploitation and privilege escalation
+│   ├── jenkins-discovery-enumeration.md # Jenkins scanning and enumeration
+│   ├── jenkins-attacks.md             # Jenkins exploitation and credential extraction
+│   ├── splunk-discovery-enumeration.md # Splunk enumeration and analysis
+│   ├── splunk-attacks.md              # Splunk exploitation and privilege escalation
+│   └── [other application attacks]    # CGI, IIS, ColdFusion, LDAP, etc.
 ├── active-directory-enumeration-attacks/ # Active Directory penetration testing
 │   ├── initial-enumeration-domain.md     # Initial domain enumeration
 │   ├── llmnr-nbt-ns-poisoning-linux.md   # LLMNR/NBT-NS poisoning with Responder
 │   └── [additional AD attack modules]    # More AD techniques to be added
-│   ├── smb-attacks.md                 # SMB protocol attacks and RCE
-│   ├── sql-attacks.md                 # MySQL/MSSQL database exploitation
-│   └── [other service exploitation]
 └── remote-management/                  # Remote access protocols
     ├── remote-management.md            # Overview of remote management protocols
     ├── linux-remote-protocols.md      # SSH, Rsync, R-Services
@@ -98,6 +113,20 @@ CPTS-PREP/
 - **[RDP Attacks](./attacking-common-services/rdp-attacks.md)** - RDP exploitation, password spraying, session hijacking, and Pass-the-Hash attacks
 - **[Email Services Attacks](./attacking-common-services/smtp-attacks.md)** - SMTP/IMAP/POP3 exploitation, user enumeration, mail relay abuse, and credential harvesting
 - **[Skills Assessment](./attacking-common-services/skills-assessment.md)** - Complete attack chain scenarios (Easy/Medium/Hard) with HTB Academy solutions
+
+**🌐 Attacking Common Applications:**
+- **[Module Overview](./attacking-common-applications/README.md)** - Comprehensive methodologies for attacking prevalent applications in penetration testing
+- **CMS Attacks** - WordPress, Joomla, Drupal discovery, enumeration, and exploitation
+  - **[WordPress Complete Guide](./attacking-common-applications/wordpress-discovery-enumeration.md)** - WPScan, plugin enumeration, and WordPress-specific attacks
+  - **[Joomla Complete Guide](./attacking-common-applications/joomla-discovery-enumeration.md)** - JoomScan, version detection, and Joomla exploitation
+  - **[Drupal Complete Guide](./attacking-common-applications/drupal-discovery-enumeration.md)** - DroopeScan, Drupalgeddon, and Drupal security testing
+- **Development Tools** - Tomcat, Jenkins discovery and exploitation
+  - **[Tomcat Complete Guide](./attacking-common-applications/tomcat-discovery-enumeration.md)** - Manager interface, WAR deployment, and privilege escalation
+  - **[Jenkins Complete Guide](./attacking-common-applications/jenkins-discovery-enumeration.md)** - Script console, build job exploitation, and credential extraction
+- **Infrastructure Monitoring** - Splunk, PRTG, GitLab attacks
+  - **[Splunk Complete Guide](./attacking-common-applications/splunk-discovery-enumeration.md)** - Search processing language exploitation and privilege escalation
+  - **[PRTG Attacks](./attacking-common-applications/prtg-attacks.md)** - Network monitoring system exploitation
+- **Specialized Applications** - CGI Shellshock, IIS Tilde, ColdFusion, LDAP injection, and binary reverse engineering
 
 **🔀 Pivoting, Tunneling & Port Forwarding:**
 - **[Module Overview](./pivoting-tunneling-port-forwarding/pivoting-overview.md)** - Concepts, network segmentation, and methodology
@@ -200,9 +229,10 @@ CPTS-PREP/
 
 ### **🎯 Comprehensive Coverage**
 - **30+ Service Types** - Complete enumeration guides for all major services
-- **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines)
-- **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides: LFI/RFI, PHP Wrappers, Log Poisoning, Automated Scanning, Prevention), File Upload Attacks (10 comprehensive sections + Skills Assessment), and Command Injection (10 comprehensive sections + Skills Assessment)
-- **Skills Assessment Trilogy** - Easy/Medium/Hard difficulty scenarios with solutions
+- **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines) + "Attacking Common Applications" (22 documents)
+- **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides), File Upload Attacks (9 comprehensive sections), Command Injection (10 comprehensive sections), and Web Attacks (HTTP Verb Tampering, IDOR, XXE)
+- **Application-Specific Exploitation** - WordPress, Joomla, Drupal, Tomcat, Jenkins, Splunk, and specialized applications
+- **Skills Assessment Coverage** - Multiple complete walkthroughs for different difficulty levels
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration
 - **CVE References** - Known vulnerabilities with exploitation examples
 - **HTB Academy Style** - Lab questions and practical examples
