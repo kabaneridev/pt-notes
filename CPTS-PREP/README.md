@@ -117,16 +117,30 @@ CPTS-PREP/
 **🌐 Attacking Common Applications:**
 - **[Module Overview](./attacking-common-applications/README.md)** - Comprehensive methodologies for attacking prevalent applications in penetration testing
 - **CMS Attacks** - WordPress, Joomla, Drupal discovery, enumeration, and exploitation
-  - **[WordPress Complete Guide](./attacking-common-applications/wordpress-discovery-enumeration.md)** - WPScan, plugin enumeration, and WordPress-specific attacks
-  - **[Joomla Complete Guide](./attacking-common-applications/joomla-discovery-enumeration.md)** - JoomScan, version detection, and Joomla exploitation
-  - **[Drupal Complete Guide](./attacking-common-applications/drupal-discovery-enumeration.md)** - DroopeScan, Drupalgeddon, and Drupal security testing
+  - **[WordPress Discovery & Enumeration](./attacking-common-applications/wordpress-discovery-enumeration.md)** - WPScan, plugin enumeration, and version detection
+  - **[WordPress Attacks & Exploitation](./attacking-common-applications/wordpress-attacks.md)** - Theme manipulation, plugin vulnerabilities, Metasploit integration
+  - **[Joomla Discovery & Enumeration](./attacking-common-applications/joomla-discovery-enumeration.md)** - JoomScan, version detection, component analysis
+  - **[Joomla Attacks & Exploitation](./attacking-common-applications/joomla-attacks.md)** - Template RCE, CVE-2019-10945 directory traversal, core vulnerabilities
+  - **[Drupal Discovery & Enumeration](./attacking-common-applications/drupal-discovery-enumeration.md)** - DroopeScan, CHANGELOG analysis, module discovery
+  - **[Drupal Attacks & Exploitation](./attacking-common-applications/drupal-attacks.md)** - PHP Filter abuse, Drupalgeddon series, backdoored modules
 - **Development Tools** - Tomcat, Jenkins discovery and exploitation
-  - **[Tomcat Complete Guide](./attacking-common-applications/tomcat-discovery-enumeration.md)** - Manager interface, WAR deployment, and privilege escalation
-  - **[Jenkins Complete Guide](./attacking-common-applications/jenkins-discovery-enumeration.md)** - Script console, build job exploitation, and credential extraction
+  - **[Tomcat Discovery & Enumeration](./attacking-common-applications/tomcat-discovery-enumeration.md)** - Servlet container fingerprinting, manager interface discovery
+  - **[Tomcat Attacks & Exploitation](./attacking-common-applications/tomcat-attacks.md)** - Manager brute force, WAR uploads, JSP shells, CVE-2020-1938
+  - **[Jenkins Discovery & Enumeration](./attacking-common-applications/jenkins-discovery-enumeration.md)** - CI/CD automation server reconnaissance, plugin analysis
+  - **[Jenkins Attacks & Exploitation](./attacking-common-applications/jenkins-attacks.md)** - Script Console abuse, Groovy RCE, pipeline manipulation
 - **Infrastructure Monitoring** - Splunk, PRTG, GitLab attacks
-  - **[Splunk Complete Guide](./attacking-common-applications/splunk-discovery-enumeration.md)** - Search processing language exploitation and privilege escalation
-  - **[PRTG Attacks](./attacking-common-applications/prtg-attacks.md)** - Network monitoring system exploitation
-- **Specialized Applications** - CGI Shellshock, IIS Tilde, ColdFusion, LDAP injection, and binary reverse engineering
+  - **[Splunk Discovery & Enumeration](./attacking-common-applications/splunk-discovery-enumeration.md)** - SIEM log analytics reconnaissance, license analysis
+  - **[Splunk Attacks & Exploitation](./attacking-common-applications/splunk-attacks.md)** - Custom app RCE, scripted inputs, Universal Forwarder compromise
+  - **[GitLab Discovery & Enumeration](./attacking-common-applications/gitlab-discovery-enumeration.md)** - Repository mining, user enumeration, CVE exploitation
+  - **[PRTG Network Monitor Attacks](./attacking-common-applications/prtg-attacks.md)** - Command injection via notification parameters
+- **Specialized Applications** - CGI, IIS, ColdFusion, LDAP, Binary Analysis
+  - **[CGI Shellshock Attacks](./attacking-common-applications/cgi-shellshock-attacks.md)** - CVE-2014-6271 exploitation via HTTP headers
+  - **[IIS Tilde Enumeration](./attacking-common-applications/iis-tilde-enumeration.md)** - Short filename discovery using 8.3 format
+  - **[ColdFusion Discovery & Enumeration](./attacking-common-applications/coldfusion-discovery-enumeration.md)** - CFML application testing, port 5500 protocols
+  - **[LDAP Injection Attacks](./attacking-common-applications/ldap-injection-attacks.md)** - Authentication bypass via environment variables
+  - **[Binary Reverse Engineering](./attacking-common-applications/binary-reverse-engineering.md)** - Connection string extraction from compiled applications
+  - **[osTicket System Exploitation](./attacking-common-applications/osticket-attacks.md)** - Support system credential harvesting
+  - **[Other Notable Applications](./attacking-common-applications/other-notable-applications.md)** - WebLogic, Axis2, WebSphere, Zabbix, Nagios
 
 **🔀 Pivoting, Tunneling & Port Forwarding:**
 - **[Module Overview](./pivoting-tunneling-port-forwarding/pivoting-overview.md)** - Concepts, network segmentation, and methodology

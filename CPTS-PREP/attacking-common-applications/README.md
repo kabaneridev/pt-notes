@@ -30,33 +30,24 @@ During penetration tests, we frequently encounter the same applications across d
 * [Jenkins Discovery & Enumeration](jenkins-discovery-enumeration.md)
 * [Jenkins Attacks & Exploitation](jenkins-attacks.md)
 
-### 📊 Infrastructure & Network Monitoring
+### 📊 Infrastructure & Monitoring
 * [Splunk Discovery & Enumeration](splunk-discovery-enumeration.md)
 * [Splunk Attacks & Exploitation](splunk-attacks.md)
-* [GitLab/Git Repository Attacks](gitlab-attacks.md)
-
-### 📊 Infrastructure & Monitoring
-* [Splunk Discovery & Exploitation](splunk-attacks.md)
+* [GitLab Discovery & Enumeration](gitlab-discovery-enumeration.md)
 * [PRTG Network Monitor Attacks](prtg-attacks.md)
-* [Grafana & Monitoring Tools](monitoring-tools-attacks.md)
 
-### 🎫 Customer Service & Configuration Management
+### 🎫 Customer Service & Management
 * [osTicket System Exploitation](osticket-attacks.md)
-* [ServiceNow Discovery & Attacks](servicenow-attacks.md)
-* [Configuration Management Platforms](config-management-attacks.md)
 
 ### 🔌 Web Interfaces & Gateways
-* [Common Gateway Interface (CGI) Attacks](cgi-attacks.md)
-* [API Gateway Exploitation](api-gateway-attacks.md)
-* [Web Service Endpoints](web-services-attacks.md)
+* [Common Gateway Interface (CGI) - Shellshock Attacks](cgi-shellshock-attacks.md)
+* [IIS Tilde Enumeration](iis-tilde-enumeration.md)
+* [ColdFusion Discovery & Enumeration](coldfusion-discovery-enumeration.md)
 
-### 💻 Client Applications & Miscellaneous
-* [Thick Client Application Analysis](thick-client-attacks.md)
-* [Network Device Web Interfaces](network-device-attacks.md)
-* [Virtualization Platforms](virtualization-attacks.md)
-
-### 🎯 Comprehensive Skills Assessment
-* [Multi-Application Assessment](skills-assessment.md)
+### 🔍 Specialized Applications
+* [LDAP Injection Attacks](ldap-injection-attacks.md)
+* [Binary Reverse Engineering](binary-reverse-engineering.md)
+* [Other Notable Applications](other-notable-applications.md)
 
 ---
 
