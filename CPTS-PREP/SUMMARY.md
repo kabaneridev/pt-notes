@@ -16,6 +16,11 @@
 
 ### 🌐 Web Application Attacks
 * [🔥 Cross-Site Scripting (XSS)](xss-cross-site-scripting.md)
+* [🌐 Web Attacks](web-attacks/README.md)
+  * [HTTP Verb Tampering](web-attacks/http-verb-tampering.md)
+  * [Insecure Direct Object References (IDOR)](web-attacks/idor-attacks.md)
+  * [XML External Entity (XXE) Injection](web-attacks/xxe-injection.md)
+  * [🎯 Skills Assessment](web-attacks/skills-assessment.md)
 * [📁 File Inclusion](file-inclusion/README.md)
   * [Basic LFI Techniques](file-inclusion/basic-lfi-techniques.md)
   * [Advanced Bypasses & PHP Filters](file-inclusion/advanced-bypasses-filters.md)
@@ -33,9 +38,7 @@
   * [Basic Bypass Techniques](file-upload-attacks/basic-bypass-techniques.md)
   * [Type Filters](file-upload-attacks/type-filters.md)
   * [Limited File Uploads](file-upload-attacks/limited-file-uploads.md)
-  * [Advanced Bypass Methods](file-upload-attacks/advanced-bypass-methods.md)
-  * [Other Upload Attacks](file-upload-attacks/other-upload-attacks.md)
-  * [Prevention & Hardening](file-upload-attacks/prevention-hardening.md)
+  * [Prevention & Defenses](file-upload-attacks/prevention-and-defenses.md)
   * [🎯 Skills Assessment](file-upload-attacks/skills-assessment-walkthrough.md)
 * [⚡ Command Injection](command-injection/README.md)
   * [Detection Methods](command-injection/detection-methods.md)
