@@ -228,6 +228,12 @@ CPTS-PREP/
 - **[Linux Remote Protocols](./remote-management/linux-remote-protocols.md)** - SSH, Rsync, R-Services enumeration
 - **[Windows Remote Protocols](./remote-management/windows-remote-protocols.md)** - RDP, WinRM, WMI testing
 
+**🪟 Windows Privilege Escalation:**
+- **[Module Overview](./windows-priv-esc/README.md)** - Comprehensive Windows privilege escalation methodology
+- **[Situational Awareness](./windows-priv-esc/situational-awareness.md)** - Network enumeration, security protections, system context assessment
+- **[Initial Enumeration](./windows-priv-esc/initial-enumeration.md)** - System information, processes, users, groups, and services enumeration
+- **[Communication with Processes](./windows-priv-esc/communication-with-processes.md)** - Network services and named pipes analysis for privilege escalation
+
 **🐧 Linux Privilege Escalation:**
 - **[Module Overview](./linux-priv-esc/README.md)** - Comprehensive Linux privilege escalation methodology
 - **[Environment Enumeration](./linux-priv-esc/environment-enumeration.md)** - System reconnaissance and information gathering techniques
@@ -367,6 +373,7 @@ CPTS-PREP/
 - **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines) + "Attacking Common Applications" (22 documents)
 - **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides), File Upload Attacks (9 comprehensive sections), Command Injection (10 comprehensive sections), and Web Attacks (HTTP Verb Tampering, IDOR, XXE)
 - **Application-Specific Exploitation** - WordPress, Joomla, Drupal, Tomcat, Jenkins, Splunk, and specialized applications
+- **Windows Privilege Escalation** - New module covering situational awareness, initial enumeration, user/group privileges, and systematic escalation techniques
 - **Linux Privilege Escalation** - Complete module with 24 techniques covering environment enumeration, permissions-based attacks, service exploitation, container escapes, kernel exploits, and defensive hardening
 - **Skills Assessment Coverage** - Multiple complete walkthroughs for different difficulty levels
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration

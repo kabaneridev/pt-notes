@@ -201,6 +201,12 @@
 * [🎯 Living off the Land Transfers](file-transfers/living-off-the-land-file-transfers.md)
 * [🔍 File Transfer Detection](file-transfers/file-transfer-detection.md)
 
+## 🪟 Windows Privilege Escalation
+* [📋 Module Overview](windows-priv-esc/README.md)
+* [🔍 Situational Awareness](windows-priv-esc/situational-awareness.md)
+* [📊 Initial Enumeration](windows-priv-esc/initial-enumeration.md)
+* [🔄 Communication with Processes](windows-priv-esc/communication-with-processes.md)
+
 ## 🐧 Linux Privilege Escalation
 * [📋 Module Overview](linux-priv-esc/README.md)
 * [🔍 Environment Enumeration](linux-priv-esc/environment-enumeration.md)
