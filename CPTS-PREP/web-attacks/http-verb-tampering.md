@@ -247,7 +247,7 @@ curl -i http://94.237.50.221:38391/
 # Should show empty file manager
 ```
 
-**🎯 Flag:** `HTB{4lw4y5_c0v3r_4ll_v3rb5}`
+**🎯 Flag:** `HTB{...}`
 
 ### Lab 2: Command Injection Filter Bypass
 

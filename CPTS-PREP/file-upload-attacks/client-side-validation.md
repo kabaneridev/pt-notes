@@ -246,7 +246,7 @@ function checkFile(File) {
 
 ### Lab 1: Basic Client-Side Bypass
 
-**Target:** `HTB{cl13n7_51d3_v4l1d4710n_w0n7_570p_m3}`
+**Target:** `HTB{...}`
 
 **Method 1 - Burp Suite Interception:**
 ```bash

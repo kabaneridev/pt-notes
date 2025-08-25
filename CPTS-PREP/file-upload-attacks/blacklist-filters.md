@@ -72,7 +72,7 @@ This indicates that the web application has some form of file type validation on
 
 ### Lab 1: Basic Blacklist Bypass
 
-**Target:** \`HTB{1_c4n_n3v3r_b3_bl4ckl1573d}\`
+**Target:** \`HTB{...}\`
 
 **Step-by-Step Solution:**
 

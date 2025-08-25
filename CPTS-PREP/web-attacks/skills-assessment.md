@@ -280,10 +280,10 @@ PD9waHAgJGZsYWcgPSAiSFRCe200NTczcl93M2JfNDc3NGNrM3J9IjsgPz4K
 ```bash
 echo 'PD9waHAgJGZsYWcgPSAiSFRCe200NTczcl93M2JfNDc3NGNrM3J9IjsgPz4K' | base64 -d
 
-# Output: <?php $flag = "HTB{m4573r_w3b_4774ck3r}"; ?>
+# Output: <?php $flag = "HTB{...}"; ?>
 ```
 
-**🏆 Final Flag:** `HTB{m4573r_w3b_4774ck3r}`
+**🏆 Final Flag:** `HTB{...}`
 
 ---
 
@@ -300,7 +300,7 @@ graph TD
     G --> H[Admin Access<br/>a.corrales login]
     H --> I[XXE Discovery<br/>/addEvent.php XML]
     I --> J[Flag Extraction<br/>php://filter XXE]
-    J --> K[Mission Complete<br/>HTB{m4573r_w3b_4774ck3r}]
+    J --> K[Mission Complete<br/>HTB{...}]
 ```
 
 ---

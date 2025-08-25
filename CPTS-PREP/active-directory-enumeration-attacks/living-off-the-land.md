@@ -674,10 +674,10 @@ wmic useraccount where "disabled=true" get name,description
 PS C:\htb> dsquery * -filter "(&(objectCategory=person)(objectClass=user)(userAccountControl:1.2.840.113556.1.4.803:=2)(adminCount=1))" -attr sAMAccountName description
 
   sAMAccountName description
-  backup_svc     HTB{D15abl3d_4dm1n_4cc0un7_3num3r4710n}
+  backup_svc     HTB{...}
 ```
 
-**Expected Answer:** `HTB{D15abl3d_4dm1n_4cc0un7_3num3r4710n}`
+**Expected Answer:** `HTB{...}`
 
 ---
 

@@ -96,7 +96,7 @@ curl "http://TARGET_IP:PORT/ilf_admin/index.php?log=../../../../../../../var/log
 
 ## Expected Flag Format
 
-**Flag:** `HTB{example_flag_here}` or similar format  
+**Flag:** `HTB{...}` or similar format  
 **Location:** `/flag_[random].txt` in root directory
 
 ---

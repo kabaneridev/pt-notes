@@ -308,7 +308,7 @@ filename="shell.aspx:.jpg"
 
 ### Expected Flag Format
 ```bash
-HTB{wh173l157_byp455_15_p0551bl3}
+HTB{...}
 ```
 
 ---

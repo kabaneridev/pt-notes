@@ -361,7 +361,7 @@ snmpwalk -v2c -c backup target | grep -i "version"
 
 # Step 5: Look for custom scripts and flags
 snmpwalk -v2c -c backup target | grep -i "htb\|flag"
-# Result: HTB{5nMp_fl4g_uidhfljnsldiuhbfsdij44738b2u763g}
+# Result: HTB{...}
 ```
 
 ### HTB Academy Lab Questions Examples

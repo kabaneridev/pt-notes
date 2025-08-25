@@ -335,10 +335,8 @@ ns.inlanefreight.htb
 dig axfr hr.inlanefreight.htb @10.129.137.154 | grep "TXT"
 
 # Successful flag extraction
-hr.inlanefreight.htb.	604800	IN	TXT	"HTB{LUIHNFAS2871SJK1259991}"
+hr.inlanefreight.htb.	604800	IN	TXT	"HTB{...}"
 ```
-
-**Answer**: `HTB{LUIHNFAS2871SJK1259991}`
 
 #### Alternative Methods
 ```bash

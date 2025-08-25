@@ -84,7 +84,7 @@ sudo nmap -g53 --max-retries=1 -Pn -p- --disable-arp-ping 10.129.142.113
 sudo nc -s 10.10.14.87 -p53 10.129.142.113 50000
 
 # Result: Access to IBM Db2 service that returns flag
-# 220 HTB{kjnsdf2n982n1827eh76238s98di1w6}
+# 220 HTB{...
 ```
 
 ## **Advanced Evasion Techniques**

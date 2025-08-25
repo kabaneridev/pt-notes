@@ -360,7 +360,7 @@ ssh -i id_rsa jason@10.129.137.91
 
 # Find flag
 cat flag.txt
-# HTB{SMB_4TT4CKS_2349872359}
+# HTB{...}
 ```
 
 ---

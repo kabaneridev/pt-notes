@@ -148,7 +148,7 @@ hexedit normal.jpg
 - Check page source if content is not visible
 - Flag should be displayed in SVG text content
 
-**Expected Flag:** `HTB{xxe_4nd_svg_c4n_l34d_70_f1l3_d15cl05ur3}`
+**Expected Flag:** `HTB{...}`
 
 ### Lab 2: Source Code Disclosure
 

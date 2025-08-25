@@ -201,6 +201,33 @@
 * [🎯 Living off the Land Transfers](file-transfers/living-off-the-land-file-transfers.md)
 * [🔍 File Transfer Detection](file-transfers/file-transfer-detection.md)
 
+## 🐧 Linux Privilege Escalation
+* [📋 Module Overview](linux-priv-esc/README.md)
+* [🔍 Environment Enumeration](linux-priv-esc/environment-enumeration.md)
+* [🔧 Services & Internals Enumeration](linux-priv-esc/services-internals-enumeration.md)
+* [🔍 Credential Hunting](linux-priv-esc/credential-hunting.md)
+* [🛤️ PATH Abuse](linux-priv-esc/path-abuse.md)
+* [🌟 Wildcard Abuse](linux-priv-esc/wildcard-abuse.md)
+* [🚪 Escaping Restricted Shells](linux-priv-esc/escaping-restricted-shells.md)
+* [🔐 Special Permissions](linux-priv-esc/special-permissions.md)
+* [⚡ Sudo Rights Abuse](linux-priv-esc/sudo-rights-abuse.md)
+* [👑 Privileged Groups](linux-priv-esc/privileged-groups.md)
+* [🎭 Capabilities](linux-priv-esc/capabilities.md)
+* [⚙️ Vulnerable Services](linux-priv-esc/vulnerable-services.md)
+* [⏰ Cron Job Abuse](linux-priv-esc/cron-job-abuse.md)
+* [🐳 LXD Container Escape](linux-priv-esc/lxd-container-escape.md)
+* [🐋 Docker Container Escape](linux-priv-esc/docker-container-escape.md)
+* [📜 Logrotate Exploitation](linux-priv-esc/logrotate-exploitation.md)
+* [🔧 Miscellaneous Techniques](linux-priv-esc/miscellaneous-techniques.md)
+* [📚 Shared Libraries](linux-priv-esc/shared-libraries.md)
+* [🎯 Shared Object Hijacking](linux-priv-esc/shared-object-hijacking.md)
+* [🐍 Python Library Hijacking](linux-priv-esc/python-library-hijacking.md)
+* [🚨 Sudo CVE Exploits](linux-priv-esc/sudo-cve-exploits.md)
+* [🔐 Polkit/Pwnkit](linux-priv-esc/polkit-pwnkit.md)
+* [💧 Dirty Pipe](linux-priv-esc/dirty-pipe.md)
+* [🌐 Netfilter Kernel Exploits](linux-priv-esc/netfilter-kernel-exploits.md) *(Advanced)*
+* [🛡️ Linux Hardening](linux-priv-esc/linux-hardening.md)
+
 ## 🔐 Password Attacks
 
 ### 📋 Complete Assessment Workflows

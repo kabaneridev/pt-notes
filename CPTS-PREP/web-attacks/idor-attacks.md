@@ -557,7 +557,7 @@ ls -la *.txt
 cat *.txt
 ```
 
-**🎯 Flag:** `HTB{4ll_f1l35_4r3_m1n3}`
+**🎯 Flag:** `HTB{...}`
 
 ### Lab 2: Encoded Contract Bypass
 
@@ -593,7 +593,7 @@ for i in {1..20}; do
 done
 ```
 
-**🎯 Flag:** `HTB{h45h1n6_1d5_w0n7_570p_m3}`
+**🎯 Flag:** `HTB{...}`
 
 ### Lab 3: API Information Disclosure
 

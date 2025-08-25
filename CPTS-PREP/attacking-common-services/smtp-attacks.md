@@ -673,12 +673,12 @@ Hi admin,
 
 How can I change my password to something more secure? 
 
-flag: HTB{w34k_p4$$w0rd}
+flag: HTB{...}
 
 )
 13 OK FETCH completed
 
-# Lab Answer: HTB{w34k_p4$$w0rd}
+# Lab Answer: HTB{...}
 ```
 
 ### Key Lab Learning Points
@@ -705,7 +705,7 @@ flag: HTB{w34k_p4$$w0rd}
    - Enumeration → Credential Attack → Email Access
    - Weak password exploitation (rockyou.txt)
    - Email-based intelligence gathering
-   - Flag extraction: HTB{w34k_p4$$w0rd}
+   - Flag extraction: HTB{...}
 ```
 
 ---

