@@ -233,6 +233,28 @@ CPTS-PREP/
 - **[Situational Awareness](./windows-priv-esc/situational-awareness.md)** - Network enumeration, security protections, system context assessment
 - **[Initial Enumeration](./windows-priv-esc/initial-enumeration.md)** - System information, processes, users, groups, and services enumeration
 - **[Communication with Processes](./windows-priv-esc/communication-with-processes.md)** - Network services and named pipes analysis for privilege escalation
+- **[SeImpersonate & SeAssignPrimaryToken](./windows-priv-esc/seimpersonate-privilege-escalation.md)** - Token impersonation attacks using JuicyPotato, PrintSpoofer, and RoguePotato
+- **[SeDebugPrivilege](./windows-priv-esc/sedebug-privilege-escalation.md)** - LSASS memory dumping, credential extraction, and SYSTEM privilege escalation
+- **[SeTakeOwnershipPrivilege](./windows-priv-esc/setakeownership-privilege-escalation.md)** - File ownership takeover, ACL manipulation, and sensitive data access
+- **[Windows Built-in Groups](./windows-priv-esc/windows-builtin-groups.md)** - Backup Operators exploitation, SeBackupPrivilege abuse, and Domain Controller NTDS.dit extraction
+- **[Event Log Readers](./windows-priv-esc/event-log-readers.md)** - Event log analysis, process creation auditing, and credential extraction from command-line history
+- **[DnsAdmins](./windows-priv-esc/dnsadmins-privilege-escalation.md)** - DNS service manipulation, custom DLL injection, and Domain Controller privilege escalation attacks
+- **[Hyper-V Administrators](./windows-priv-esc/hyperv-administrators.md)** - Virtual machine cloning attacks and hard link exploitation techniques
+- **[Print Operators](./windows-priv-esc/print-operators.md)** - SeLoadDriverPrivilege exploitation and malicious driver loading attacks
+- **[Server Operators](./windows-priv-esc/server-operators.md)** - Service control, binary path modification, and Domain Controller compromise techniques
+- **[UAC Bypass](./windows-priv-esc/uac-bypass.md)** - User Account Control bypass via DLL hijacking, auto-elevating binaries, and UACME techniques
+- **[Weak Permissions](./windows-priv-esc/weak-permissions.md)** - File system ACLs, service permissions, unquoted service paths, registry ACLs, and autorun binary exploitation
+- **[Kernel Exploits](./windows-priv-esc/kernel-exploits.md)** - Historical and modern Windows kernel vulnerabilities including HiveNightmare, PrintNightmare, and legacy exploits
+- **[Vulnerable Services](./windows-priv-esc/vulnerable-services.md)** - Third-party application vulnerabilities, service enumeration, and exploitation techniques including Druva inSync command injection
+- **[Credential Hunting](./windows-priv-esc/credential-hunting.md)** - File system credential discovery, PowerShell history analysis, browser dictionaries, unattended installation files, and DPAPI credential decryption
+- **[Other Files](./windows-priv-esc/other-files.md)** - Advanced credential hunting in StickyNotes databases, system backup files, network shares, and application-specific storage locations
+- **[Further Credential Theft](./windows-priv-esc/further-credential-theft.md)** - Browser credential extraction, password manager cracking, LaZagne automation, SessionGopher, registry-stored credentials, and WiFi password retrieval
+- **[Citrix Breakout](./windows-priv-esc/citrix-breakout.md)** - Escaping restricted virtualization environments using dialog boxes, UNC paths, alternate tools, and privilege escalation chains
+- **[Interacting with Users](./windows-priv-esc/interacting-with-users.md)** - Social engineering attacks including traffic capture, SCF/LNK file hash capture, process monitoring, and credential harvesting
+- **[Pillaging](./windows-priv-esc/pillaging.md)** - Post-exploitation data extraction from applications, browsers, clipboard, backup systems, and configuration files
+- **[Miscellaneous Techniques](./windows-priv-esc/miscellaneous-techniques.md)** - LOLBAS exploitation, AlwaysInstallElevated, CVE-2019-1388, scheduled tasks, and virtual disk mounting
+- **[Windows Server 2008](./windows-priv-esc/windows-server-2008.md)** - Legacy system exploitation using Sherlock, missing patches, and Metasploit privilege escalation
+- **[Windows 7 Exploitation](./windows-priv-esc/windows-7-exploitation.md)** - End-of-life desktop exploitation using Windows-Exploit-Suggester and MS16-032 PowerShell attacks
 
 **🐧 Linux Privilege Escalation:**
 - **[Module Overview](./linux-priv-esc/README.md)** - Comprehensive Linux privilege escalation methodology
@@ -373,7 +395,7 @@ CPTS-PREP/
 - **Complete Attack Modules** - Full HTB Academy "Attacking Common Services" (4,262 lines) + "Attacking Common Applications" (22 documents)
 - **Web Application Attacks** - XSS (Cross-Site Scripting), File Inclusion module (9 specialized guides), File Upload Attacks (9 comprehensive sections), Command Injection (10 comprehensive sections), and Web Attacks (HTTP Verb Tampering, IDOR, XXE)
 - **Application-Specific Exploitation** - WordPress, Joomla, Drupal, Tomcat, Jenkins, Splunk, and specialized applications
-- **Windows Privilege Escalation** - New module covering situational awareness, initial enumeration, user/group privileges, and systematic escalation techniques
+- **Windows Privilege Escalation** - Comprehensive module covering situational awareness, initial enumeration, privilege exploitation (SeImpersonate, SeDebugPrivilege, SeTakeOwnershipPrivilege), Windows Built-in Groups abuse (Backup Operators, Event Log Readers, DnsAdmins, Hyper-V Administrators, Print Operators, Server Operators), UAC bypass techniques, weak permissions exploitation, kernel exploits (HiveNightmare, PrintNightmare, legacy vulnerabilities), vulnerable third-party services, credential hunting techniques, advanced file system searches, further credential theft (browsers, password managers, automated tools), and systematic escalation techniques
 - **Linux Privilege Escalation** - Complete module with 24 techniques covering environment enumeration, permissions-based attacks, service exploitation, container escapes, kernel exploits, and defensive hardening
 - **Skills Assessment Coverage** - Multiple complete walkthroughs for different difficulty levels
 - **Web Application Focus** - Dedicated web reconnaissance and enumeration

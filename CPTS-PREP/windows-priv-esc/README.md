@@ -12,6 +12,22 @@ Windows privilege escalation techniques for penetration testing and CPTS prepara
 - **[Communication with Processes](communication-with-processes.md)** - Network services and named pipes analysis
 
 ### 🏛️ User and Group Privileges  
+- **[SeImpersonate & SeAssignPrimaryToken](seimpersonate-privilege-escalation.md)** - Token impersonation attacks (Potato techniques)
+- **[SeDebugPrivilege](sedebug-privilege-escalation.md)** - LSASS memory dumping and SYSTEM privilege escalation
+- **[SeTakeOwnershipPrivilege](setakeownership-privilege-escalation.md)** - File ownership takeover and ACL manipulation
+- **[Windows Built-in Groups](windows-builtin-groups.md)** - Backup Operators, SeBackupPrivilege, and NTDS.dit extraction
+- **[Event Log Readers](event-log-readers.md)** - Event log analysis and credential extraction from command lines
+- **[DnsAdmins](dnsadmins-privilege-escalation.md)** - DNS service DLL injection and Domain Controller privilege escalation
+- **[Hyper-V Administrators](hyperv-administrators.md)** - VM cloning attacks and hard link exploitation
+- **[Print Operators](print-operators.md)** - SeLoadDriverPrivilege exploitation and Capcom.sys driver attacks
+- **[Server Operators](server-operators.md)** - Service control, binary path modification, and local administrator access
+- **[UAC Bypass](uac-bypass.md)** - User Account Control bypass via DLL hijacking and auto-elevating binaries
+- **[Weak Permissions](weak-permissions.md)** - File system ACLs, service permissions, unquoted paths, and registry exploitation
+- **[Kernel Exploits](kernel-exploits.md)** - Historical and modern Windows kernel vulnerabilities for privilege escalation
+- **[Vulnerable Services](vulnerable-services.md)** - Third-party application exploitation and service-based privilege escalation
+- **[Credential Hunting](credential-hunting.md)** - File system credential discovery, PowerShell history, and DPAPI decryption
+- **[Other Files](other-files.md)** - Advanced credential hunting in StickyNotes, system files, and network shares
+- **[Further Credential Theft](further-credential-theft.md)** - Browser credentials, password managers, LaZagne, SessionGopher, and registry-stored credentials
 - **Windows User Privileges** - Token privileges and abuse techniques
 - **Windows Group Privileges** - Dangerous group memberships and exploitation
 
