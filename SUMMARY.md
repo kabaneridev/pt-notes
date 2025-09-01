@@ -235,6 +235,13 @@
     * [💧 Dirty Pipe](CPTS-PREP/linux-priv-esc/dirty-pipe.md)
     * [🌐 Netfilter Kernel Exploits](CPTS-PREP/linux-priv-esc/netfilter-kernel-exploits.md)
     * [🛡️ Linux Hardening](CPTS-PREP/linux-priv-esc/linux-hardening.md)
+  * 📋 Documentation & Reporting
+    * [📝 Notetaking & Organization](CPTS-PREP/documentation-reporting/notetaking-organization.md)
+    * [📊 Types of Reports](CPTS-PREP/documentation-reporting/types-of-reports.md)
+    * [📋 Components of a Report](CPTS-PREP/documentation-reporting/components-of-a-report.md)
+    * [🔍 How to Write Up a Finding](CPTS-PREP/documentation-reporting/how-to-write-up-a-finding.md)
+    * [🛠️ Reporting Tips and Tricks](CPTS-PREP/documentation-reporting/reporting-tips-and-tricks.md)
+    * [📁 HTB Academy Example](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/README.md)
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)

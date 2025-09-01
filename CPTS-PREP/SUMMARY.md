@@ -256,6 +256,14 @@
 * [🌐 Netfilter Kernel Exploits](linux-priv-esc/netfilter-kernel-exploits.md) *(Advanced)*
 * [🛡️ Linux Hardening](linux-priv-esc/linux-hardening.md)
 
+## 📋 Documentation & Reporting
+* [📝 Notetaking & Organization](documentation-reporting/notetaking-organization.md)
+* [📊 Types of Reports](documentation-reporting/types-of-reports.md)
+* [📋 Components of a Report](documentation-reporting/components-of-a-report.md)
+* [🔍 How to Write Up a Finding](documentation-reporting/how-to-write-up-a-finding.md)
+* [🛠️ Reporting Tips and Tricks](documentation-reporting/reporting-tips-and-tricks.md)
+* [📁 HTB Academy Example](documentation-reporting/HTB_Academy_EXAMPLE/README.md)
+
 ## 🔐 Password Attacks
 
 ### 📋 Complete Assessment Workflows

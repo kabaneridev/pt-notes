@@ -256,6 +256,14 @@ CPTS-PREP/
 - **[Windows Server 2008](./windows-priv-esc/windows-server-2008.md)** - Legacy system exploitation using Sherlock, missing patches, and Metasploit privilege escalation
 - **[Windows 7 Exploitation](./windows-priv-esc/windows-7-exploitation.md)** - End-of-life desktop exploitation using Windows-Exploit-Suggester and MS16-032 PowerShell attacks
 
+**📋 Documentation & Reporting:**
+- **[Notetaking & Organization](./documentation-reporting/notetaking-organization.md)** - Comprehensive notetaking structure, Tmux logging setup, evidence collection, and artifact tracking for professional penetration testing assessments
+- **[Types of Reports](./documentation-reporting/types-of-reports.md)** - Assessment methodologies, report categories, specialized testing types, and professional deliverable standards
+- **[Components of a Report](./documentation-reporting/components-of-a-report.md)** - Executive summary best practices, attack chain documentation, findings structure, and appendix organization
+- **[How to Write Up a Finding](./documentation-reporting/how-to-write-up-a-finding.md)** - Professional finding structure, evidence presentation, remediation recommendations, and quality reference selection
+- **[Reporting Tips and Tricks](./documentation-reporting/reporting-tips-and-tricks.md)** - Professional workflow, MS Word techniques, automation strategies, client communication, and quality assurance processes
+- **[HTB Academy Example](./documentation-reporting/HTB_Academy_EXAMPLE/README.md)** - Practical Obsidian notetaking structure demonstrating professional penetration test documentation for INLANEFREIGHT.LOCAL assessment
+
 **🐧 Linux Privilege Escalation:**
 - **[Module Overview](./linux-priv-esc/README.md)** - Comprehensive Linux privilege escalation methodology
 - **[Environment Enumeration](./linux-priv-esc/environment-enumeration.md)** - System reconnaissance and information gathering techniques
