@@ -264,6 +264,18 @@ CPTS-PREP/
 - **[Reporting Tips and Tricks](./documentation-reporting/reporting-tips-and-tricks.md)** - Professional workflow, MS Word techniques, automation strategies, client communication, and quality assurance processes
 - **[HTB Academy Example](./documentation-reporting/HTB_Academy_EXAMPLE/README.md)** - Practical Obsidian notetaking structure demonstrating professional penetration test documentation for INLANEFREIGHT.LOCAL assessment
 
+**🌐 Attacking Enterprise Networks:**
+- **[External Information Gathering](./attacking-enterprise-networks/external-information-gathering.md)** - Systematic reconnaissance, Nmap enumeration, DNS zone transfers, vhost discovery, and attack surface mapping for enterprise network penetration testing
+- **[Service Enumeration & Exploitation](./attacking-enterprise-networks/service-enumeration-exploitation.md)** - FTP, SSH, SMTP, email services testing, user enumeration, anonymous access validation, and vulnerability research
+- **[Web Enumeration & Exploitation](./attacking-enterprise-networks/web-enumeration-exploitation.md)** - EyeWitness automation, HTTP verb tampering, file upload bypasses, WordPress exploitation, SQL injection, XSS, SSRF, XXE, and command injection with 11 comprehensive lab solutions
+- **[Initial Access](./attacking-enterprise-networks/initial-access.md)** - Socat reverse shell establishment, TTY upgrade techniques, audit log credential mining, privilege escalation, and DMZ to internal network pivot preparation
+- **[Post-Exploitation Persistence](./attacking-enterprise-networks/post-exploitation-persistence.md)** - SSH key extraction via GTFOBins, root privilege escalation, stable access establishment, and internal network pivot preparation
+- **[Internal Information Gathering](./attacking-enterprise-networks/internal-information-gathering.md)** - SSH/Metasploit pivoting setup, internal host discovery, NFS share exploitation, DotNetNuke credential harvesting, and Active Directory infrastructure mapping
+- **[Exploitation & Privilege Escalation](./attacking-enterprise-networks/exploitation-privilege-escalation.md)** - DotNetNuke administrative exploitation, xp_cmdshell enablement, PrintSpoofer SeImpersonate attacks, SAM database extraction, and domain credential discovery
+- **[Lateral Movement](./attacking-enterprise-networks/lateral-movement.md)** - BloodHound enumeration, ForceChangePassword privilege abuse, file share credential hunting, Kerberoasting attacks, password spraying, and Sysax Automation privilege escalation
+- **[Active Directory Compromise](./attacking-enterprise-networks/active-directory-compromise.md)** - GenericWrite ACL abuse, targeted Kerberoasting attacks, Server Admins group escalation, DCSync privilege exploitation, and complete domain administrator access
+- **[Post-Exploitation](./attacking-enterprise-networks/post-exploitation.md)** - Domain password analysis, double pivoting techniques, protected network access, DirtyPipe kernel exploitation, and comprehensive enterprise impact demonstration
+
 **🐧 Linux Privilege Escalation:**
 - **[Module Overview](./linux-priv-esc/README.md)** - Comprehensive Linux privilege escalation methodology
 - **[Environment Enumeration](./linux-priv-esc/environment-enumeration.md)** - System reconnaissance and information gathering techniques

@@ -264,6 +264,18 @@
 * [🛠️ Reporting Tips and Tricks](documentation-reporting/reporting-tips-and-tricks.md)
 * [📁 HTB Academy Example](documentation-reporting/HTB_Academy_EXAMPLE/README.md)
 
+## 🌐 Attacking Enterprise Networks
+* [🔍 External Information Gathering](attacking-enterprise-networks/external-information-gathering.md)
+* [⚔️ Service Enumeration & Exploitation](attacking-enterprise-networks/service-enumeration-exploitation.md)
+* [🌐 Web Enumeration & Exploitation](attacking-enterprise-networks/web-enumeration-exploitation.md)
+* [🚀 Initial Access](attacking-enterprise-networks/initial-access.md)
+* [🔒 Post-Exploitation Persistence](attacking-enterprise-networks/post-exploitation-persistence.md)
+* [🔍 Internal Information Gathering](attacking-enterprise-networks/internal-information-gathering.md)
+* [⚔️ Exploitation & Privilege Escalation](attacking-enterprise-networks/exploitation-privilege-escalation.md)
+* [🔄 Lateral Movement](attacking-enterprise-networks/lateral-movement.md)
+* [👑 Active Directory Compromise](attacking-enterprise-networks/active-directory-compromise.md)
+* [🏆 Post-Exploitation](attacking-enterprise-networks/post-exploitation.md)
+
 ## 🔐 Password Attacks
 
 ### 📋 Complete Assessment Workflows

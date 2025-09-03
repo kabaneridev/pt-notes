@@ -242,6 +242,17 @@
     * [🔍 How to Write Up a Finding](CPTS-PREP/documentation-reporting/how-to-write-up-a-finding.md)
     * [🛠️ Reporting Tips and Tricks](CPTS-PREP/documentation-reporting/reporting-tips-and-tricks.md)
     * [📁 HTB Academy Example](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/README.md)
+  * 🌐 Attacking Enterprise Networks
+    * [🔍 External Information Gathering](CPTS-PREP/attacking-enterprise-networks/external-information-gathering.md)
+    * [⚔️ Service Enumeration & Exploitation](CPTS-PREP/attacking-enterprise-networks/service-enumeration-exploitation.md)
+    * [🌐 Web Enumeration & Exploitation](CPTS-PREP/attacking-enterprise-networks/web-enumeration-exploitation.md)
+    * [🚀 Initial Access](CPTS-PREP/attacking-enterprise-networks/initial-access.md)
+    * [🔒 Post-Exploitation Persistence](CPTS-PREP/attacking-enterprise-networks/post-exploitation-persistence.md)
+    * [🔍 Internal Information Gathering](CPTS-PREP/attacking-enterprise-networks/internal-information-gathering.md)
+    * [⚔️ Exploitation & Privilege Escalation](CPTS-PREP/attacking-enterprise-networks/exploitation-privilege-escalation.md)
+    * [🔄 Lateral Movement](CPTS-PREP/attacking-enterprise-networks/lateral-movement.md)
+    * [👑 Active Directory Compromise](CPTS-PREP/attacking-enterprise-networks/active-directory-compromise.md)
+    * [🏆 Post-Exploitation](CPTS-PREP/attacking-enterprise-networks/post-exploitation.md)
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
