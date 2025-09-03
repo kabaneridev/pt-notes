@@ -242,6 +242,12 @@
     * [🔍 How to Write Up a Finding](CPTS-PREP/documentation-reporting/how-to-write-up-a-finding.md)
     * [🛠️ Reporting Tips and Tricks](CPTS-PREP/documentation-reporting/reporting-tips-and-tricks.md)
     * [📁 HTB Academy Example](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/README.md)
+      * [📋 Administrative Information](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Notes/1. Administrative Information.md)
+      * [🎯 Attack Path Documentation](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Notes/11. Attack Path.md)
+      * [🔐 Credentials Tracking](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Notes/6. Credentials.md)
+      * [📊 Findings Summary](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Notes/12. Findings.md)
+      * [🔴 Example High Finding - Kerberoasting](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Findings/H1 - Kerberoasting.md)
+      * [🟡 Example Medium Finding - File Shares](CPTS-PREP/documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Findings/M1 - Insecure File Shares.md)
   * 🌐 Attacking Enterprise Networks
     * [🔍 External Information Gathering](CPTS-PREP/attacking-enterprise-networks/external-information-gathering.md)
     * [⚔️ Service Enumeration & Exploitation](CPTS-PREP/attacking-enterprise-networks/service-enumeration-exploitation.md)

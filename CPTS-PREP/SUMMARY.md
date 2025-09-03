@@ -9,6 +9,12 @@
 ### 🌐 Infrastructure Enumeration
 * [🔍 Footprinting](footprinting.md)
 
+### 🛡️ Network Security
+* [🔥 Firewall & IDS/IPS Evasion](firewall-evasion.md)
+
+### 🎯 Assessment Methodologies
+* [📊 Vulnerability Assessment](vulnerability-assessment.md)
+
 ### 🕷️ Web Application Information Gathering
 * [🌐 Subdomain Enumeration & DNS Discovery](web-enumeration/subdomain-enumeration.md)
 * [🔧 Web Application Enumeration](web-enumeration/web-application-enumeration.md)
@@ -168,13 +174,7 @@
 * [🐧 Linux Remote Protocols](remote-management/linux-remote-protocols.md)
 * [🪟 Windows Remote Protocols](remote-management/windows-remote-protocols.md)
 
-## 🛡️ Network Security
 
-### 🔥 Firewall & IDS/IPS Evasion
-* [🛡️ Firewall Evasion](firewall-evasion.md)
-
-### 🎯 Vulnerability Assessment
-* [🎯 Vulnerability Assessment](vulnerability-assessment.md)
 
 ## 🔧 Shells & Payloads
 
@@ -263,6 +263,12 @@
 * [🔍 How to Write Up a Finding](documentation-reporting/how-to-write-up-a-finding.md)
 * [🛠️ Reporting Tips and Tricks](documentation-reporting/reporting-tips-and-tricks.md)
 * [📁 HTB Academy Example](documentation-reporting/HTB_Academy_EXAMPLE/README.md)
+  * [📋 Administrative Information](documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Notes/1. Administrative Information.md)
+  * [🎯 Attack Path Documentation](documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Notes/11. Attack Path.md)
+  * [🔐 Credentials Tracking](documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Notes/6. Credentials.md)
+  * [📊 Findings Summary](documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Notes/12. Findings.md)
+  * [🔴 Example High Finding - Kerberoasting](documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Findings/H1 - Kerberoasting.md)
+  * [🟡 Example Medium Finding - File Shares](documentation-reporting/HTB_Academy_EXAMPLE/Inlanefreight Penetration Test/Evidence/Findings/M1 - Insecure File Shares.md)
 
 ## 🌐 Attacking Enterprise Networks
 * [🔍 External Information Gathering](attacking-enterprise-networks/external-information-gathering.md)
