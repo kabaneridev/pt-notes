@@ -15,8 +15,8 @@ Current CVEs
 * None yet - working on it!
 
 Certifications 
-* ✅ **PJPT** - Practical Junior Penetration Tester (Completed)
-* 🔄 **CPTS** - Certified Penetration Testing Professional (In Progress)
+* ✅ [**PJPT**](https://certified.tcm-sec.com/996b154f-e923-4c68-98ff-6cfd271a3f49?key=d798487a8eae8092848ecc5f2da1c4ad65bd5a5f125e63f2012585514e121195) - Practical Junior Penetration Tester (Completed)
+* 🔄 [**CPTS**](https://www.credly.com/badges/0c5030ac-339d-46ae-a28a-f15eb32c09c8) - Certified Penetration Testing Professional (Completed)
 * 📅 **OSCP** - Offensive Security Certified Professional (Planned)
 
 ---
