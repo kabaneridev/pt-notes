@@ -4,7 +4,7 @@
 
 ## 🏆 Certification Preparation
 
-* [🎯 CPTS - In Progress](CPTS-PREP/README.md)
+* [✅ CPTS - Completed](CPTS-PREP/README.md)
   * [🌐 Infrastructure Enumeration](CPTS-PREP/footprinting.md)
   * [🛡️ Firewall Evasion](CPTS-PREP/firewall-evasion.md)
   * [🔍 Vulnerability Assessment](CPTS-PREP/vulnerability-assessment.md)
