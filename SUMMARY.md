@@ -277,12 +277,12 @@
       * [Automating Blind Extraction](CWEE-PREP/injection-attacks/nosql-injection/automating-blind-extraction.md)
       * [Server-Side JavaScript Injection](CWEE-PREP/injection-attacks/nosql-injection/server-side-javascript-injection.md)
   * [Attacking Authentication Mechanisms](attacking-authentication-mechanisms/introduction.md)
-    * [JWT](attacking-authentication-mechanisms/jwt/introduction-to-jwts.md)
-      *  [Attacking Signature Verification](attacking-authentication-mechanisms/jwt/attacking-signature-verification.md)
-      *  [Attacking the Signing Secret](attacking-authentication-mechanisms/jwt/attacking-signing-secret.md)
-      *  [Algorithm Confusion](attacking-authentication-mechanisms/jwt/algorithm-confusion.md)
-      *  [Further JWT Attacks](attacking-authentication-mechanisms/jwt/further-jwt-attacks.md)
-      *  [JWT Tools & Prevention](attacking-authentication-mechanisms/jwt/tools-and-prevention.md)
+    * [JWT]
+      *  [Attacking Signature Verification](CWEE-PREP/attacking-authentication-mechanisms/jwt/attacking-signature-verification.md)
+      *  [Attacking the Signing Secret](CWEE-PREP/attacking-authentication-mechanisms/jwt/attacking-signing-secret.md)
+      *  [Algorithm Confusion](CWEE-PREP/attacking-authentication-mechanisms/jwt/algorithm-confusion.md)
+      *  [Further JWT Attacks](CWEE-PREP/attacking-authentication-mechanisms/jwt/further-jwt-attacks.md)
+      *  [JWT Tools & Prevention](CWEE-PREP/attacking-authentication-mechanisms/jwt/tools-and-prevention.md)
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
