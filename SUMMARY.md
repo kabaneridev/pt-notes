@@ -297,11 +297,11 @@
   * [Advanced XSS and CSRF Exploitation](CWEE-PREP/advanced-xss-and-csrf-exploitation/introduction.md)
     * [Introduction to the Lab Environment](CWEE-PREP/advanced-xss-and-csrf-exploitation/lab-environment.md)
     * [Lab Warmup](CWEE-PREP/advanced-xss-and-csrf-exploitation/lab-warmup.md)
-    * [Same-Origin Policy & CORS](CWEE-PREP/advanced-xss-and-csrf-exploitation/same-origin-policy-and-cors.md)
+    * [Same-Origin Policy & CORS](CWEE-PREP/advanced-xss-and-csrf-exploitation/csrf-exploitation/same-origin-policy-and-cors.md)
     * [CSRF Exploitation]
-      * [CORS Misconfigurations](CWEE-PREP/advanced-xss-and-csrf-exploitation/cors-misconfigurations.md)
-      * [Bypassing CSRF Tokens via CORS Misconfigurations](CWEE-PREP/advanced-xss-and-csrf-exploitation/bypassing-csrf-tokens-via-cors-misconfigurations.md)
-      * [Misc CSRF Exploitation](CWEE-PREP/advanced-xss-and-csrf-exploitation/misc-csrf-exploitation.md)
+      * [CORS Misconfigurations](CWEE-PREP/advanced-xss-and-csrf-exploitation/csrf-exploitation/cors-misconfigurations.md)
+      * [Bypassing CSRF Tokens via CORS Misconfigurations](CWEE-PREP/advanced-xss-and-csrf-exploitation/csrf-exploitation/bypassing-csrf-tokens-via-cors-misconfigurations.md)
+      * [Misc CSRF Exploitation](CWEE-PREP/advanced-xss-and-csrf-exploitation/csrf-exploitation/misc-csrf-exploitation.md)
       * [CSRF Vulnerability Prevention](CWEE-PREP/advanced-xss-and-csrf-exploitation/csrf-exploitation/csrf-vulnerability-prevention.md)
     * [XSS Exploitation]
       * [XSS Exploitation (Introduction)](CWEE-PREP/advanced-xss-and-csrf-exploitation/xss-exploitation/introduction.md)
