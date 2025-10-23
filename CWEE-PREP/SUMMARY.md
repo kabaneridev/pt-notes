@@ -33,5 +33,6 @@
     - [Algorithm Confusion](attacking-authentication-mechanisms/jwt/algorithm-confusion.md)
     - [Further JWT Attacks](attacking-authentication-mechanisms/jwt/further-jwt-attacks.md)
     - [JWT Tools & Prevention](attacking-authentication-mechanisms/jwt/tools-and-prevention.md)
+  - [OAuth](attacking-authentication-mechanisms/oauth/introduction.md)
 
 
