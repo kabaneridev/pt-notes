@@ -314,7 +314,27 @@
       * [XSS Filter Bypasses](CWEE-PREP/advanced-xss-and-csrf-exploitation/xss-exploitation/xss-filter-bypasses.md)
       * [XSS Vulnerability Prevention](CWEE-PREP/advanced-xss-and-csrf-exploitation/xss-exploitation/xss-vulnerability-prevention.md)
     * [Skills Assessment](CWEE-PREP/advanced-xss-and-csrf-exploitation/skills-assessment.md)
-  * [Client-Side Authorization Enforcement](CWEE-PREP/client-side-authorization-enforcement/introduction.md)
+  * [HTTPS/TLS Attacks]
+    * [Introduction to HTTPS/TLS](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/introduction.md)
+    * [Public Key Infrastructure](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/public-key-infrastructure.md)
+    * [TLS 1.2 Handshake](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/tls-1-2-handshake.md)
+    * [TLS 1.3](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/tls-1-3.md)
+    * [Padding Oracle Attacks]
+      * [Padding Oracles](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/padding-oracles.md)
+      * [POODLE & BEAST](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/poodle-beast.md)
+      * [Bleichenbacher & DROWN](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/bleichenbacher-drown.md)
+    * [Compression Attacks]
+    * [Misc Attacks & Misconfigurations]
+      * [Heartbleed Bug](CWEE-PREP/https-tls-attacks/misc-attacks-misconfigurations/heartbleed-bug.md)
+    * [Further Attacks]
+      * [SSL Stripping](CWEE-PREP/https-tls-attacks/further-attacks/ssl-stripping.md)
+      * [Cryptographic Attacks](CWEE-PREP/https-tls-attacks/further-attacks/cryptographic-attacks.md)
+      * [Downgrade Attacks](CWEE-PREP/https-tls-attacks/further-attacks/downgrade-attacks.md)
+    * [Testing TLS Configuration]
+      * [Testing TLS Configuration](CWEE-PREP/https-tls-attacks/testing-tls-configuration/testing-tls-configuration.md)
+    * [Skills Assessment]
+      * [Skills Assessment](CWEE-PREP/https-tls-attacks/skills-assessment.md)
+
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
