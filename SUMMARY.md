@@ -314,26 +314,74 @@
       * [XSS Filter Bypasses](CWEE-PREP/advanced-xss-and-csrf-exploitation/xss-exploitation/xss-filter-bypasses.md)
       * [XSS Vulnerability Prevention](CWEE-PREP/advanced-xss-and-csrf-exploitation/xss-exploitation/xss-vulnerability-prevention.md)
     * [Skills Assessment](CWEE-PREP/advanced-xss-and-csrf-exploitation/skills-assessment.md)
-  * [HTTPS/TLS Attacks]
-    * [Introduction to HTTPS/TLS](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/introduction.md)
-    * [Public Key Infrastructure](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/public-key-infrastructure.md)
-    * [TLS 1.2 Handshake](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/tls-1-2-handshake.md)
-    * [TLS 1.3](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/tls-1-3.md)
-    * [Padding Oracle Attacks]
-      * [Padding Oracles](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/padding-oracles.md)
-      * [POODLE & BEAST](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/poodle-beast.md)
-      * [Bleichenbacher & DROWN](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/bleichenbacher-drown.md)
-    * [Compression Attacks]
-    * [Misc Attacks & Misconfigurations]
-      * [Heartbleed Bug](CWEE-PREP/https-tls-attacks/misc-attacks-misconfigurations/heartbleed-bug.md)
-    * [Further Attacks]
-      * [SSL Stripping](CWEE-PREP/https-tls-attacks/further-attacks/ssl-stripping.md)
-      * [Cryptographic Attacks](CWEE-PREP/https-tls-attacks/further-attacks/cryptographic-attacks.md)
-      * [Downgrade Attacks](CWEE-PREP/https-tls-attacks/further-attacks/downgrade-attacks.md)
-    * [Testing TLS Configuration]
-      * [Testing TLS Configuration](CWEE-PREP/https-tls-attacks/testing-tls-configuration/testing-tls-configuration.md)
-    * [Skills Assessment]
-      * [Skills Assessment](CWEE-PREP/https-tls-attacks/skills-assessment.md)
+  * [Abusing HTTP Misconfigurations]
+    * [Introduction to HTTP Misconfigurations](CWEE-PREP/abusing-http-misconfigurations/introduction.md)
+    * [Web Cache Poisoning]
+      * [Introduction to Web Cache Poisoning](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/introduction.md)
+      * [Identifying Unkeyed Parameters](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/identifying-unkeyed-parameters.md)
+      * [Web Cache Poisoning Attacks](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/web-cache-poisoning-attacks.md)
+      * [Advanced Cache Poisoning Techniques](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/advanced-cache-poisoning-techniques.md)
+      * [Tools & Prevention](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/tools-and-prevention.md)
+    * [Host Header Attacks]
+      * [Introduction to Host Header Attacks](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/introduction.md)
+      * [Authentication Bypass](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/authentication-bypass.md)
+      * [Password Reset Poisoning](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/password-reset-poisoning.md)
+      * [Web Cache Deception](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/web-cache-deception.md)
+      * [Bypassing Flawed Validation](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/bypassing-flawed-validation.md)
+      * [Host Header Attacks Prevention](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/prevention.md)
+      * [Session Puzzling]
+        * [Introduction to Session Puzzling](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/introduction.md)
+        * [Weak Session IDs](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/weak-session-ids.md)
+        * [Common Session Variables (Auth Bypass)](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/common-session-variables-auth-bypass.md)
+        * [Premature Session Population (Auth Bypass)](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/premature-session-population-auth-bypass.md)
+          * [Common Session Variables (Account Takeover)](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/common-session-variables-account-takeover.md)
+          * [Session Puzzling Prevention](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/prevention.md)
+      * [Skills Assessment](CWEE-PREP/abusing-http-misconfigurations/skills-assessment.md)
+    * [HTTP Attacks]
+      * [Introduction to HTTP Attacks](CWEE-PREP/http-attacks/introduction.md)
+    * [CRLF Injection]
+      * [Introduction to CRLF Injection](CWEE-PREP/http-attacks/crlf-injection/introduction.md)
+      * [Log Injection](CWEE-PREP/http-attacks/crlf-injection/log-injection.md)
+      * [HTTP Response Splitting](CWEE-PREP/http-attacks/crlf-injection/http-response-splitting.md)
+      * [SMTP Header Injection](CWEE-PREP/http-attacks/crlf-injection/smtp-header-injection.md)
+      * [CRLF Injection Prevention](CWEE-PREP/http-attacks/crlf-injection/prevention.md)
+    * [HTTP Request Smuggling]
+      * [Introduction to HTTP Request Smuggling](CWEE-PREP/http-attacks/http-request-smuggling/introduction.md)
+      * [CL.TE Vulnerabilities](CWEE-PREP/http-attacks/http-request-smuggling/cl-te.md)
+      * [TE.CL Vulnerabilities](CWEE-PREP/http-attacks/http-request-smuggling/te-cl.md)
+      * [TE.TE Vulnerabilities](CWEE-PREP/http-attacks/http-request-smuggling/te-te.md)
+      * [Vulnerable Software](CWEE-PREP/http-attacks/http-request-smuggling/vulnerable-software.md)
+      * [Exploitation Techniques](CWEE-PREP/http-attacks/http-request-smuggling/exploitation-techniques.md)
+      * [HTTP Request Smuggling Prevention](CWEE-PREP/http-attacks/http-request-smuggling/prevention.md)
+    * [HTTP/2 Downgrading]
+      * [Introduction to HTTP/2](CWEE-PREP/http-attacks/http2-downgrading/introduction.md)
+      * [HTTP/2 Downgrading Attacks](CWEE-PREP/http-attacks/http2-downgrading/downgrading.md)
+      * [Advanced H2 Vulnerabilities](CWEE-PREP/http-attacks/http2-downgrading/advanced-h2-vulnerabilities.md)
+      * [HTTP/2 Tools & Prevention](CWEE-PREP/http-attacks/http2-downgrading/prevention.md)
+    * [Skills Assessment](CWEE-PREP/http-attacks/skills-assessment.md)
+    * [HTTPS/TLS Attacks]
+      * [Introduction to HTTPS/TLS](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/introduction.md)
+      * [Public Key Infrastructure](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/public-key-infrastructure.md)
+      * [TLS 1.2 Handshake](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/tls-1-2-handshake.md)
+      * [TLS 1.3](CWEE-PREP/https-tls-attacks/introduction-to-https-tls/tls-1-3.md)
+      * [Padding Oracle Attacks]
+        * [Padding Oracles](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/padding-oracles.md)
+        * [POODLE & BEAST](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/poodle-beast.md)
+        * [Bleichenbacher & DROWN](CWEE-PREP/https-tls-attacks/padding-oracle-attacks/bleichenbacher-drown.md)
+      * [Compression Attacks]
+      * [Misc Attacks & Misconfigurations]
+        * [Heartbleed Bug](CWEE-PREP/https-tls-attacks/misc-attacks-misconfigurations/heartbleed-bug.md)
+      * [Further Attacks]
+        * [SSL Stripping](CWEE-PREP/https-tls-attacks/further-attacks/ssl-stripping.md)
+        * [Cryptographic Attacks](CWEE-PREP/https-tls-attacks/further-attacks/cryptographic-attacks.md)
+        * [Downgrade Attacks](CWEE-PREP/https-tls-attacks/further-attacks/downgrade-attacks.md)
+      * [Testing TLS Configuration]
+        * [Testing TLS Configuration](CWEE-PREP/https-tls-attacks/testing-tls-configuration/testing-tls-configuration.md)
+      * [Skills Assessment]
+        * [Skills Assessment](CWEE-PREP/https-tls-attacks/skills-assessment.md)
+    * [Blind SQL Injection]
+      * [Introduction to MSSQL](CWEE-PREP/blind-sql-injection/introduction.md)
+      * [Introduction to Blind SQLi](CWEE-PREP/blind-sql-injection/blind-sqli-intro.md)
 
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
