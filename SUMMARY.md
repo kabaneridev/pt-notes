@@ -443,6 +443,7 @@
         * [HTTP Response Injection](CWEE-PREP/whitebox-pentesting/poc-case-study/http-response-injection.md)
         * [Blind Exploitation](CWEE-PREP/whitebox-pentesting/poc-case-study/blind-exploitation.md)
         * [Exploit Development](CWEE-PREP/whitebox-pentesting/poc-case-study/exploit-development.md)
+      * [Applied Patching](CWEE-PREP/whitebox-pentesting/patching-case-study.md)
 
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
