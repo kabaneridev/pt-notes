@@ -379,6 +379,30 @@
         * [Testing TLS Configuration](CWEE-PREP/https-tls-attacks/testing-tls-configuration/testing-tls-configuration.md)
       * [Skills Assessment]
         * [Skills Assessment](CWEE-PREP/https-tls-attacks/skills-assessment.md)
+    * [Abusing HTTP Misconfigurations]
+      * [Introduction](CWEE-PREP/abusing-http-misconfigurations/introduction.md)
+      * [Host Header Attacks]
+        * [Introduction](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/introduction.md)
+        * [Bypassing Flawed Validation](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/bypassing-flawed-validation.md)
+        * [Password Reset Poisoning](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/password-reset-poisoning.md)
+        * [Web Cache Poisoning](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/web-cache-poisoning.md)
+        * [Web Cache Deception](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/web-cache-deception.md)
+        * [Prevention](CWEE-PREP/abusing-http-misconfigurations/host-header-attacks/prevention.md)
+      * [Web Cache Poisoning]
+        * [Introduction](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/introduction.md)
+        * [Identifying Unkeyed Parameters](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/identifying-unkeyed-parameters.md)
+        * [Web Cache Poisoning Attacks](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/web-cache-poisoning-attacks.md)
+        * [Advanced Techniques](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/advanced-cache-poisoning-techniques.md)
+        * [Tools & Prevention](CWEE-PREP/abusing-http-misconfigurations/web-cache-poisoning/tools-and-prevention.md)
+      * [Session Puzzling]
+        * [Introduction](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/introduction.md)
+        * [Weak Session IDs](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/weak-session-ids.md)
+        * [Common Session Variables - Auth Bypass](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/common-session-variables-auth-bypass.md)
+        * [Common Session Variables - Account Takeover](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/common-session-variables-account-takeover.md)
+        * [Premature Session Population](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/premature-session-population-auth-bypass.md)
+        * [Prevention](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/prevention.md)
+        * [Skills Assessment](CWEE-PREP/abusing-http-misconfigurations/session-puzzling/skills-assessment.md)
+      * [Skills Assessment](CWEE-PREP/abusing-http-misconfigurations/skills-assessment.md)
     * [Blind SQL Injection]
       * [Introduction to MSSQL](CWEE-PREP/blind-sql-injection/introduction.md)
       * [Introduction to Blind SQLi](CWEE-PREP/blind-sql-injection/blind-sqli-intro.md)
