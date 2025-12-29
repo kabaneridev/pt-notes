@@ -406,6 +406,22 @@
     * [Blind SQL Injection]
       * [Introduction to MSSQL](CWEE-PREP/blind-sql-injection/introduction.md)
       * [Introduction to Blind SQLi](CWEE-PREP/blind-sql-injection/blind-sqli-intro.md)
+      * [Boolean-based SQLi]
+        * [Identifying Boolean-based](CWEE-PREP/blind-sql-injection/boolean-based/identifying-boolean-based.md)
+        * [Designing the Oracle](CWEE-PREP/blind-sql-injection/boolean-based/designing-the-oracle.md)
+        * [Extracting Data](CWEE-PREP/blind-sql-injection/boolean-based/extracting-data.md)
+        * [Optimizing](CWEE-PREP/blind-sql-injection/boolean-based/optimizing.md)
+      * [Time-based SQLi]
+        * [Identifying Time-based](CWEE-PREP/blind-sql-injection/time-based/identifying-time-based.md)
+        * [Designing Time Oracle](CWEE-PREP/blind-sql-injection/time-based/designing-time-oracle.md)
+        * [Data Extraction](CWEE-PREP/blind-sql-injection/time-based/data-extraction.md)
+        * [OOB DNS Exfiltration](CWEE-PREP/blind-sql-injection/time-based/oob-dns-exfiltration.md)
+      * [MSSQL-specific Attacks]
+        * [Remote Code Execution](CWEE-PREP/blind-sql-injection/mssql-attacks/remote-code-execution.md)
+        * [Leaking NetNTLM Hashes](CWEE-PREP/blind-sql-injection/mssql-attacks/leaking-netntlm-hashes.md)
+        * [File Read](CWEE-PREP/blind-sql-injection/mssql-attacks/file-read.md)
+      * [Prevention](CWEE-PREP/blind-sql-injection/prevention.md)
+      * [Skills Assessment](CWEE-PREP/blind-sql-injection/skills-assessment.md)
 
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
