@@ -422,6 +422,27 @@
         * [File Read](CWEE-PREP/blind-sql-injection/mssql-attacks/file-read.md)
       * [Prevention](CWEE-PREP/blind-sql-injection/prevention.md)
       * [Skills Assessment](CWEE-PREP/blind-sql-injection/skills-assessment.md)
+    * [Whitebox Pentesting]
+      * [Introduction](CWEE-PREP/whitebox-pentesting/introduction.md)
+      * [Process]
+        * [Overview](CWEE-PREP/whitebox-pentesting/process/overview.md)
+        * [Code Review](CWEE-PREP/whitebox-pentesting/process/code-review.md)
+        * [Local Testing](CWEE-PREP/whitebox-pentesting/process/local-testing.md)
+        * [Proof of Concept](CWEE-PREP/whitebox-pentesting/process/proof-of-concept.md)
+        * [Patching & Remediation](CWEE-PREP/whitebox-pentesting/process/patching-remediation.md)
+      * [Code Review Case Study]
+        * [Authentication](CWEE-PREP/whitebox-pentesting/code-review-case-study/authentication.md)
+        * [Services](CWEE-PREP/whitebox-pentesting/code-review-case-study/services.md)
+      * [Local Testing Case Study]
+        * [Planning](CWEE-PREP/whitebox-pentesting/local-testing-case-study/planning.md)
+        * [Eval Injection](CWEE-PREP/whitebox-pentesting/local-testing-case-study/eval-injection.md)
+        * [Target Function](CWEE-PREP/whitebox-pentesting/local-testing-case-study/target-function.md)
+        * [Code Injection](CWEE-PREP/whitebox-pentesting/local-testing-case-study/code-injection.md)
+      * [PoC Case Study]
+        * [Command Execution](CWEE-PREP/whitebox-pentesting/poc-case-study/command-execution.md)
+        * [HTTP Response Injection](CWEE-PREP/whitebox-pentesting/poc-case-study/http-response-injection.md)
+        * [Blind Exploitation](CWEE-PREP/whitebox-pentesting/poc-case-study/blind-exploitation.md)
+        * [Exploit Development](CWEE-PREP/whitebox-pentesting/poc-case-study/exploit-development.md)
 
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
