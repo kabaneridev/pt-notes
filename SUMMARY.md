@@ -424,7 +424,9 @@
       * [Second-Order IDOR (Whitebox)](CWEE-PREP/modern-web-exploitation/second-order-attacks/second-order-idor.md)
       * [Second-Order IDOR (Blackbox)](CWEE-PREP/modern-web-exploitation/second-order-attacks/second-order-idor-blackbox.md)
       * [Second-Order LFI](CWEE-PREP/modern-web-exploitation/second-order-attacks/second-order-lfi.md)
+      * [Second-Order Command Injection](CWEE-PREP/modern-web-exploitation/second-order-attacks/second-order-command-injection.md)
     * [WebSocket Attacks]
+      * [Introduction](CWEE-PREP/modern-web-exploitation/websocket-attacks/introduction.md)
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
