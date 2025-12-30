@@ -414,6 +414,7 @@
     * [Applied Patching](CWEE-PREP/whitebox-pentesting/patching-case-study.md)
   * [Modern Web Exploitation](CWEE-PREP/modern-web-exploitation/introduction.md)
     * [DNS Rebinding]
+      * [Introduction](CWEE-PREP/modern-web-exploitation/dns-rebinding/introduction.md)
     * [Second-Order Attacks]
     * [WebSocket Attacks]
 
