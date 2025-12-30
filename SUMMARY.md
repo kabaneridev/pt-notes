@@ -427,6 +427,12 @@
       * [Second-Order Command Injection](CWEE-PREP/modern-web-exploitation/second-order-attacks/second-order-command-injection.md)
     * [WebSocket Attacks]
       * [Introduction](CWEE-PREP/modern-web-exploitation/websocket-attacks/introduction.md)
+      * [Burp Analysis](CWEE-PREP/modern-web-exploitation/websocket-attacks/burp-analysis.md)
+      * [XSS via WebSockets](CWEE-PREP/modern-web-exploitation/websocket-attacks/xss-via-websockets.md)
+      * [SQLi via WebSockets](CWEE-PREP/modern-web-exploitation/websocket-attacks/sqli-via-websockets.md)
+      * [CSWH](CWEE-PREP/modern-web-exploitation/websocket-attacks/cswh.md)
+      * [Tools & Prevention](CWEE-PREP/modern-web-exploitation/websocket-attacks/tools-and-prevention.md)
+    * [Skills Assessment](CWEE-PREP/modern-web-exploitation/skills-assessment.md)
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
