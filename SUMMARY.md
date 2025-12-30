@@ -416,7 +416,11 @@
     * [DNS Rebinding]
       * [Introduction](CWEE-PREP/modern-web-exploitation/dns-rebinding/introduction.md)
       * [SSRF Filter Bypasses](CWEE-PREP/modern-web-exploitation/dns-rebinding/ssrf-filter-bypasses.md)
+      * [DNS Rebinding SSRF Bypass](CWEE-PREP/modern-web-exploitation/dns-rebinding/dns-rebinding-ssrf-bypass.md)
+      * [SOP Bypass](CWEE-PREP/modern-web-exploitation/dns-rebinding/sop-bypass.md)
+      * [Tools & Prevention](CWEE-PREP/modern-web-exploitation/dns-rebinding/tools-and-prevention.md)
     * [Second-Order Attacks]
+      * [Introduction](CWEE-PREP/modern-web-exploitation/second-order-attacks/introduction.md)
     * [WebSocket Attacks]
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
