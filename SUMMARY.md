@@ -433,6 +433,11 @@
       * [CSWH](CWEE-PREP/modern-web-exploitation/websocket-attacks/cswh.md)
       * [Tools & Prevention](CWEE-PREP/modern-web-exploitation/websocket-attacks/tools-and-prevention.md)
     * [Skills Assessment](CWEE-PREP/modern-web-exploitation/skills-assessment.md)
+  * [Deserialization Attacks]
+    * [Introduction to Serialization](CWEE-PREP/deserialization-attacks/introduction-to-serialization.md)
+    * [Introduction to Deserialization Attacks](CWEE-PREP/deserialization-attacks/introduction-to-deserialization-attacks.md)
+    * [PHP Deserialization]
+      * [Identifying Vulnerability](CWEE-PREP/deserialization-attacks/php-deserialization/identifying-vulnerability.md)
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
