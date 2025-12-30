@@ -421,6 +421,8 @@
       * [Tools & Prevention](CWEE-PREP/modern-web-exploitation/dns-rebinding/tools-and-prevention.md)
     * [Second-Order Attacks]
       * [Introduction](CWEE-PREP/modern-web-exploitation/second-order-attacks/introduction.md)
+      * [Second-Order IDOR (Whitebox)](CWEE-PREP/modern-web-exploitation/second-order-attacks/second-order-idor.md)
+      * [Second-Order IDOR (Blackbox)](CWEE-PREP/modern-web-exploitation/second-order-attacks/second-order-idor-blackbox.md)
     * [WebSocket Attacks]
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
