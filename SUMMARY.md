@@ -415,6 +415,7 @@
   * [Modern Web Exploitation](CWEE-PREP/modern-web-exploitation/introduction.md)
     * [DNS Rebinding]
       * [Introduction](CWEE-PREP/modern-web-exploitation/dns-rebinding/introduction.md)
+      * [SSRF Filter Bypasses](CWEE-PREP/modern-web-exploitation/dns-rebinding/ssrf-filter-bypasses.md)
     * [Second-Order Attacks]
     * [WebSocket Attacks]
 
