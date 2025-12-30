@@ -412,6 +412,10 @@
       * [Blind Exploitation](CWEE-PREP/whitebox-pentesting/poc-case-study/blind-exploitation.md)
       * [Exploit Development](CWEE-PREP/whitebox-pentesting/poc-case-study/exploit-development.md)
     * [Applied Patching](CWEE-PREP/whitebox-pentesting/patching-case-study.md)
+  * [Modern Web Exploitation](CWEE-PREP/modern-web-exploitation/introduction.md)
+    * [DNS Rebinding]
+    * [Second-Order Attacks]
+    * [WebSocket Attacks]
 
 * [✅ PJPT - Completed](PJPT-prep/README.md)
   * [🎯 Quick Reference](PJPT-prep/PJPT-QUICK-REFERENCE.md)
